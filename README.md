@@ -1,9 +1,16 @@
 # Oracle ERP Procure-to-Pay (P2P) Implementation Case Study
 
+> 🌐 **LIVE INTERACTIVE DEMO WEBSITE**:  
+> 👉 **[https://madhav70.github.io/oracle-erp-p2p-case-study/](https://madhav70.github.io/oracle-erp-p2p-case-study/)**  
+> *(No installation required — click the link above to explore the live consulting dashboard, interactive voucher workbench, filterable requirements, risk register, and process flowcharts)*
+
+---
+
 **Fictional Enterprise**: Northstar Manufacturing Ltd.  
 **Role Demonstrated**: Senior Oracle ERP Functional Consultant, Business Analyst, QA/UAT Specialist, Technical Writer & Project Manager  
 **Project Methodology**: Hybrid Agile-Waterfall ERP Implementation (14-Week Illustrative Horizon)  
-**Target Architecture**: Conceptual Alignment with Oracle Fusion Cloud Procurement & Financials (Payables)
+**Target Architecture**: Conceptual Alignment with Oracle Fusion Cloud Procurement & Financials (Payables)  
+**Live Deployment**: [https://madhav70.github.io/oracle-erp-p2p-case-study/](https://madhav70.github.io/oracle-erp-p2p-case-study/)
 
 ---
 
@@ -211,15 +218,13 @@ All analytical figures displayed on the dashboard match `analysis/outputs/p2p_su
 
 ---
 
-## 9. GitHub Pages Deployment Instructions
+## 9. Live Website & GitHub Pages Deployment
 
-To view this portfolio project live via GitHub Pages:
-1. Ensure this repository is pushed to your GitHub account (`main` branch).
-2. On GitHub, navigate to **Settings** &rarr; **Pages** (under "Code and automation").
-3. Under **Build and deployment** &rarr; **Source**, select **Deploy from a branch**.
-4. Under **Branch**, select `main` and root `/(root)`, then click **Save**.
-5. Within 1–2 minutes, GitHub Pages will deploy the project at:
-   `https://<your-username>.github.io/oracle-erp-p2p-case-study/`
+The project is deployed and actively hosted on GitHub Pages:
+- **Live Interactive Website URL**: [https://madhav70.github.io/oracle-erp-p2p-case-study/](https://madhav70.github.io/oracle-erp-p2p-case-study/)
+- **Repository Link**: [https://github.com/Madhav70/oracle-erp-p2p-case-study](https://github.com/Madhav70/oracle-erp-p2p-case-study)
+
+The website is 100% self-contained (HTML5, responsive CSS3, vanilla JavaScript ES6) and runs directly in any browser without requiring backend servers, Node modules, databases, or third-party paid API keys. All metrics and charts render instantly from the repository's generated data artifacts.
 
 ---
 

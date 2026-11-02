@@ -1,0 +1,13 @@
+Grouping Dimension,Cohort,Total Invoices,Hold Count,Hold Rate (%),95% CI Lower (%),95% CI Upper (%)
+Overall Population,All Invoices,207,43,20.77,15.8,26.81
+category,Facilities & Services,57,6,10.53,4.91,21.12
+category,IT & Telecommunications,32,4,12.5,4.97,28.07
+category,Logistics,14,1,7.14,1.27,31.47
+category,MRO & Tooling,49,15,30.61,19.52,44.53
+category,Packaging,21,5,23.81,10.63,45.09
+category,Raw Materials,34,12,35.29,21.49,52.09
+matching_type,2-Way Match,103,11,10.68,6.07,18.12
+matching_type,3-Way Match,104,32,30.77,22.72,40.19
+risk_rating,High,8,0,0.0,0.0,32.44
+risk_rating,Low,166,27,16.27,11.43,22.63
+risk_rating,Medium,33,16,48.48,32.5,64.78

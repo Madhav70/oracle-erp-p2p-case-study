@@ -1,0 +1,5 @@
+payment_terms,paid_count,avg_payment_days,median_payment_days,total_paid_value,discounts_earned
+2/10 Net 30,3,21.67,10.0,32754.65,434.38
+Net 30,129,30.81,30.0,1405964.13,0.0
+Net 45,26,47.5,45.0,504606.81,0.0
+Net 60,2,60.0,60.0,43616.65,0.0

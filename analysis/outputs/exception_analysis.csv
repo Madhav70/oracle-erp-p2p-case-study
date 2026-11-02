@@ -1,8 +1,8 @@
 match_status,hold_resolution,incident_count,total_amount,total_variance
-Hold: Missing Goods Receipt,Awaiting Warehouse Receiving Confirmation,6,67031.64,0.0
-Hold: Missing Goods Receipt,Hold Released After Dock Receipt Verified,15,218915.69,0.0
-Hold: Price Variance,AP Supervisor Reviewed & Approved Price Amendment,12,207371.33,14363.67
-Hold: Price Variance,Pending Credit Memo from Supplier,7,98163.94,7722.66
-Hold: Quantity Variance,Shortage Claim Filed with Supplier / Under Review,11,128663.71,0.0
-Matched,Standard Auto-Approval,141,1872105.05,0.0
-Matched (Within Tolerance),Auto-approved within standard tolerance,16,217955.22,426.36
+Hold: Missing Goods Receipt,Awaiting Warehouse Receiving Confirmation,5,60583.3,0.0
+Hold: Missing Goods Receipt,Hold Released After Dock Receipt Verified,13,251457.88,0.0
+Hold: Price Variance,AP Supervisor Reviewed & Approved Price Amendment,10,112888.36,9758.75
+Hold: Price Variance,Pending Credit Memo from Supplier,2,80234.39,6482.46
+Hold: Quantity Variance,Shortage Claim Filed with Supplier / Under Review,13,158390.25,0.0
+Matched,Standard Auto-Approval,153,1865758.88,0.0
+Matched (Within Tolerance),Auto-approved within standard tolerance,11,145416.23,256.72

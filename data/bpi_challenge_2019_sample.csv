@@ -1,0 +1,21 @@
+case_id,purchasing_doc,line_item,spend_category,po_amount_eur,matching_type,gr_date,inv_date,clear_date,invoice_before_gr,payment_block_set,price_rework_count,qty_rework_count,process_path
+BPI-0001,4500012010,1,Raw Materials,12450.00,3-Way Match,2018-02-10,2018-02-18,2018-03-20,0,0,0,0,Standard Happy Path
+BPI-0002,4500012011,1,Packaging,3200.50,3-Way Match,2018-03-05,2018-03-01,2018-04-15,1,1,0,0,Invoice Before GR (Blocked)
+BPI-0003,4500012012,1,Industrial Services,8500.00,2-Way Match,,2018-01-20,2018-02-28,0,0,0,0,2-Way Service Clean
+BPI-0004,4500012013,1,Raw Materials,45100.00,3-Way Match,2018-04-12,2018-04-15,2018-05-30,0,1,1,0,Price Variance Dispute
+BPI-0005,4500012014,1,MRO Tooling,1450.20,3-Way Match,2018-01-15,2018-01-22,2018-02-25,0,0,0,0,Standard Happy Path
+BPI-0006,4500012015,1,Raw Materials,28700.00,3-Way Match,2018-05-18,2018-05-10,2018-06-25,1,1,0,0,Invoice Before GR (Blocked)
+BPI-0007,4500012016,1,Packaging,5600.00,3-Way Match,2018-02-28,2018-03-05,2018-04-05,0,0,0,0,Standard Happy Path
+BPI-0008,4500012017,1,Logistics,4100.00,2-Way Match,,2018-03-12,2018-04-12,0,0,0,0,2-Way Service Clean
+BPI-0009,4500012018,1,Raw Materials,65200.00,3-Way Match,2018-06-02,2018-06-05,2018-07-20,0,1,0,1,Quantity Discrepancy
+BPI-0010,4500012019,1,MRO Tooling,3400.00,3-Way Match,2018-04-10,2018-04-18,2018-05-22,0,0,0,0,Standard Happy Path
+BPI-0011,4500012020,1,Raw Materials,19800.00,3-Way Match,2018-03-15,2018-03-11,2018-04-28,1,1,0,0,Invoice Before GR (Blocked)
+BPI-0012,4500012021,1,Industrial Services,15000.00,2-Way Match,,2018-05-02,2018-06-15,0,1,1,0,Price Amendment Rework
+BPI-0013,4500012022,1,Raw Materials,38900.00,3-Way Match,2018-01-25,2018-02-02,2018-03-10,0,0,0,0,Standard Happy Path
+BPI-0014,4500012023,1,Packaging,7200.00,3-Way Match,2018-06-10,2018-06-15,2018-07-25,0,0,0,0,Standard Happy Path
+BPI-0015,4500012024,1,Raw Materials,52100.00,3-Way Match,2018-02-14,2018-02-08,2018-04-02,1,1,0,0,Invoice Before GR (Blocked)
+BPI-0016,4500012025,1,MRO Tooling,2100.00,3-Way Match,2018-04-22,2018-04-28,2018-05-30,0,0,0,0,Standard Happy Path
+BPI-0017,4500012026,1,Raw Materials,84000.00,3-Way Match,2018-03-18,2018-03-24,2018-05-15,0,1,1,0,Price Variance Dispute
+BPI-0018,4500012027,1,Logistics,6800.00,2-Way Match,,2018-01-10,2018-02-15,0,0,0,0,2-Way Service Clean
+BPI-0019,4500012028,1,Raw Materials,11200.00,3-Way Match,2018-05-05,2018-05-01,2018-06-20,1,1,0,0,Invoice Before GR (Blocked)
+BPI-0020,4500012029,1,Packaging,4900.00,3-Way Match,2018-04-02,2018-04-09,2018-05-14,0,0,0,0,Standard Happy Path

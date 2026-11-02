@@ -1,0 +1,8 @@
+Policy Name,Pct Tolerance,Dollar Cap,Price Holds Generated,Auto-Cleared Invoices,Auto-Clear Rate (%),Overpayment Exposure ($),Clerical Investigation Cost ($),Total Economic Cost ($)
+Zero Tolerance (0% / $0),0.0%,$0.0,23,184,88.89,0.0,603.75,603.75
+Strict (0.5% / $25),0.5%,$25.0,13,194,93.72,226.85,341.25,568.1
+Conservative (1.0% / $35),1.0%,$35.0,12,195,94.2,256.72,315.0,571.72
+Recommended Baseline (1.5% / $50),1.5%,$50.0,12,195,94.2,256.72,315.0,571.72
+Moderate (2.0% / $75),2.0%,$75.0,11,196,94.69,311.72,288.75,600.47
+Permissive (3.0% / $100),3.0%,$100.0,10,197,95.17,406.59,262.5,669.09
+High Tolerance (5.0% / $250),5.0%,$250.0,8,199,96.14,774.68,210.0,984.68

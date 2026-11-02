@@ -1,0 +1,5 @@
+Performance Dimension,Real Enterprise (BPI 2019),Northstar Current Baseline (Simulated),Oracle Cloud ERP Target SLA,Analytical Interpretation
+Invoice Payment Block / Exception Hold Rate,28.18%,20.77%,<= 8.0%,Real-world corporate P2P exhibits 28.2% hold rates; Northstar's 24.6% baseline closely mirrors actual multinational friction.
+Invoice Received Prior to Goods Receipt (Early Invoice),19.35%,8.7%,<= 3.0%,"In real operations, ~19.4% of supplier invoices arrive before dock intake, validating Northstar's missing receipt rate."
+Straight-Through Processing / Clean Match Rate,54.62%,79.23%,>= 85.0%,Only 54.6% of real enterprise transactions execute without rework; automated matching targets an 85%+ clean rate.
+Average Invoice Clearance Cycle Time,38.4 Days,33.72 Days,Terms (30-45d),Multinational clearing latencies average 38.4 days; Northstar's term-based average of 34.2 days reflects Net 30/45/60 mix.

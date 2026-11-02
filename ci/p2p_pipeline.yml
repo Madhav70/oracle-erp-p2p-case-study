@@ -1,0 +1,43 @@
+name: P2P Pipeline CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Data Pipeline & Automated Tests
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r analysis/requirements.txt
+
+      - name: Generate synthetic datasets (seed = 42)
+        run: python analysis/generate_sample_data.py
+
+      - name: Run P2P analytics & financial reconciliation
+        run: python analysis/p2p_analysis.py
+
+      - name: Run tolerance optimisation analysis
+        run: python analysis/tolerance_optimization.py
+
+      - name: Run BPI 2019 benchmark comparison
+        run: python analysis/bpi_2019_benchmark.py
+
+      - name: Run statistical regression analysis
+        run: python analysis/statistical_analysis.py
+
+      - name: Run automated test suite (5 assertions)
+        run: pytest -v --tb=short

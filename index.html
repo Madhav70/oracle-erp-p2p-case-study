@@ -60,32 +60,32 @@
       </div>
     </header>
 
-    <!-- KEY PERFORMANCE INDICATORS (DERIVED FROM GENERATED DATA) -->
+    <!-- KEY PERFORMANCE INDICATORS (DERIVED FROM RECONCILED DATA) -->
     <div class="kpi-grid">
       <div class="kpi-card">
         <div class="kpi-title">Committed PO Spend</div>
-        <div class="kpi-value">$2.96M</div>
-        <p class="kpi-desc">223 Purchase Orders issued across 25 approved vendors ($2,964,919.38).</p>
+        <div class="kpi-value">$2.98M</div>
+        <p class="kpi-desc">224 Purchase Orders issued across 25 approved vendors ($2,975,908.83).</p>
       </div>
       <div class="kpi-card">
         <div class="kpi-title">Invoiced Volume</div>
-        <div class="kpi-value">$2.81M</div>
-        <p class="kpi-desc">208 Vouchers processed ($2,810,206.58); $2.30M disbursed to date.</p>
+        <div class="kpi-value">$2.67M</div>
+        <p class="kpi-desc">207 Vouchers ($2,674,729.29): $1.99M disbursed, $388k approved, $299k on hold.</p>
       </div>
       <div class="kpi-card danger">
-        <div class="kpi-title">Simulated Discrepancy Rate</div>
-        <div class="kpi-value">24.52%</div>
-        <p class="kpi-desc">51 Invoices on hold (Price variance, Missing receipts, Quantity mismatch).</p>
+        <div class="kpi-title">Simulated Hold Rate</div>
+        <div class="kpi-value">20.77%</div>
+        <p class="kpi-desc">43 total matching exceptions; 20 active holds ($299,207.94). BPI benchmark: 28.18%.</p>
       </div>
       <div class="kpi-card warning">
         <div class="kpi-title">Procurement Cycle Time</div>
-        <div class="kpi-value">3.88 Days</div>
-        <p class="kpi-desc">Average elapsed duration from PR creation to PO dispatch (Target: &le; 2.0d).</p>
+        <div class="kpi-value">4.00 Days</div>
+        <p class="kpi-desc">Average elapsed duration from PR creation to PO dispatch (Target SLA: &le; 3.0d).</p>
       </div>
       <div class="kpi-card success">
-        <div class="kpi-title">Data Quality Audit</div>
-        <div class="kpi-value">100% Pass</div>
-        <p class="kpi-desc">Zero foreign-key orphans; strict referential integrity across all tables.</p>
+        <div class="kpi-title">Financial Reconciliation</div>
+        <div class="kpi-value">$0.00 Gap</div>
+        <p class="kpi-desc">Paid + Pending + Active Hold = Total Invoiced ($2,674,729.29). Zero mathematical variance.</p>
       </div>
     </div>
 
@@ -876,14 +876,35 @@
           <h4>Invoice Matching & Exception Hold Distribution</h4>
           <img src="assets/images/chart_exception_breakdown.png" alt="Invoice Exception Breakdown Chart">
           <p style="font-size: 0.8rem; color: var(--neutral-600); margin-top: 0.5rem;">
-            157 invoices matched cleanly (75.48%); 51 vouchers encountered holds (Price variance: 19, Missing receipt: 21, Quantity: 11).
+            164 invoices matched cleanly (79.23%); 43 total exceptions encountered; 20 active unresolved holds ($299,207.94).
           </p>
         </div>
         <div class="chart-card">
           <h4>Cycle Times: Simulated Current vs. Target ERP SLA</h4>
           <img src="assets/images/chart_cycle_times.png" alt="Cycle Times Comparison Chart">
           <p style="font-size: 0.8rem; color: var(--neutral-600); margin-top: 0.5rem;">
-            Requisition approval takes 2.48 days (target: 2.0d); overall procurement cycle takes 3.88 days (target: 3.0d).
+            PR approval turnaround: 2.5 days (target SLA: 2.0d); overall procurement cycle: 4.0 days (target: 3.0d).
+          </p>
+        </div>
+        <div class="chart-card">
+          <h4>Real-World Benchmark: BPI Challenge 2019 Comparison</h4>
+          <img src="assets/images/chart_bpi_empirical_comparison.png" alt="BPI 2019 Empirical Comparison Chart">
+          <p style="font-size: 0.8rem; color: var(--neutral-600); margin-top: 0.5rem;">
+            Empirical validation against AkzoNobel real dataset (251k POs): Real hold rate is 28.18% vs Northstar 20.77%, proving simulated baseline is conservative.
+          </p>
+        </div>
+        <div class="chart-card">
+          <h4>Tolerance Optimization & Trade-off Analysis</h4>
+          <img src="assets/images/chart_tolerance_tradeoff.png" alt="Tolerance Optimization Chart">
+          <p style="font-size: 0.8rem; color: var(--neutral-600); margin-top: 0.5rem;">
+            Optimal economic balance at 1.5% / $50 ($572 total economic cost): balances $257 overpayment exposure with $315 investigation labor.
+          </p>
+        </div>
+        <div class="chart-card" style="grid-column: 1 / -1;">
+          <h4>Hold Probability Econometric Odds Ratios (Logistic Regression)</h4>
+          <img src="assets/images/chart_regression_odds_ratios.png" alt="Econometric Odds Ratios Forest Plot">
+          <p style="font-size: 0.8rem; color: var(--neutral-600); margin-top: 0.5rem;">
+            Statsmodels logit model: 3-Way physical dock match (OR: 2.45) and Raw Materials commodity (OR: 2.04) are primary operational hold drivers.
           </p>
         </div>
       </div>

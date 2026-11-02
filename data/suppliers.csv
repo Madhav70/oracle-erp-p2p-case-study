@@ -1,5 +1,5 @@
 supplier_id,supplier_name,category,payment_terms,risk_rating,lead_time_days,is_active,created_date
-SUP-001,Apex Industrial Fasteners,Raw Materials,Net 30,Low,7,True,2025-11-15
+SUP-001,Apex Industrial Fasteners,Raw Materials,2/10 Net 30,Low,7,True,2025-11-15
 SUP-002,Vulcan Steelworks Corp,Raw Materials,Net 45,Medium,14,True,2025-11-15
 SUP-003,Precision Hydraulics Ltd,MRO & Tooling,Net 30,Low,10,True,2025-11-15
 SUP-004,Orion Logistics & Freight,Logistics,Net 30,Low,5,True,2025-11-15

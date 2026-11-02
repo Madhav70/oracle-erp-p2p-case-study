@@ -1,4 +1,10 @@
 # Northstar Manufacturing Ltd. - P2P Analytics Environment Requirements
-pandas>=2.0.0
-numpy>=1.24.0
-matplotlib>=3.7.0
+# Tested against Python 3.14.7 (Windows / Linux x86_64)
+
+pandas>=2.2.0
+numpy>=1.26.0
+matplotlib>=3.8.0
+statsmodels>=0.14.0
+scipy>=1.12.0
+scikit-learn>=1.4.0
+pytest>=8.0.0

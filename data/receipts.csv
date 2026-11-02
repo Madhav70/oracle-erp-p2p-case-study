@@ -1,106 +1,111 @@
 receipt_id,po_id,supplier_id,receipt_date,receiving_clerk,received_qty_pct,inspection_status,dock_location
-REC-30001,PO-20002,SUP-013,2026-04-08,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
-REC-30002,PO-20005,SUP-013,2026-06-15,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock A - Raw Intake
-REC-30003,PO-20006,SUP-005,2026-03-07,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
-REC-30004,PO-20007,SUP-008,2026-05-23,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30005,PO-20009,SUP-024,2026-03-29,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
-REC-30006,PO-20011,SUP-013,2026-06-15,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30007,PO-20015,SUP-019,2026-03-15,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30008,PO-20016,SUP-013,2026-05-08,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30009,PO-20017,SUP-015,2026-03-03,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30010,PO-20020,SUP-021,2026-03-30,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30011,PO-20021,SUP-007,2026-05-23,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
-REC-30012,PO-20022,SUP-005,2026-03-11,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
-REC-30013,PO-20024,SUP-009,2026-03-23,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30014,PO-20026,SUP-005,2026-05-08,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30015,PO-20028,SUP-021,2026-04-14,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
-REC-30016,PO-20029,SUP-006,2026-02-28,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
-REC-30017,PO-20032,SUP-016,2026-02-24,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30018,PO-20034,SUP-008,2026-04-25,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
-REC-30019,PO-20037,SUP-021,2026-02-15,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30020,PO-20038,SUP-005,2026-02-17,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30021,PO-20039,SUP-022,2026-04-01,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30022,PO-20040,SUP-016,2026-06-29,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30023,PO-20041,SUP-003,2026-02-15,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30024,PO-20042,SUP-015,2026-04-01,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
-REC-30025,PO-20048,SUP-010,2026-05-14,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30026,PO-20051,SUP-005,2026-03-01,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
-REC-30027,PO-20053,SUP-021,2026-05-01,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30028,PO-20055,SUP-007,2026-06-10,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30029,PO-20057,SUP-006,2026-04-15,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30030,PO-20059,SUP-013,2026-05-31,Carlos Mendez (Warehouse Clerk),80.0,Partial Delivery Received,Dock C - Pallet Staging
-REC-30031,PO-20064,SUP-008,2026-05-13,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30032,PO-20065,SUP-003,2026-03-25,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
-REC-30033,PO-20066,SUP-003,2026-05-29,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
-REC-30034,PO-20069,SUP-007,2026-04-13,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30035,PO-20072,SUP-017,2026-07-03,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30036,PO-20073,SUP-015,2026-06-24,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30037,PO-20076,SUP-008,2026-06-20,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30038,PO-20079,SUP-001,2026-03-03,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
-REC-30039,PO-20081,SUP-002,2026-04-09,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30040,PO-20082,SUP-015,2026-04-08,Carlos Mendez (Warehouse Clerk),90.0,Damaged in Transit / Return Recorded,Dock C - Pallet Staging
-REC-30041,PO-20083,SUP-010,2026-05-18,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30042,PO-20085,SUP-017,2026-05-22,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30043,PO-20086,SUP-007,2026-05-22,Carlos Mendez (Warehouse Clerk),90.0,Damaged in Transit / Return Recorded,Dock A - Raw Intake
-REC-30044,PO-20088,SUP-016,2026-03-27,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30045,PO-20089,SUP-019,2026-04-26,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
-REC-30046,PO-20092,SUP-005,2026-04-27,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
-REC-30047,PO-20096,SUP-005,2026-04-06,Tom Bradley (Receiving Lead),80.0,Partial Delivery Received,Dock C - Pallet Staging
-REC-30048,PO-20100,SUP-003,2026-03-11,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30049,PO-20101,SUP-021,2026-03-02,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30050,PO-20108,SUP-015,2026-06-14,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30051,PO-20109,SUP-011,2026-04-17,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock A - Raw Intake
-REC-30052,PO-20110,SUP-017,2026-03-08,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30053,PO-20113,SUP-007,2026-02-19,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
-REC-30054,PO-20115,SUP-001,2026-05-06,Carlos Mendez (Warehouse Clerk),80.0,Partial Delivery Received,Dock B - Central Bay
-REC-30055,PO-20117,SUP-021,2026-04-04,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
-REC-30056,PO-20121,SUP-007,2026-02-06,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
-REC-30057,PO-20122,SUP-022,2026-05-15,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30058,PO-20125,SUP-015,2026-04-30,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
-REC-30059,PO-20126,SUP-016,2026-04-12,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30060,PO-20130,SUP-003,2026-04-27,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
-REC-30061,PO-20134,SUP-006,2026-05-18,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
-REC-30062,PO-20142,SUP-001,2026-03-19,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
-REC-30063,PO-20143,SUP-002,2026-05-13,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
-REC-30064,PO-20144,SUP-003,2026-05-23,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
-REC-30065,PO-20145,SUP-013,2026-04-24,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
-REC-30066,PO-20146,SUP-016,2026-05-17,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30067,PO-20148,SUP-006,2026-05-22,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock A - Raw Intake
-REC-30068,PO-20152,SUP-006,2026-02-05,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
-REC-30069,PO-20154,SUP-009,2026-05-03,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30070,PO-20155,SUP-003,2026-06-05,Tom Bradley (Receiving Lead),80.0,Partial Delivery Received,Dock B - Central Bay
-REC-30071,PO-20158,SUP-006,2026-01-31,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30072,PO-20163,SUP-015,2026-03-19,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30073,PO-20164,SUP-009,2026-05-01,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30074,PO-20166,SUP-016,2026-04-24,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30075,PO-20172,SUP-006,2026-04-07,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30076,PO-20173,SUP-010,2026-06-23,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30077,PO-20175,SUP-005,2026-04-22,Sarah Jenkins (Dock Specialist),90.0,Damaged in Transit / Return Recorded,Dock B - Central Bay
-REC-30078,PO-20176,SUP-006,2026-03-10,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30079,PO-20177,SUP-007,2026-05-10,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30080,PO-20178,SUP-001,2026-06-05,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30081,PO-20179,SUP-003,2026-02-27,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30082,PO-20182,SUP-006,2026-03-18,Sarah Jenkins (Dock Specialist),80.0,Partial Delivery Received,Dock B - Central Bay
-REC-30083,PO-20186,SUP-021,2026-04-24,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30084,PO-20187,SUP-017,2026-06-03,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
-REC-30085,PO-20190,SUP-019,2026-03-29,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock A - Raw Intake
-REC-30086,PO-20191,SUP-017,2026-06-04,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
-REC-30087,PO-20192,SUP-010,2026-05-31,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
-REC-30088,PO-20193,SUP-016,2026-02-27,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
-REC-30089,PO-20194,SUP-003,2026-04-30,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
-REC-30090,PO-20195,SUP-017,2026-03-23,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30091,PO-20197,SUP-010,2026-03-11,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
-REC-30092,PO-20198,SUP-021,2026-05-26,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30093,PO-20199,SUP-024,2026-03-25,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30094,PO-20203,SUP-006,2026-02-17,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock A - Raw Intake
-REC-30095,PO-20204,SUP-015,2026-03-28,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
-REC-30096,PO-20207,SUP-016,2026-05-25,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30097,PO-20208,SUP-013,2026-03-26,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
-REC-30098,PO-20209,SUP-019,2026-04-01,Carlos Mendez (Warehouse Clerk),80.0,Partial Delivery Received,Dock B - Central Bay
-REC-30099,PO-20210,SUP-015,2026-02-24,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30100,PO-20213,SUP-003,2026-04-03,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30101,PO-20216,SUP-015,2026-05-20,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
-REC-30102,PO-20217,SUP-005,2026-04-20,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock A - Raw Intake
-REC-30103,PO-20218,SUP-008,2026-04-08,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
-REC-30104,PO-20219,SUP-024,2026-04-14,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
-REC-30105,PO-20223,SUP-021,2026-03-17,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30001,PO-20002,SUP-013,2026-04-07,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock A - Raw Intake
+REC-30002,PO-20005,SUP-013,2026-06-22,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
+REC-30003,PO-20006,SUP-005,2026-02-28,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30004,PO-20007,SUP-008,2026-05-23,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
+REC-30005,PO-20009,SUP-024,2026-04-03,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30006,PO-20011,SUP-013,2026-06-13,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30007,PO-20015,SUP-019,2026-03-18,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30008,PO-20016,SUP-013,2026-05-04,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30009,PO-20017,SUP-015,2026-03-06,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30010,PO-20018,SUP-007,2026-04-22,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
+REC-30011,PO-20019,SUP-021,2026-03-28,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
+REC-30012,PO-20021,SUP-007,2026-03-30,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30013,PO-20022,SUP-021,2026-05-20,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30014,PO-20023,SUP-024,2026-02-27,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
+REC-30015,PO-20025,SUP-009,2026-03-23,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
+REC-30016,PO-20029,SUP-009,2026-04-13,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30017,PO-20030,SUP-015,2026-03-09,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
+REC-30018,PO-20031,SUP-021,2026-03-24,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30019,PO-20033,SUP-003,2026-02-22,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30020,PO-20035,SUP-009,2026-04-24,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30021,PO-20038,SUP-013,2026-02-19,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30022,PO-20039,SUP-022,2026-02-18,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30023,PO-20040,SUP-019,2026-04-10,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
+REC-30024,PO-20042,SUP-009,2026-02-11,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30025,PO-20043,SUP-015,2026-04-03,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
+REC-30026,PO-20045,SUP-009,2026-03-14,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30027,PO-20049,SUP-011,2026-05-14,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30028,PO-20052,SUP-002,2026-03-01,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30029,PO-20054,SUP-013,2026-05-04,Carlos Mendez (Warehouse Clerk),80.0,Partial Delivery Received,Dock C - Pallet Staging
+REC-30030,PO-20058,SUP-006,2026-04-12,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30031,PO-20060,SUP-007,2026-05-29,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
+REC-30032,PO-20064,SUP-010,2026-07-01,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
+REC-30033,PO-20065,SUP-003,2026-05-24,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30034,PO-20066,SUP-003,2026-03-28,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30035,PO-20067,SUP-007,2026-05-27,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30036,PO-20070,SUP-007,2026-04-07,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30037,PO-20073,SUP-001,2026-06-28,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
+REC-30038,PO-20074,SUP-015,2026-06-25,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30039,PO-20077,SUP-009,2026-06-21,Carlos Mendez (Warehouse Clerk),90.0,Damaged in Transit / Return Recorded,Dock C - Pallet Staging
+REC-30040,PO-20080,SUP-019,2026-03-13,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30041,PO-20082,SUP-024,2026-03-28,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30042,PO-20083,SUP-015,2026-04-12,Carlos Mendez (Warehouse Clerk),90.0,Damaged in Transit / Return Recorded,Dock A - Raw Intake
+REC-30043,PO-20084,SUP-024,2026-05-04,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30044,PO-20085,SUP-017,2026-05-11,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
+REC-30045,PO-20086,SUP-005,2026-05-23,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
+REC-30046,PO-20087,SUP-009,2026-05-22,Tom Bradley (Receiving Lead),80.0,Partial Delivery Received,Dock C - Pallet Staging
+REC-30047,PO-20089,SUP-007,2026-03-24,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30048,PO-20090,SUP-010,2026-04-27,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30049,PO-20093,SUP-022,2026-04-26,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30050,PO-20097,SUP-019,2026-04-15,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock A - Raw Intake
+REC-30051,PO-20101,SUP-021,2026-03-08,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30052,PO-20102,SUP-003,2026-03-02,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
+REC-30053,PO-20109,SUP-015,2026-06-20,Carlos Mendez (Warehouse Clerk),80.0,Partial Delivery Received,Dock B - Central Bay
+REC-30054,PO-20110,SUP-017,2026-04-20,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
+REC-30055,PO-20111,SUP-017,2026-03-03,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
+REC-30056,PO-20114,SUP-009,2026-02-17,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30057,PO-20116,SUP-022,2026-05-08,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
+REC-30058,PO-20118,SUP-003,2026-03-29,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30059,PO-20122,SUP-007,2026-02-10,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
+REC-30060,PO-20123,SUP-017,2026-05-19,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
+REC-30061,PO-20126,SUP-006,2026-05-01,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
+REC-30062,PO-20127,SUP-007,2026-04-06,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
+REC-30063,PO-20131,SUP-013,2026-04-22,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
+REC-30064,PO-20135,SUP-006,2026-05-19,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
+REC-30065,PO-20143,SUP-002,2026-03-30,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30066,PO-20144,SUP-022,2026-05-19,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock A - Raw Intake
+REC-30067,PO-20145,SUP-013,2026-05-16,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30068,PO-20146,SUP-016,2026-05-07,Carlos Mendez (Warehouse Clerk),90.0,Damaged in Transit / Return Recorded,Dock A - Raw Intake
+REC-30069,PO-20147,SUP-003,2026-05-10,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
+REC-30070,PO-20149,SUP-015,2026-05-19,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30071,PO-20152,SUP-021,2026-07-03,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
+REC-30072,PO-20153,SUP-006,2026-01-31,Carlos Mendez (Warehouse Clerk),90.0,Damaged in Transit / Return Recorded,Dock A - Raw Intake
+REC-30073,PO-20155,SUP-003,2026-05-13,Tom Bradley (Receiving Lead),80.0,Partial Delivery Received,Dock B - Central Bay
+REC-30074,PO-20156,SUP-007,2026-06-01,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30075,PO-20164,SUP-015,2026-03-17,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30076,PO-20165,SUP-013,2026-04-21,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30077,PO-20166,SUP-016,2026-05-24,Sarah Jenkins (Dock Specialist),90.0,Damaged in Transit / Return Recorded,Dock B - Central Bay
+REC-30078,PO-20167,SUP-009,2026-04-22,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30079,PO-20170,SUP-009,2026-06-06,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30080,PO-20173,SUP-006,2026-04-04,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30081,PO-20174,SUP-017,2026-06-19,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30082,PO-20176,SUP-001,2026-04-21,Sarah Jenkins (Dock Specialist),80.0,Partial Delivery Received,Dock B - Central Bay
+REC-30083,PO-20177,SUP-015,2026-03-01,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30084,PO-20178,SUP-021,2026-05-12,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
+REC-30085,PO-20179,SUP-001,2026-06-11,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock A - Raw Intake
+REC-30086,PO-20180,SUP-009,2026-03-03,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
+REC-30087,PO-20183,SUP-015,2026-03-12,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
+REC-30088,PO-20187,SUP-013,2026-04-28,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
+REC-30089,PO-20188,SUP-024,2026-05-28,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
+REC-30090,PO-20191,SUP-017,2026-03-19,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30091,PO-20192,SUP-010,2026-06-04,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
+REC-30092,PO-20193,SUP-022,2026-05-27,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30093,PO-20194,SUP-003,2026-02-17,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30094,PO-20195,SUP-016,2026-05-07,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock A - Raw Intake
+REC-30095,PO-20196,SUP-001,2026-03-22,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock A - Raw Intake
+REC-30096,PO-20198,SUP-017,2026-03-05,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30097,PO-20199,SUP-009,2026-05-30,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
+REC-30098,PO-20200,SUP-019,2026-04-08,Carlos Mendez (Warehouse Clerk),80.0,Partial Delivery Received,Dock B - Central Bay
+REC-30099,PO-20204,SUP-015,2026-02-18,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30100,PO-20205,SUP-006,2026-03-21,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30101,PO-20206,SUP-015,2026-04-10,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock A - Raw Intake
+REC-30102,PO-20208,SUP-013,2026-05-11,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock A - Raw Intake
+REC-30103,PO-20209,SUP-003,2026-04-01,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30104,PO-20210,SUP-002,2026-03-27,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30105,PO-20211,SUP-015,2026-02-22,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock B - Central Bay
+REC-30106,PO-20214,SUP-003,2026-04-07,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock B - Central Bay
+REC-30107,PO-20217,SUP-006,2026-05-26,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock B - Central Bay
+REC-30108,PO-20218,SUP-017,2026-05-02,Carlos Mendez (Warehouse Clerk),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30109,PO-20219,SUP-007,2026-04-12,Sarah Jenkins (Dock Specialist),100.0,Accepted Full,Dock C - Pallet Staging
+REC-30110,PO-20224,SUP-016,2026-03-29,Tom Bradley (Receiving Lead),100.0,Accepted Full,Dock C - Pallet Staging

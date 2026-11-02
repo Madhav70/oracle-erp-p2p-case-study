@@ -1,9 +1,9 @@
 """
 Northstar Manufacturing Ltd. - Procure-to-Pay (P2P) Comprehensive Analysis
 --------------------------------------------------------------------------
-Conducts data quality audits, calculates key operational & financial metrics,
-computes cycle times, analyzes invoice discrepancies, and outputs summaries
-and professional visualization charts.
+Conducts automated data quality and financial reconciliation audits,
+calculates key operational & financial metrics, computes term-based payment cycle
+times, analyzes invoice discrepancies, and outputs summaries and charts.
 
 Outputs generated in ../analysis/outputs/ and ../assets/images/:
 - p2p_summary_metrics.json
@@ -11,6 +11,7 @@ Outputs generated in ../analysis/outputs/ and ../assets/images/:
 - spend_by_category.csv
 - exception_analysis.csv
 - cycle_times.csv
+- payment_terms_performance.csv
 - chart_spend_by_category.png
 - chart_monthly_spend.png
 - chart_exception_breakdown.png
@@ -24,7 +25,7 @@ from datetime import datetime
 import pandas as pd
 import numpy as np
 
-# Set matplotlib backend and config to avoid GUI errors and permission warnings
+# Set matplotlib backend and config
 os.environ['MPLCONFIGDIR'] = os.path.join(os.path.dirname(__file__), '.mpl_cache')
 import matplotlib
 matplotlib.use('Agg')
@@ -41,9 +42,9 @@ os.makedirs(os.environ['MPLCONFIGDIR'], exist_ok=True)
 
 def run_data_quality_checks(df_sup, df_req, df_po, df_rec, df_inv):
     """
-    Automated Data Quality & Referential Integrity Verifications
+    Automated Data Quality & Financial Reconciliation Audits
     """
-    print("\n--- RUNNING AUTOMATED DATA QUALITY AUDIT ---")
+    print("\n--- RUNNING AUTOMATED DATA QUALITY & FINANCIAL AUDIT ---")
     issues = []
     
     # 1. Primary Key Uniqueness
@@ -84,10 +85,24 @@ def run_data_quality_checks(df_sup, df_req, df_po, df_rec, df_inv):
     if (df_inv['invoice_amount'] <= 0).any():
         issues.append("Non-positive Invoice amounts detected")
         
+    # 4. Strict Financial Reconciliation Audit:
+    # Total Invoiced == Disbursed (Paid) + Approved Pending Payment + Active On Hold
+    total_inv = round(float(df_inv['invoice_amount'].sum()), 2)
+    paid_amt = round(float(df_inv[df_inv['payment_status'] == 'Paid']['invoice_amount'].sum()), 2)
+    pending_amt = round(float(df_inv[df_inv['payment_status'] == 'Approved for Payment']['invoice_amount'].sum()), 2)
+    on_hold_amt = round(float(df_inv[df_inv['payment_status'] == 'On Hold']['invoice_amount'].sum()), 2)
+    
+    reconciled_sum = round(paid_amt + pending_amt + on_hold_amt, 2)
+    variance = round(total_inv - reconciled_sum, 2)
+    
+    if abs(variance) > 0.01:
+        issues.append(f"Financial reconciliation failed: Total Invoiced (${total_inv}) != Sum (${reconciled_sum}), Variance: ${variance}")
+        
     if not issues:
         print("[PASS] Referential integrity verified: All Foreign Keys map accurately.")
         print("[PASS] Uniqueness check passed: No duplicate primary keys found.")
         print("[PASS] Numeric check passed: All transaction amounts are strictly positive.")
+        print(f"[PASS] Financial Reconciliation passed to the cent: Total ${total_inv:,.2f} = Disbursed ${paid_amt:,.2f} + Pending ${pending_amt:,.2f} + Active Hold ${on_hold_amt:,.2f} (Variance: ${variance:.2f})")
     else:
         for iss in issues:
             print(f"[FAIL] {iss}")
@@ -100,11 +115,20 @@ def analyze_p2p_metrics(df_sup, df_req, df_po, df_rec, df_inv):
     """
     print("\n--- COMPUTING PROCUREMENT & FINANCIAL METRICS ---")
     
-    # Financial Totals
+    # Financial Totals & Airtight Reconciliation
     total_po_value = float(df_po['po_amount'].sum())
     total_invoiced_value = float(df_inv['invoice_amount'].sum())
+    
     paid_invoices = df_inv[df_inv['payment_status'] == 'Paid']
     total_paid_value = float(paid_invoices['invoice_amount'].sum())
+    
+    pending_invoices = df_inv[df_inv['payment_status'] == 'Approved for Payment']
+    total_pending_value = float(pending_invoices['invoice_amount'].sum())
+    
+    active_hold_invoices = df_inv[df_inv['payment_status'] == 'On Hold']
+    total_active_hold_value = float(active_hold_invoices['invoice_amount'].sum())
+    
+    total_discounts_captured = float(df_inv['discount_captured_amount'].sum()) if 'discount_captured_amount' in df_inv.columns else 0.0
     
     # Counts
     total_prs = len(df_req)
@@ -116,36 +140,27 @@ def analyze_p2p_metrics(df_sup, df_req, df_po, df_rec, df_inv):
     total_receipts = len(df_rec)
     total_invoices = len(df_inv)
     
-    # Discrepancy & Exception Analysis
-    # Definition: Exceptions include any hold (Price variance, Missing receipt, Quantity variance)
-    exception_invoices = df_inv[df_inv['match_status'].str.startswith('Hold')]
-    exception_count = len(exception_invoices)
+    # Discrepancy & Exception Analysis (Matching Engine Level)
+    # Total historical matching exceptions encountered
+    historical_exceptions = df_inv[df_inv['match_status'].str.startswith('Hold')]
+    exception_count = len(historical_exceptions)
     clean_matched_count = len(df_inv[df_inv['match_status'].str.startswith('Matched')])
     
-    # Metrics definitions:
-    # 1. Transaction Discrepancy Rate (Count) = Total Invoices with Exception Holds / Total Invoices Processed
-    exception_rate_count = round((exception_count / total_invoices) * 100, 2) if total_invoices > 0 else 0.0
+    # Resolved exceptions vs active exceptions
+    resolved_exceptions = historical_exceptions[historical_exceptions['payment_status'] != 'On Hold']
+    active_exceptions = historical_exceptions[historical_exceptions['payment_status'] == 'On Hold']
     
-    # 2. Value-Weighted Discrepancy Rate = Total Amount of Invoices on Hold / Total Invoiced Amount
-    exception_value = float(exception_invoices['invoice_amount'].sum())
+    exception_rate_count = round((exception_count / total_invoices) * 100, 2) if total_invoices > 0 else 0.0
+    exception_value = float(historical_exceptions['invoice_amount'].sum())
     exception_rate_value = round((exception_value / total_invoiced_value) * 100, 2) if total_invoiced_value > 0 else 0.0
     
-    # Price Variance Breakdown
+    # Breakdown of holds by root cause
     price_var_invs = df_inv[df_inv['match_status'] == 'Hold: Price Variance']
-    price_var_count = len(price_var_invs)
-    price_var_amt = float(price_var_invs['invoice_amount'].sum())
-    total_price_delta = float(df_inv['variance_amount'].sum())
-    
     missing_receipt_invs = df_inv[df_inv['match_status'] == 'Hold: Missing Goods Receipt']
-    missing_rec_count = len(missing_receipt_invs)
-    missing_rec_amt = float(missing_receipt_invs['invoice_amount'].sum())
-    
     qty_var_invs = df_inv[df_inv['match_status'] == 'Hold: Quantity Variance']
-    qty_var_count = len(qty_var_invs)
-    qty_var_amt = float(qty_var_invs['invoice_amount'].sum())
     
-    # Cycle Time Computations
-    # 1. Requisition Approval Cycle Time: PR Date -> PR Approval Date
+    # Cycle Times Computations
+    # 1. PR Approval Time (Submission -> Approval)
     pr_merged = df_req[df_req['approval_date'].notna()].copy()
     pr_merged['approval_days'] = (
         pd.to_datetime(pr_merged['approval_date']) - pd.to_datetime(pr_merged['pr_date'])
@@ -153,7 +168,7 @@ def analyze_p2p_metrics(df_sup, df_req, df_po, df_rec, df_inv):
     avg_pr_approval_days = round(float(pr_merged['approval_days'].mean()), 2)
     median_pr_approval_days = round(float(pr_merged['approval_days'].median()), 2)
     
-    # 2. PO Issuance Turnaround: PR Approval Date -> PO Date
+    # 2. Buyer Turnaround (PR Approval -> PO Issuance)
     po_pr_merged = df_po.merge(df_req[['pr_id', 'approval_date']], on='pr_id')
     po_pr_merged['po_creation_days'] = (
         pd.to_datetime(po_pr_merged['po_date']) - pd.to_datetime(po_pr_merged['approval_date'])
@@ -161,7 +176,7 @@ def analyze_p2p_metrics(df_sup, df_req, df_po, df_rec, df_inv):
     avg_po_creation_days = round(float(po_pr_merged['po_creation_days'].mean()), 2)
     median_po_creation_days = round(float(po_pr_merged['po_creation_days'].median()), 2)
     
-    # 3. Overall Procurement Cycle Time (PR Creation -> PO Issuance)
+    # 3. Overall Procurement Cycle (PR Submission -> PO Issuance)
     po_pr_full = df_po.merge(df_req[['pr_id', 'pr_date']], on='pr_id')
     po_pr_full['full_po_cycle_days'] = (
         pd.to_datetime(po_pr_full['po_date']) - pd.to_datetime(po_pr_full['pr_date'])
@@ -169,14 +184,14 @@ def analyze_p2p_metrics(df_sup, df_req, df_po, df_rec, df_inv):
     avg_po_cycle_days = round(float(po_pr_full['full_po_cycle_days'].mean()), 2)
     median_po_cycle_days = round(float(po_pr_full['full_po_cycle_days'].median()), 2)
     
-    # 4. Receipt to Invoice Days (for matched items with receipts)
+    # 4. Receipt to Invoice Days
     inv_rec = df_inv.merge(df_rec[['po_id', 'receipt_date']], on='po_id', how='inner')
     inv_rec['rec_to_inv_days'] = (
         pd.to_datetime(inv_rec['invoice_date']) - pd.to_datetime(inv_rec['receipt_date'])
     ).dt.days
     avg_rec_to_inv_days = round(float(inv_rec['rec_to_inv_days'].mean()), 2)
     
-    # 5. Invoice to Payment Days (for paid items)
+    # 5. Payment Turnaround by Payment Terms (Verifying timing respects terms)
     paid_invs = df_inv[df_inv['paid_date'].notna()].copy()
     paid_invs['inv_to_pay_days'] = (
         pd.to_datetime(paid_invs['paid_date']) - pd.to_datetime(paid_invs['invoice_date'])
@@ -184,20 +199,38 @@ def analyze_p2p_metrics(df_sup, df_req, df_po, df_rec, df_inv):
     avg_inv_to_pay_days = round(float(paid_invs['inv_to_pay_days'].mean()), 2)
     median_inv_to_pay_days = round(float(paid_invs['inv_to_pay_days'].median()), 2)
     
-    # Compile Summary Dictionary
+    terms_performance = paid_invs.groupby('payment_terms').agg(
+        paid_count=('invoice_id', 'count'),
+        avg_payment_days=('inv_to_pay_days', 'mean'),
+        median_payment_days=('inv_to_pay_days', 'median'),
+        total_paid_value=('invoice_amount', 'sum'),
+        discounts_earned=('discount_captured_amount', 'sum')
+    ).reset_index()
+    terms_performance['avg_payment_days'] = terms_performance['avg_payment_days'].round(2)
+    terms_performance['total_paid_value'] = terms_performance['total_paid_value'].round(2)
+    terms_performance['discounts_earned'] = terms_performance['discounts_earned'].round(2)
+    terms_performance.to_csv(os.path.join(OUTPUT_DIR, 'payment_terms_performance.csv'), index=False)
+    
+    # Comprehensive Summary Dictionary with Exact Reconciliation
     summary = {
         "metadata": {
             "organization": "Northstar Manufacturing Ltd.",
             "project_name": "Oracle ERP Procure-to-Pay Implementation Simulation",
             "analysis_timestamp": datetime.now().isoformat(),
-            "status": "Simulated Analytics - Synthetic Baseline",
+            "status": "Simulated Analytics - Reconciled Baseline",
             "seed": 42
         },
-        "financial_overview": {
-            "total_po_value": round(total_po_value, 2),
+        "financial_reconciliation": {
+            "equation": "total_invoiced_value = total_disbursed_paid + total_approved_pending + total_active_on_hold",
+            "total_po_committed_value": round(total_po_value, 2),
             "total_invoiced_value": round(total_invoiced_value, 2),
-            "total_paid_value": round(total_paid_value, 2),
-            "total_price_variance_delta": round(total_price_delta, 2)
+            "total_disbursed_paid": round(total_paid_value, 2),
+            "total_approved_pending_payment": round(total_pending_value, 2),
+            "total_active_on_hold": round(total_active_hold_value, 2),
+            "sum_of_disbursed_pending_and_hold": round(total_paid_value + total_pending_value + total_active_hold_value, 2),
+            "mathematical_variance": round(total_invoiced_value - (total_paid_value + total_pending_value + total_active_hold_value), 2),
+            "early_discounts_captured": round(total_discounts_captured, 2),
+            "total_price_variance_delta": round(float(df_inv['variance_amount'].sum()), 2)
         },
         "transaction_counts": {
             "total_suppliers": len(df_sup),
@@ -208,47 +241,55 @@ def analyze_p2p_metrics(df_sup, df_req, df_po, df_rec, df_inv):
             "total_purchase_orders": total_pos,
             "total_goods_receipts": total_receipts,
             "total_invoices": total_invoices,
-            "paid_invoices": len(paid_invoices),
-            "invoices_on_hold": len(df_inv[df_inv['payment_status'] == 'On Hold']),
-            "approved_pending_payment": len(df_inv[df_inv['payment_status'] == 'Approved for Payment'])
+            "paid_invoices_count": len(paid_invoices),
+            "approved_pending_payment_count": len(pending_invoices),
+            "active_on_hold_count": len(active_hold_invoices)
         },
-        "discrepancy_and_exception_metrics": {
+        "matching_exceptions_summary": {
             "clean_matched_count": clean_matched_count,
-            "total_exception_count": exception_count,
+            "total_exceptions_encountered": exception_count,
             "exception_rate_count_pct": exception_rate_count,
-            "exception_value": round(exception_value, 2),
+            "exception_value_total": round(exception_value, 2),
             "exception_rate_value_pct": exception_rate_value,
-            "price_variance_count": price_var_count,
-            "price_variance_value": round(price_var_amt, 2),
-            "missing_receipt_count": missing_rec_count,
-            "missing_receipt_value": round(missing_rec_amt, 2),
-            "quantity_variance_count": qty_var_count,
-            "quantity_variance_value": round(qty_var_amt, 2)
+            "resolved_exceptions_count": len(resolved_exceptions),
+            "resolved_exceptions_value": round(float(resolved_exceptions['invoice_amount'].sum()), 2),
+            "unresolved_active_holds_count": len(active_exceptions),
+            "unresolved_active_holds_value": round(float(active_exceptions['invoice_amount'].sum()), 2),
+            "price_variance_count": len(price_var_invs),
+            "price_variance_value": round(float(price_var_invs['invoice_amount'].sum()), 2),
+            "missing_receipt_count": len(missing_receipt_invs),
+            "missing_receipt_value": round(float(missing_receipt_invs['invoice_amount'].sum()), 2),
+            "quantity_variance_count": len(qty_var_invs),
+            "quantity_variance_value": round(float(qty_var_invs['invoice_amount'].sum()), 2)
         },
         "cycle_time_metrics_days": {
             "pr_approval_time": {
                 "mean": avg_pr_approval_days,
                 "median": median_pr_approval_days,
-                "description": "Days between Requisition submission and Managerial approval"
+                "target_sla": 2.0,
+                "description": "Days between Requisition submission and Managerial approval (Consistent 2.0d Target SLA)"
             },
             "po_creation_turnaround": {
                 "mean": avg_po_creation_days,
                 "median": median_po_creation_days,
+                "target_sla": 1.0,
                 "description": "Days between PR approval and PO issuance by Buyer"
             },
             "procurement_cycle_time": {
                 "mean": avg_po_cycle_days,
                 "median": median_po_cycle_days,
+                "target_sla": 3.0,
                 "description": "Total elapsed days from initial Requisition creation to PO issuance"
             },
             "receipt_to_invoice_turnaround": {
                 "mean": avg_rec_to_inv_days,
+                "target_sla": 3.0,
                 "description": "Days between physical dock receipt and invoice recording"
             },
             "invoice_to_payment_cycle_time": {
                 "mean": avg_inv_to_pay_days,
                 "median": median_inv_to_pay_days,
-                "description": "Days between invoice recording and final payment disbursement"
+                "description": "Days between invoice recording and final payment disbursement (respecting contractual terms)"
             }
         }
     }
@@ -259,7 +300,7 @@ def analyze_p2p_metrics(df_sup, df_req, df_po, df_rec, df_inv):
         json.dump(summary, f, indent=4)
     print(f"[OK] Summary metrics JSON saved to {json_path}")
     
-    # Groupings & Export Tables
+    # Export Tables
     # 1. Spend by Category
     cat_spend = df_po.groupby('category').agg(
         po_count=('po_id', 'count'),
@@ -282,7 +323,8 @@ def analyze_p2p_metrics(df_sup, df_req, df_po, df_rec, df_inv):
         invoice_count=('invoice_id', 'count'),
         invoiced_amount=('invoice_amount', 'sum'),
         exception_count=('match_status', lambda s: s.str.startswith('Hold').sum()),
-        paid_amount=('invoice_amount', lambda s: s[df_inv.loc[s.index, 'payment_status'] == 'Paid'].sum())
+        paid_amount=('invoice_amount', lambda s: s[df_inv.loc[s.index, 'payment_status'] == 'Paid'].sum()),
+        active_hold_count=('payment_status', lambda s: (s == 'On Hold').sum())
     ).reset_index()
     
     sup_analysis = sup_pos.merge(sup_invs, on='supplier_id', how='left').fillna(0)
@@ -307,13 +349,13 @@ def analyze_p2p_metrics(df_sup, df_req, df_po, df_rec, df_inv):
     exc_breakdown['total_variance'] = exc_breakdown['total_variance'].round(2)
     exc_breakdown.to_csv(os.path.join(OUTPUT_DIR, 'exception_analysis.csv'), index=False)
     
-    # 4. Cycle Times Summary Table
+    # 4. Cycle Times Summary Table (Unified 2.0d Target SLA)
     cycle_df = pd.DataFrame([
         {"Stage": "Requisition to Manager Approval", "Average (Days)": avg_pr_approval_days, "Median (Days)": median_pr_approval_days, "Target (Days)": 2.0},
         {"Stage": "Approval to PO Issuance (Buyer Turnaround)", "Average (Days)": avg_po_creation_days, "Median (Days)": median_po_creation_days, "Target (Days)": 1.0},
         {"Stage": "Total Procurement Cycle (PR to PO)", "Average (Days)": avg_po_cycle_days, "Median (Days)": median_po_cycle_days, "Target (Days)": 3.0},
         {"Stage": "Receipt to Invoice Capture", "Average (Days)": avg_rec_to_inv_days, "Median (Days)": "N/A", "Target (Days)": 3.0},
-        {"Stage": "Invoice Capture to Payment Disbursement", "Average (Days)": avg_inv_to_pay_days, "Median (Days)": median_inv_to_pay_days, "Target (Days)": 30.0}
+        {"Stage": "Invoice Capture to Payment Disbursement", "Average (Days)": avg_inv_to_pay_days, "Median (Days)": median_inv_to_pay_days, "Target (Days)": "Per Terms (30-60d)"}
     ])
     cycle_df.to_csv(os.path.join(OUTPUT_DIR, 'cycle_times.csv'), index=False)
     
@@ -325,7 +367,6 @@ def generate_visualizations(cat_spend, df_inv, df_po, summary):
     """
     print("\n--- GENERATING VISUALIZATION CHARTS ---")
     
-    # Styling settings
     plt.rcParams['font.sans-serif'] = 'DejaVu Sans'
     plt.rcParams['axes.edgecolor'] = '#cbd5e1'
     plt.rcParams['axes.linewidth'] = 0.8
@@ -370,8 +411,8 @@ def generate_visualizations(cat_spend, df_inv, df_po, summary):
     plt.close()
     
     # 3. Invoice Exception Distribution (Donut Chart)
-    exc_metrics = summary['discrepancy_and_exception_metrics']
-    labels = ['Clean 3-Way/2-Way Match', 'Price Variance Hold', 'Missing Receipt Hold', 'Quantity Variance Hold']
+    exc_metrics = summary['matching_exceptions_summary']
+    labels = ['Clean Match', 'Price Variance Hold', 'Missing Receipt Hold', 'Quantity Variance Hold']
     counts = [
         exc_metrics['clean_matched_count'],
         exc_metrics['price_variance_count'],
@@ -394,14 +435,14 @@ def generate_visualizations(cat_spend, df_inv, df_po, summary):
         at.set_color('white')
         at.set_weight('bold')
         at.set_fontsize(10)
-    ax.legend(wedges, [f"{l} ({c})" for l, c in zip(labels, counts)], title="Invoice Status Breakdown", loc="center left", bbox_to_anchor=(1, 0, 0.5, 1), fontsize=9)
+    ax.legend(wedges, [f"{l} ({c})" for l, c in zip(labels, counts)], title="Matching Status Breakdown", loc="center left", bbox_to_anchor=(1, 0, 0.5, 1), fontsize=9)
     ax.set_title(f"Supplier Invoice Matching & Hold Distribution\n(Total Invoices = {summary['transaction_counts']['total_invoices']})", fontsize=12, fontweight='bold', pad=15, color='#0f172a')
     plt.tight_layout()
     chart3_path = os.path.join(OUTPUT_DIR, 'chart_exception_breakdown.png')
     plt.savefig(chart3_path)
     plt.close()
     
-    # 4. Cycle Times Comparison (Actual Simulated vs Target Assumption)
+    # 4. Cycle Times Comparison (Unified Target 2.0d SLA)
     stages = [
         'PR Manager\nApproval',
         'Buyer PO\nTurnaround',
@@ -423,7 +464,7 @@ def generate_visualizations(cat_spend, df_inv, df_po, summary):
     rects1 = ax.bar(x - width/2, simulated_vals, width, label='Current Simulated (Mean Days)', color='#3b82f6')
     rects2 = ax.bar(x + width/2, target_vals, width, label='To-Be ERP SLA Target', color='#10b981')
     
-    ax.set_title('P2P Cycle Times: Simulated Current Performance vs Target ERP SLA', fontsize=12, fontweight='bold', pad=15, color='#0f172a')
+    ax.set_title('P2P Cycle Times: Simulated Performance vs Target ERP SLA', fontsize=12, fontweight='bold', pad=15, color='#0f172a')
     ax.set_ylabel('Duration (Elapsed Days)', fontsize=10, labelpad=10, color='#334155')
     ax.set_xticks(x)
     ax.set_xticklabels(stages, fontsize=9)
@@ -443,7 +484,6 @@ def generate_visualizations(cat_spend, df_inv, df_po, summary):
     plt.savefig(chart4_path)
     plt.close()
     
-    # Copy charts to assets/images for website consumption
     for c_path in [chart1_path, chart2_path, chart3_path, chart4_path]:
         shutil.copy(c_path, IMAGES_DIR)
         
@@ -454,34 +494,32 @@ def main():
     print("Northstar Manufacturing Ltd. - P2P Analytics & Integrity Engine")
     print("=" * 70)
     
-    # Load raw datasets
     df_sup = pd.read_csv(os.path.join(DATA_DIR, 'suppliers.csv'))
     df_req = pd.read_csv(os.path.join(DATA_DIR, 'requisitions.csv'))
     df_po = pd.read_csv(os.path.join(DATA_DIR, 'purchase_orders.csv'))
     df_rec = pd.read_csv(os.path.join(DATA_DIR, 'receipts.csv'))
     df_inv = pd.read_csv(os.path.join(DATA_DIR, 'invoices.csv'))
     
-    # Run QA checks
     is_valid = run_data_quality_checks(df_sup, df_req, df_po, df_rec, df_inv)
     if not is_valid:
         print("[WARNING] Data quality issues encountered! Halting.")
         return
         
-    # Analyze metrics
     summary, cat_spend, sup_analysis, df_inv, df_po = analyze_p2p_metrics(df_sup, df_req, df_po, df_rec, df_inv)
-    
-    # Generate Visualizations
     generate_visualizations(cat_spend, df_inv, df_po, summary)
     
+    recon = summary['financial_reconciliation']
     print("\n" + "=" * 70)
-    print("ANALYSIS COMPLETE - EXECUTIVE SUMMARY METRICS:")
-    print(f"Total Committed PO Spend:      ${summary['financial_overview']['total_po_value']:,.2f}")
-    print(f"Total Invoiced Amount:         ${summary['financial_overview']['total_invoiced_value']:,.2f}")
-    print(f"Total Paid Invoices Value:     ${summary['financial_overview']['total_paid_value']:,.2f}")
-    print(f"Total Invoices Processed:      {summary['transaction_counts']['total_invoices']}")
-    print(f"Invoice Exception Holds:       {summary['discrepancy_and_exception_metrics']['total_exception_count']} ({summary['discrepancy_and_exception_metrics']['exception_rate_count_pct']}%)")
-    print(f"Average PR Approval Turnaround:{summary['cycle_time_metrics_days']['pr_approval_time']['mean']} days")
-    print(f"Average PR-to-PO Cycle Time:   {summary['cycle_time_metrics_days']['procurement_cycle_time']['mean']} days")
+    print("AIRTIGHT RECONCILIATION SUMMARY:")
+    print(f"Total Committed PO Spend:        ${recon['total_po_committed_value']:,.2f}")
+    print(f"Total Invoiced Amount:           ${recon['total_invoiced_value']:,.2f}")
+    print(f"  |-- 1. Disbursed (Paid):       ${recon['total_disbursed_paid']:,.2f} ({summary['transaction_counts']['paid_invoices_count']} invoices)")
+    print(f"  |-- 2. Approved Pending Pmt:   ${recon['total_approved_pending_payment']:,.2f} ({summary['transaction_counts']['approved_pending_payment_count']} invoices)")
+    print(f"  +-- 3. Active On Hold (Unpaid):${recon['total_active_on_hold']:,.2f} ({summary['transaction_counts']['active_on_hold_count']} invoices)")
+    print(f"Sum (Paid + Pending + Hold):     ${recon['sum_of_disbursed_pending_and_hold']:,.2f}")
+    print(f"Mathematical Gap / Variance:     ${recon['mathematical_variance']:,.2f} (Zero Gap Verified)")
+    print(f"Discounts Captured (2/10 Terms): ${recon['early_discounts_captured']:,.2f}")
+    print(f"Requisition Approval Turnaround: {summary['cycle_time_metrics_days']['pr_approval_time']['mean']} days (Target SLA: 2.0d)")
     print("=" * 70)
 
 if __name__ == "__main__":

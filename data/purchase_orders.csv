@@ -1,0 +1,224 @@
+po_id,pr_id,supplier_id,supplier_name,category,buyer_name,po_date,po_amount,line_count,payment_terms,matching_type,lead_time_days,po_status
+PO-20001,PR-10001,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,David Kim (Purchasing Analyst),2026-04-27,2058.04,1,Net 30,2-Way Match,3,Closed
+PO-20002,PR-10002,SUP-013,Ironclad Safety Gear Co,MRO & Tooling,Elena Rostova (Lead Buyer),2026-04-05,3649.91,1,Net 30,3-Way Match,5,Closed
+PO-20003,PR-10003,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Marcus Vance (Procurement Specialist),2026-04-26,1040.56,1,Net 30,2-Way Match,5,Closed
+PO-20004,PR-10004,SUP-012,Crestview Facilities Management,Facilities & Services,Marcus Vance (Procurement Specialist),2026-03-04,8901.55,2,Net 30,2-Way Match,7,Closed
+PO-20005,PR-10005,SUP-013,Ironclad Safety Gear Co,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-06-13,16690.27,3,Net 30,3-Way Match,5,Closed
+PO-20006,PR-10006,SUP-005,Solenoid Systems Corp,Raw Materials,Marcus Vance (Procurement Specialist),2026-02-19,5242.28,1,Net 45,3-Way Match,12,Closed
+PO-20007,PR-10007,SUP-008,Kinetics Lubricants Inc,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-05-20,1516.53,1,2/10 Net 30,3-Way Match,6,Closed
+PO-20008,PR-10008,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,David Kim (Purchasing Analyst),2026-03-13,12439.26,3,Net 30,2-Way Match,5,Open - Awaiting Delivery
+PO-20009,PR-10009,SUP-024,Starlight Industrial Gas,Raw Materials,Elena Rostova (Lead Buyer),2026-03-26,3889.1,3,Net 30,3-Way Match,6,Closed
+PO-20010,PR-10010,SUP-012,Crestview Facilities Management,Facilities & Services,Marcus Vance (Procurement Specialist),2026-05-14,10767.19,2,Net 30,2-Way Match,7,Closed
+PO-20011,PR-10011,SUP-013,Ironclad Safety Gear Co,MRO & Tooling,Elena Rostova (Lead Buyer),2026-06-08,10526.23,3,Net 30,3-Way Match,5,Closed
+PO-20012,PR-10012,SUP-018,Fleetlink Transport Services,Logistics,Elena Rostova (Lead Buyer),2026-02-10,9027.25,2,Net 30,2-Way Match,5,Closed
+PO-20013,PR-10013,SUP-014,Matrix Information Technologies,IT & Telecommunications,David Kim (Purchasing Analyst),2026-04-22,24469.96,5,Net 30,2-Way Match,10,Closed
+PO-20014,PR-10014,SUP-025,Vanguard Security Services,Facilities & Services,Rachel Adams (Senior Buyer),2026-04-14,8393.04,1,Net 30,2-Way Match,7,Closed
+PO-20015,PR-10015,SUP-019,Quantum Sensor Tech,Raw Materials,David Kim (Purchasing Analyst),2026-02-23,8408.96,3,Net 30,3-Way Match,20,Closed
+PO-20016,PR-10016,SUP-013,Ironclad Safety Gear Co,MRO & Tooling,David Kim (Purchasing Analyst),2026-04-30,10185.73,3,Net 30,3-Way Match,5,Invoiced - Pending Payment
+PO-20017,PR-10017,SUP-015,Pinnacle Corrugated Boxes,Packaging,Elena Rostova (Lead Buyer),2026-02-24,21043.16,3,Net 45,3-Way Match,8,Invoiced - Pending Payment
+PO-20018,PR-10019,SUP-025,Vanguard Security Services,Facilities & Services,David Kim (Purchasing Analyst),2026-03-15,1989.77,1,Net 30,2-Way Match,7,Closed
+PO-20019,PR-10020,SUP-014,Matrix Information Technologies,IT & Telecommunications,Rachel Adams (Senior Buyer),2026-03-25,31711.32,3,Net 30,2-Way Match,10,Closed
+PO-20020,PR-10021,SUP-021,Dynamic Pneumatics Ltd,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-03-20,14442.4,2,Net 30,3-Way Match,8,Closed
+PO-20021,PR-10022,SUP-007,Titan Bearings & Drives,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-05-10,5142.21,2,Net 45,3-Way Match,10,Closed
+PO-20022,PR-10023,SUP-005,Solenoid Systems Corp,Raw Materials,David Kim (Purchasing Analyst),2026-02-22,12178.85,3,Net 45,3-Way Match,12,Closed
+PO-20023,PR-10024,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,Rachel Adams (Senior Buyer),2026-04-21,24713.59,5,Net 30,2-Way Match,3,Closed
+PO-20024,PR-10025,SUP-009,Benchmark Electricals Ltd,MRO & Tooling,Elena Rostova (Lead Buyer),2026-03-15,3746.49,3,Net 30,3-Way Match,9,Closed
+PO-20025,PR-10026,SUP-014,Matrix Information Technologies,IT & Telecommunications,Elena Rostova (Lead Buyer),2026-03-24,33797.84,3,Net 30,2-Way Match,10,Closed
+PO-20026,PR-10027,SUP-005,Solenoid Systems Corp,Raw Materials,Rachel Adams (Senior Buyer),2026-04-23,6346.35,1,Net 45,3-Way Match,12,Closed
+PO-20027,PR-10029,SUP-012,Crestview Facilities Management,Facilities & Services,Elena Rostova (Lead Buyer),2026-03-22,7852.66,3,Net 30,2-Way Match,7,Closed
+PO-20028,PR-10030,SUP-021,Dynamic Pneumatics Ltd,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-04-06,1082.38,1,Net 30,3-Way Match,8,Invoiced - Pending Payment
+PO-20029,PR-10031,SUP-006,Global Packaging Solutions,Packaging,Elena Rostova (Lead Buyer),2026-02-22,64185.07,5,Net 30,3-Way Match,8,Closed
+PO-20030,PR-10032,SUP-007,Titan Bearings & Drives,MRO & Tooling,Rachel Adams (Senior Buyer),2026-03-19,13896.55,2,Net 45,3-Way Match,10,Invoiced - Pending Payment
+PO-20031,PR-10034,SUP-014,Matrix Information Technologies,IT & Telecommunications,Elena Rostova (Lead Buyer),2026-01-31,24814.79,5,Net 30,2-Way Match,10,Closed
+PO-20032,PR-10035,SUP-016,Summit CNC Tooling GmbH,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-02-09,3266.17,2,Net 60,3-Way Match,18,Closed
+PO-20033,PR-10036,SUP-025,Vanguard Security Services,Facilities & Services,Marcus Vance (Procurement Specialist),2026-03-19,9345.74,1,Net 30,2-Way Match,7,Closed
+PO-20034,PR-10037,SUP-008,Kinetics Lubricants Inc,MRO & Tooling,Elena Rostova (Lead Buyer),2026-04-14,25992.45,2,2/10 Net 30,3-Way Match,6,Invoiced - Pending Payment
+PO-20035,PR-10038,SUP-025,Vanguard Security Services,Facilities & Services,Rachel Adams (Senior Buyer),2026-06-17,4670.45,3,Net 30,2-Way Match,7,Open - Awaiting Delivery
+PO-20036,PR-10039,SUP-014,Matrix Information Technologies,IT & Telecommunications,David Kim (Purchasing Analyst),2026-03-20,9297.65,1,Net 30,2-Way Match,10,Closed
+PO-20037,PR-10040,SUP-021,Dynamic Pneumatics Ltd,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-02-10,3491.71,1,Net 30,3-Way Match,8,Closed
+PO-20038,PR-10041,SUP-005,Solenoid Systems Corp,Raw Materials,Elena Rostova (Lead Buyer),2026-02-01,1042.6,1,Net 45,3-Way Match,12,Closed
+PO-20039,PR-10042,SUP-022,Polymer Extrusions Inc,Raw Materials,David Kim (Purchasing Analyst),2026-03-18,53594.0,8,Net 45,3-Way Match,14,Closed
+PO-20040,PR-10043,SUP-016,Summit CNC Tooling GmbH,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-06-06,12943.43,2,Net 60,3-Way Match,18,Closed
+PO-20041,PR-10044,SUP-003,Precision Hydraulics Ltd,MRO & Tooling,Elena Rostova (Lead Buyer),2026-02-01,5617.42,3,Net 30,3-Way Match,10,Closed
+PO-20042,PR-10045,SUP-015,Pinnacle Corrugated Boxes,Packaging,David Kim (Purchasing Analyst),2026-03-22,61701.09,8,Net 45,3-Way Match,8,Closed
+PO-20043,PR-10046,SUP-025,Vanguard Security Services,Facilities & Services,David Kim (Purchasing Analyst),2026-04-13,2961.0,1,Net 30,2-Way Match,7,Closed
+PO-20044,PR-10047,SUP-016,Summit CNC Tooling GmbH,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-03-06,878.94,1,Net 60,3-Way Match,18,Invoiced - Pending Payment
+PO-20045,PR-10048,SUP-004,Orion Logistics & Freight,Logistics,David Kim (Purchasing Analyst),2026-05-10,16865.92,2,Net 30,2-Way Match,5,Closed
+PO-20046,PR-10050,SUP-012,Crestview Facilities Management,Facilities & Services,Rachel Adams (Senior Buyer),2026-02-14,11305.5,1,Net 30,2-Way Match,7,Closed
+PO-20047,PR-10051,SUP-025,Vanguard Security Services,Facilities & Services,David Kim (Purchasing Analyst),2026-04-21,1454.92,1,Net 30,2-Way Match,7,Open - Awaiting Delivery
+PO-20048,PR-10052,SUP-010,AccuPlast Molding Corp,Raw Materials,David Kim (Purchasing Analyst),2026-04-24,18817.63,3,Net 60,3-Way Match,21,Invoiced - Pending Payment
+PO-20049,PR-10053,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Elena Rostova (Lead Buyer),2026-03-24,9771.57,2,Net 30,2-Way Match,5,Closed
+PO-20050,PR-10054,SUP-018,Fleetlink Transport Services,Logistics,David Kim (Purchasing Analyst),2026-02-24,7981.27,1,Net 30,2-Way Match,5,Closed
+PO-20051,PR-10056,SUP-005,Solenoid Systems Corp,Raw Materials,Rachel Adams (Senior Buyer),2026-02-14,38730.98,2,Net 45,3-Way Match,12,Received - Pending Invoice
+PO-20052,PR-10057,SUP-012,Crestview Facilities Management,Facilities & Services,Rachel Adams (Senior Buyer),2026-03-06,2562.43,1,Net 30,2-Way Match,7,Closed
+PO-20053,PR-10058,SUP-021,Dynamic Pneumatics Ltd,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-04-23,8439.46,2,Net 30,3-Way Match,8,Closed
+PO-20054,PR-10059,SUP-025,Vanguard Security Services,Facilities & Services,Marcus Vance (Procurement Specialist),2026-05-06,10400.55,2,Net 30,2-Way Match,7,Closed
+PO-20055,PR-10060,SUP-007,Titan Bearings & Drives,MRO & Tooling,Rachel Adams (Senior Buyer),2026-05-27,4039.31,1,Net 45,3-Way Match,10,Invoiced - Pending Payment
+PO-20056,PR-10061,SUP-004,Orion Logistics & Freight,Logistics,Marcus Vance (Procurement Specialist),2026-02-28,16563.61,8,Net 30,2-Way Match,5,Closed
+PO-20057,PR-10063,SUP-006,Global Packaging Solutions,Packaging,Elena Rostova (Lead Buyer),2026-04-05,7583.15,1,Net 30,3-Way Match,8,Received - Pending Invoice
+PO-20058,PR-10064,SUP-014,Matrix Information Technologies,IT & Telecommunications,Marcus Vance (Procurement Specialist),2026-04-06,6668.07,3,Net 30,2-Way Match,10,Closed
+PO-20059,PR-10066,SUP-013,Ironclad Safety Gear Co,MRO & Tooling,Rachel Adams (Senior Buyer),2026-05-21,1754.24,1,Net 30,3-Way Match,5,Closed
+PO-20060,PR-10068,SUP-004,Orion Logistics & Freight,Logistics,Rachel Adams (Senior Buyer),2026-02-09,15348.09,3,Net 30,2-Way Match,5,Closed
+PO-20061,PR-10069,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Elena Rostova (Lead Buyer),2026-05-27,13951.37,3,Net 30,2-Way Match,5,Closed
+PO-20062,PR-10070,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Marcus Vance (Procurement Specialist),2026-04-25,693.39,1,Net 30,2-Way Match,5,Closed
+PO-20063,PR-10071,SUP-005,Solenoid Systems Corp,Raw Materials,Rachel Adams (Senior Buyer),2026-06-05,10487.49,2,Net 45,3-Way Match,12,Invoiced - Pending Payment
+PO-20064,PR-10072,SUP-008,Kinetics Lubricants Inc,MRO & Tooling,Rachel Adams (Senior Buyer),2026-05-10,3738.41,2,2/10 Net 30,3-Way Match,6,Invoiced - Pending Payment
+PO-20065,PR-10073,SUP-003,Precision Hydraulics Ltd,MRO & Tooling,David Kim (Purchasing Analyst),2026-03-16,23679.68,5,Net 30,3-Way Match,10,Closed
+PO-20066,PR-10074,SUP-003,Precision Hydraulics Ltd,MRO & Tooling,Elena Rostova (Lead Buyer),2026-05-15,687.61,1,Net 30,3-Way Match,10,Closed
+PO-20067,PR-10075,SUP-004,Orion Logistics & Freight,Logistics,Marcus Vance (Procurement Specialist),2026-05-04,7342.29,3,Net 30,2-Way Match,5,Closed
+PO-20068,PR-10076,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,Elena Rostova (Lead Buyer),2026-03-08,32507.06,5,Net 30,2-Way Match,3,Closed
+PO-20069,PR-10077,SUP-007,Titan Bearings & Drives,MRO & Tooling,Elena Rostova (Lead Buyer),2026-03-31,27538.77,3,Net 45,3-Way Match,10,Closed
+PO-20070,PR-10078,SUP-012,Crestview Facilities Management,Facilities & Services,David Kim (Purchasing Analyst),2026-03-01,5642.52,1,Net 30,2-Way Match,7,Closed
+PO-20071,PR-10079,SUP-025,Vanguard Security Services,Facilities & Services,David Kim (Purchasing Analyst),2026-05-30,6035.24,1,Net 30,2-Way Match,7,Closed
+PO-20072,PR-10080,SUP-017,AeroMetals Alloy Supply,Raw Materials,Marcus Vance (Procurement Specialist),2026-06-16,62004.86,5,Net 45,3-Way Match,16,Closed
+PO-20073,PR-10081,SUP-015,Pinnacle Corrugated Boxes,Packaging,David Kim (Purchasing Analyst),2026-06-17,15562.15,8,Net 45,3-Way Match,8,Invoiced - Pending Payment
+PO-20074,PR-10082,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,Rachel Adams (Senior Buyer),2026-02-18,25978.63,3,Net 30,2-Way Match,3,Closed
+PO-20075,PR-10083,SUP-014,Matrix Information Technologies,IT & Telecommunications,Elena Rostova (Lead Buyer),2026-04-21,12507.46,1,Net 30,2-Way Match,10,Closed
+PO-20076,PR-10084,SUP-008,Kinetics Lubricants Inc,MRO & Tooling,Elena Rostova (Lead Buyer),2026-06-14,18625.9,5,2/10 Net 30,3-Way Match,6,Received - Pending Invoice
+PO-20077,PR-10085,SUP-025,Vanguard Security Services,Facilities & Services,David Kim (Purchasing Analyst),2026-03-15,6558.15,2,Net 30,2-Way Match,7,Closed
+PO-20078,PR-10086,SUP-004,Orion Logistics & Freight,Logistics,Marcus Vance (Procurement Specialist),2026-05-08,13454.1,2,Net 30,2-Way Match,5,Invoiced - Pending Payment
+PO-20079,PR-10087,SUP-001,Apex Industrial Fasteners,Raw Materials,Elena Rostova (Lead Buyer),2026-02-21,2936.68,1,Net 30,3-Way Match,7,Closed
+PO-20080,PR-10088,SUP-014,Matrix Information Technologies,IT & Telecommunications,Rachel Adams (Senior Buyer),2026-04-24,10808.5,1,Net 30,2-Way Match,10,Closed
+PO-20081,PR-10089,SUP-002,Vulcan Steelworks Corp,Raw Materials,Elena Rostova (Lead Buyer),2026-03-26,18405.65,2,Net 45,3-Way Match,14,Closed
+PO-20082,PR-10090,SUP-015,Pinnacle Corrugated Boxes,Packaging,Elena Rostova (Lead Buyer),2026-04-02,41481.59,8,Net 45,3-Way Match,8,Closed
+PO-20083,PR-10091,SUP-010,AccuPlast Molding Corp,Raw Materials,David Kim (Purchasing Analyst),2026-04-29,8457.17,1,Net 60,3-Way Match,21,Invoiced - Pending Payment
+PO-20084,PR-10094,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,David Kim (Purchasing Analyst),2026-04-19,1314.84,1,Net 30,2-Way Match,5,Open - Awaiting Delivery
+PO-20085,PR-10097,SUP-017,AeroMetals Alloy Supply,Raw Materials,Rachel Adams (Senior Buyer),2026-05-09,5648.16,2,Net 45,3-Way Match,16,Closed
+PO-20086,PR-10098,SUP-007,Titan Bearings & Drives,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-05-10,10422.74,1,Net 45,3-Way Match,10,Closed
+PO-20087,PR-10099,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,David Kim (Purchasing Analyst),2026-05-10,10290.0,1,Net 30,2-Way Match,3,Open - Awaiting Delivery
+PO-20088,PR-10101,SUP-016,Summit CNC Tooling GmbH,MRO & Tooling,Elena Rostova (Lead Buyer),2026-03-12,7076.89,3,Net 60,3-Way Match,18,Closed
+PO-20089,PR-10102,SUP-019,Quantum Sensor Tech,Raw Materials,Marcus Vance (Procurement Specialist),2026-04-02,38080.7,5,Net 30,3-Way Match,20,Closed
+PO-20090,PR-10103,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,David Kim (Purchasing Analyst),2026-03-16,11093.94,3,Net 30,2-Way Match,5,Closed
+PO-20091,PR-10104,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Elena Rostova (Lead Buyer),2026-05-07,468.34,1,Net 30,2-Way Match,5,Closed
+PO-20092,PR-10105,SUP-005,Solenoid Systems Corp,Raw Materials,Marcus Vance (Procurement Specialist),2026-04-14,9325.41,1,Net 45,3-Way Match,12,Closed
+PO-20093,PR-10106,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,David Kim (Purchasing Analyst),2026-05-15,5487.82,3,Net 30,2-Way Match,5,Closed
+PO-20094,PR-10107,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,Elena Rostova (Lead Buyer),2026-03-19,26158.73,8,Net 30,2-Way Match,3,Closed
+PO-20095,PR-10108,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Elena Rostova (Lead Buyer),2026-04-11,13860.57,2,Net 30,2-Way Match,5,Closed
+PO-20096,PR-10109,SUP-005,Solenoid Systems Corp,Raw Materials,Rachel Adams (Senior Buyer),2026-03-23,32269.8,2,Net 45,3-Way Match,12,Closed
+PO-20097,PR-10110,SUP-018,Fleetlink Transport Services,Logistics,Marcus Vance (Procurement Specialist),2026-06-12,8628.67,2,Net 30,2-Way Match,5,Closed
+PO-20098,PR-10111,SUP-012,Crestview Facilities Management,Facilities & Services,Elena Rostova (Lead Buyer),2026-06-09,10220.03,3,Net 30,2-Way Match,7,Closed
+PO-20099,PR-10112,SUP-018,Fleetlink Transport Services,Logistics,Elena Rostova (Lead Buyer),2026-01-27,17945.57,3,Net 30,2-Way Match,5,Closed
+PO-20100,PR-10113,SUP-003,Precision Hydraulics Ltd,MRO & Tooling,Elena Rostova (Lead Buyer),2026-02-26,23755.5,2,Net 30,3-Way Match,10,Invoiced - Pending Payment
+PO-20101,PR-10114,SUP-021,Dynamic Pneumatics Ltd,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-02-19,18854.1,8,Net 30,3-Way Match,8,Closed
+PO-20102,PR-10115,SUP-012,Crestview Facilities Management,Facilities & Services,Elena Rostova (Lead Buyer),2026-01-20,2364.42,1,Net 30,2-Way Match,7,Closed
+PO-20103,PR-10116,SUP-012,Crestview Facilities Management,Facilities & Services,David Kim (Purchasing Analyst),2026-05-23,1687.33,1,Net 30,2-Way Match,7,Invoiced - Pending Payment
+PO-20104,PR-10117,SUP-025,Vanguard Security Services,Facilities & Services,Marcus Vance (Procurement Specialist),2026-05-16,6378.71,1,Net 30,2-Way Match,7,Closed
+PO-20105,PR-10118,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Elena Rostova (Lead Buyer),2026-05-07,2067.19,1,Net 30,2-Way Match,5,Closed
+PO-20106,PR-10119,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,David Kim (Purchasing Analyst),2026-04-23,6701.29,3,Net 30,2-Way Match,5,Closed
+PO-20107,PR-10120,SUP-012,Crestview Facilities Management,Facilities & Services,Marcus Vance (Procurement Specialist),2026-04-21,804.58,1,Net 30,2-Way Match,7,Closed
+PO-20108,PR-10121,SUP-015,Pinnacle Corrugated Boxes,Packaging,David Kim (Purchasing Analyst),2026-06-07,43277.1,5,Net 45,3-Way Match,8,Closed
+PO-20109,PR-10122,SUP-011,Nordic Chemical Reagents,Raw Materials,Marcus Vance (Procurement Specialist),2026-03-31,6570.91,1,Net 45,3-Way Match,15,Invoiced - Pending Payment
+PO-20110,PR-10123,SUP-017,AeroMetals Alloy Supply,Raw Materials,Rachel Adams (Senior Buyer),2026-02-18,7429.58,3,Net 45,3-Way Match,16,Closed
+PO-20111,PR-10124,SUP-025,Vanguard Security Services,Facilities & Services,Elena Rostova (Lead Buyer),2026-05-05,10501.87,2,Net 30,2-Way Match,7,Closed
+PO-20112,PR-10125,SUP-025,Vanguard Security Services,Facilities & Services,Elena Rostova (Lead Buyer),2026-04-14,5593.14,3,Net 30,2-Way Match,7,Closed
+PO-20113,PR-10126,SUP-007,Titan Bearings & Drives,MRO & Tooling,Rachel Adams (Senior Buyer),2026-02-07,6520.59,3,Net 45,3-Way Match,10,Invoiced - Pending Payment
+PO-20114,PR-10127,SUP-018,Fleetlink Transport Services,Logistics,Elena Rostova (Lead Buyer),2026-03-15,7065.07,2,Net 30,2-Way Match,5,Closed
+PO-20115,PR-10128,SUP-001,Apex Industrial Fasteners,Raw Materials,Rachel Adams (Senior Buyer),2026-04-27,34490.66,3,Net 30,3-Way Match,7,Invoiced - Pending Payment
+PO-20116,PR-10129,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,Marcus Vance (Procurement Specialist),2026-06-18,16161.28,5,Net 30,2-Way Match,3,Closed
+PO-20117,PR-10130,SUP-021,Dynamic Pneumatics Ltd,MRO & Tooling,Rachel Adams (Senior Buyer),2026-03-24,20033.69,2,Net 30,3-Way Match,8,Closed
+PO-20118,PR-10131,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Rachel Adams (Senior Buyer),2026-03-03,12288.98,3,Net 30,2-Way Match,5,Closed
+PO-20119,PR-10132,SUP-014,Matrix Information Technologies,IT & Telecommunications,Marcus Vance (Procurement Specialist),2026-05-18,10547.01,2,Net 30,2-Way Match,10,Closed
+PO-20120,PR-10133,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,Rachel Adams (Senior Buyer),2026-03-12,11923.68,3,Net 30,2-Way Match,3,Invoiced - Pending Payment
+PO-20121,PR-10134,SUP-007,Titan Bearings & Drives,MRO & Tooling,Elena Rostova (Lead Buyer),2026-01-29,21142.72,5,Net 45,3-Way Match,10,Closed
+PO-20122,PR-10135,SUP-022,Polymer Extrusions Inc,Raw Materials,Marcus Vance (Procurement Specialist),2026-05-02,27192.16,8,Net 45,3-Way Match,14,Closed
+PO-20123,PR-10136,SUP-018,Fleetlink Transport Services,Logistics,David Kim (Purchasing Analyst),2026-04-16,12633.85,1,Net 30,2-Way Match,5,Closed
+PO-20124,PR-10137,SUP-014,Matrix Information Technologies,IT & Telecommunications,David Kim (Purchasing Analyst),2026-04-18,4671.11,2,Net 30,2-Way Match,10,Invoiced - Pending Payment
+PO-20125,PR-10139,SUP-015,Pinnacle Corrugated Boxes,Packaging,Elena Rostova (Lead Buyer),2026-04-25,2868.88,1,Net 45,3-Way Match,8,Closed
+PO-20126,PR-10141,SUP-016,Summit CNC Tooling GmbH,MRO & Tooling,Elena Rostova (Lead Buyer),2026-03-27,16246.61,5,Net 60,3-Way Match,18,Closed
+PO-20127,PR-10142,SUP-012,Crestview Facilities Management,Facilities & Services,Marcus Vance (Procurement Specialist),2026-03-05,11135.91,3,Net 30,2-Way Match,7,Closed
+PO-20128,PR-10143,SUP-004,Orion Logistics & Freight,Logistics,Rachel Adams (Senior Buyer),2026-01-29,13940.82,2,Net 30,2-Way Match,5,Closed
+PO-20129,PR-10144,SUP-014,Matrix Information Technologies,IT & Telecommunications,Elena Rostova (Lead Buyer),2026-04-28,10170.2,1,Net 30,2-Way Match,10,Closed
+PO-20130,PR-10145,SUP-003,Precision Hydraulics Ltd,MRO & Tooling,Rachel Adams (Senior Buyer),2026-04-14,2826.16,1,Net 30,3-Way Match,10,Invoiced - Pending Payment
+PO-20131,PR-10146,SUP-014,Matrix Information Technologies,IT & Telecommunications,David Kim (Purchasing Analyst),2026-03-05,10960.77,1,Net 30,2-Way Match,10,Closed
+PO-20132,PR-10147,SUP-014,Matrix Information Technologies,IT & Telecommunications,Elena Rostova (Lead Buyer),2026-02-03,3567.99,1,Net 30,2-Way Match,10,Closed
+PO-20133,PR-10148,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,David Kim (Purchasing Analyst),2026-03-31,1739.96,1,Net 30,2-Way Match,5,Closed
+PO-20134,PR-10149,SUP-006,Global Packaging Solutions,Packaging,David Kim (Purchasing Analyst),2026-05-08,4809.07,2,Net 30,3-Way Match,8,Closed
+PO-20135,PR-10150,SUP-025,Vanguard Security Services,Facilities & Services,David Kim (Purchasing Analyst),2026-05-04,8626.35,1,Net 30,2-Way Match,7,Closed
+PO-20136,PR-10151,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Elena Rostova (Lead Buyer),2026-02-27,6782.45,2,Net 30,2-Way Match,5,Closed
+PO-20137,PR-10152,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,David Kim (Purchasing Analyst),2026-03-17,21482.1,2,Net 30,2-Way Match,3,Invoiced - Pending Payment
+PO-20138,PR-10153,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,David Kim (Purchasing Analyst),2026-02-24,34520.13,5,Net 30,2-Way Match,3,Closed
+PO-20139,PR-10154,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,David Kim (Purchasing Analyst),2026-02-06,11569.03,2,Net 30,2-Way Match,5,Closed
+PO-20140,PR-10155,SUP-018,Fleetlink Transport Services,Logistics,Marcus Vance (Procurement Specialist),2026-06-11,10416.09,2,Net 30,2-Way Match,5,Closed
+PO-20141,PR-10156,SUP-012,Crestview Facilities Management,Facilities & Services,David Kim (Purchasing Analyst),2026-03-10,4288.62,3,Net 30,2-Way Match,7,Open - Awaiting Delivery
+PO-20142,PR-10158,SUP-001,Apex Industrial Fasteners,Raw Materials,Rachel Adams (Senior Buyer),2026-03-14,19870.64,2,Net 30,3-Way Match,7,Received - Pending Invoice
+PO-20143,PR-10159,SUP-002,Vulcan Steelworks Corp,Raw Materials,Elena Rostova (Lead Buyer),2026-04-30,10691.68,2,Net 45,3-Way Match,14,Closed
+PO-20144,PR-10160,SUP-003,Precision Hydraulics Ltd,MRO & Tooling,Elena Rostova (Lead Buyer),2026-05-12,10829.25,1,Net 30,3-Way Match,10,Closed
+PO-20145,PR-10161,SUP-013,Ironclad Safety Gear Co,MRO & Tooling,David Kim (Purchasing Analyst),2026-04-16,3515.35,1,Net 30,3-Way Match,5,Closed
+PO-20146,PR-10162,SUP-016,Summit CNC Tooling GmbH,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-04-29,746.41,1,Net 60,3-Way Match,18,Closed
+PO-20147,PR-10163,SUP-014,Matrix Information Technologies,IT & Telecommunications,David Kim (Purchasing Analyst),2026-05-05,11556.44,3,Net 30,2-Way Match,10,Closed
+PO-20148,PR-10164,SUP-006,Global Packaging Solutions,Packaging,Elena Rostova (Lead Buyer),2026-05-10,61363.94,5,Net 30,3-Way Match,8,Closed
+PO-20149,PR-10165,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,David Kim (Purchasing Analyst),2026-02-14,18577.98,5,Net 30,2-Way Match,3,Closed
+PO-20150,PR-10166,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Elena Rostova (Lead Buyer),2026-02-25,3244.6,3,Net 30,2-Way Match,5,Open - Awaiting Delivery
+PO-20151,PR-10167,SUP-007,Titan Bearings & Drives,MRO & Tooling,David Kim (Purchasing Analyst),2026-06-25,14849.9,2,Net 45,3-Way Match,10,Invoiced - Pending Payment
+PO-20152,PR-10168,SUP-006,Global Packaging Solutions,Packaging,Rachel Adams (Senior Buyer),2026-01-25,17620.29,2,Net 30,3-Way Match,8,Invoiced - Pending Payment
+PO-20153,PR-10170,SUP-012,Crestview Facilities Management,Facilities & Services,Elena Rostova (Lead Buyer),2026-04-24,6779.4,3,Net 30,2-Way Match,7,Closed
+PO-20154,PR-10171,SUP-009,Benchmark Electricals Ltd,MRO & Tooling,David Kim (Purchasing Analyst),2026-04-25,11697.81,3,Net 30,3-Way Match,9,Closed
+PO-20155,PR-10172,SUP-003,Precision Hydraulics Ltd,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-05-24,2019.14,1,Net 30,3-Way Match,10,Closed
+PO-20156,PR-10173,SUP-025,Vanguard Security Services,Facilities & Services,David Kim (Purchasing Analyst),2026-05-06,11458.95,3,Net 30,2-Way Match,7,Closed
+PO-20157,PR-10175,SUP-014,Matrix Information Technologies,IT & Telecommunications,David Kim (Purchasing Analyst),2026-03-02,14867.39,3,Net 30,2-Way Match,10,Open - Awaiting Delivery
+PO-20158,PR-10176,SUP-006,Global Packaging Solutions,Packaging,Rachel Adams (Senior Buyer),2026-01-19,21081.72,2,Net 30,3-Way Match,8,Closed
+PO-20159,PR-10177,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,Rachel Adams (Senior Buyer),2026-05-25,30051.21,8,Net 30,2-Way Match,3,Closed
+PO-20160,PR-10178,SUP-018,Fleetlink Transport Services,Logistics,David Kim (Purchasing Analyst),2026-03-16,17315.65,8,Net 30,2-Way Match,5,Closed
+PO-20161,PR-10179,SUP-012,Crestview Facilities Management,Facilities & Services,David Kim (Purchasing Analyst),2026-02-26,4074.8,3,Net 30,2-Way Match,7,Invoiced - Pending Payment
+PO-20162,PR-10181,SUP-025,Vanguard Security Services,Facilities & Services,Marcus Vance (Procurement Specialist),2026-03-01,2343.66,1,Net 30,2-Way Match,7,Closed
+PO-20163,PR-10182,SUP-015,Pinnacle Corrugated Boxes,Packaging,Elena Rostova (Lead Buyer),2026-03-08,23278.01,8,Net 45,3-Way Match,8,Closed
+PO-20164,PR-10183,SUP-009,Benchmark Electricals Ltd,MRO & Tooling,David Kim (Purchasing Analyst),2026-04-17,11956.03,1,Net 30,3-Way Match,9,Closed
+PO-20165,PR-10184,SUP-013,Ironclad Safety Gear Co,MRO & Tooling,Elena Rostova (Lead Buyer),2026-05-08,2969.5,1,Net 30,3-Way Match,5,Invoiced - Pending Payment
+PO-20166,PR-10185,SUP-016,Summit CNC Tooling GmbH,MRO & Tooling,David Kim (Purchasing Analyst),2026-04-06,5689.62,1,Net 60,3-Way Match,18,Closed
+PO-20167,PR-10186,SUP-014,Matrix Information Technologies,IT & Telecommunications,Elena Rostova (Lead Buyer),2026-05-25,31306.55,5,Net 30,2-Way Match,10,Closed
+PO-20168,PR-10188,SUP-004,Orion Logistics & Freight,Logistics,Marcus Vance (Procurement Specialist),2026-05-16,15878.56,8,Net 30,2-Way Match,5,Closed
+PO-20169,PR-10189,SUP-007,Titan Bearings & Drives,MRO & Tooling,David Kim (Purchasing Analyst),2026-06-01,23949.26,5,Net 45,3-Way Match,10,Invoiced - Pending Payment
+PO-20170,PR-10191,SUP-004,Orion Logistics & Freight,Logistics,Rachel Adams (Senior Buyer),2026-04-22,15123.76,8,Net 30,2-Way Match,5,Closed
+PO-20171,PR-10193,SUP-012,Crestview Facilities Management,Facilities & Services,Elena Rostova (Lead Buyer),2026-06-26,3857.76,1,Net 30,2-Way Match,7,Closed
+PO-20172,PR-10195,SUP-006,Global Packaging Solutions,Packaging,Rachel Adams (Senior Buyer),2026-03-27,6962.53,3,Net 30,3-Way Match,8,Closed
+PO-20173,PR-10196,SUP-010,AccuPlast Molding Corp,Raw Materials,Elena Rostova (Lead Buyer),2026-06-01,30714.38,5,Net 60,3-Way Match,21,Closed
+PO-20174,PR-10197,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Marcus Vance (Procurement Specialist),2026-03-06,12434.52,3,Net 30,2-Way Match,5,Closed
+PO-20175,PR-10198,SUP-005,Solenoid Systems Corp,Raw Materials,Elena Rostova (Lead Buyer),2026-04-12,10358.71,3,Net 45,3-Way Match,12,Invoiced - Pending Payment
+PO-20176,PR-10199,SUP-006,Global Packaging Solutions,Packaging,Marcus Vance (Procurement Specialist),2026-02-25,18390.86,3,Net 30,3-Way Match,8,Invoiced - Pending Payment
+PO-20177,PR-10200,SUP-007,Titan Bearings & Drives,MRO & Tooling,Rachel Adams (Senior Buyer),2026-05-03,9428.43,2,Net 45,3-Way Match,10,Closed
+PO-20178,PR-10201,SUP-001,Apex Industrial Fasteners,Raw Materials,Rachel Adams (Senior Buyer),2026-05-31,9216.31,1,Net 30,3-Way Match,7,Closed
+PO-20179,PR-10202,SUP-003,Precision Hydraulics Ltd,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-02-18,8230.94,2,Net 30,3-Way Match,10,Received - Pending Invoice
+PO-20180,PR-10203,SUP-012,Crestview Facilities Management,Facilities & Services,Marcus Vance (Procurement Specialist),2026-02-01,10102.83,2,Net 30,2-Way Match,7,Closed
+PO-20181,PR-10204,SUP-014,Matrix Information Technologies,IT & Telecommunications,Elena Rostova (Lead Buyer),2026-01-12,23428.85,2,Net 30,2-Way Match,10,Open - Awaiting Delivery
+PO-20182,PR-10205,SUP-006,Global Packaging Solutions,Packaging,Marcus Vance (Procurement Specialist),2026-03-07,12048.1,3,Net 30,3-Way Match,8,Closed
+PO-20183,PR-10206,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Marcus Vance (Procurement Specialist),2026-04-05,8184.95,1,Net 30,2-Way Match,5,Open - Awaiting Delivery
+PO-20184,PR-10207,SUP-025,Vanguard Security Services,Facilities & Services,David Kim (Purchasing Analyst),2026-06-11,13608.92,1,Net 30,2-Way Match,7,Closed
+PO-20185,PR-10208,SUP-025,Vanguard Security Services,Facilities & Services,Rachel Adams (Senior Buyer),2026-04-18,13846.46,3,Net 30,2-Way Match,7,Closed
+PO-20186,PR-10209,SUP-021,Dynamic Pneumatics Ltd,MRO & Tooling,Rachel Adams (Senior Buyer),2026-04-18,13236.47,2,Net 30,3-Way Match,8,Invoiced - Pending Payment
+PO-20187,PR-10210,SUP-017,AeroMetals Alloy Supply,Raw Materials,David Kim (Purchasing Analyst),2026-05-18,65545.96,8,Net 45,3-Way Match,16,Closed
+PO-20188,PR-10211,SUP-004,Orion Logistics & Freight,Logistics,David Kim (Purchasing Analyst),2026-04-20,20821.49,2,Net 30,2-Way Match,5,Closed
+PO-20189,PR-10212,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,Marcus Vance (Procurement Specialist),2026-03-14,23268.57,5,Net 30,2-Way Match,3,Invoiced - Pending Payment
+PO-20190,PR-10213,SUP-019,Quantum Sensor Tech,Raw Materials,Rachel Adams (Senior Buyer),2026-03-04,12766.75,2,Net 30,3-Way Match,20,Closed
+PO-20191,PR-10214,SUP-017,AeroMetals Alloy Supply,Raw Materials,Marcus Vance (Procurement Specialist),2026-05-18,2872.43,1,Net 45,3-Way Match,16,Closed
+PO-20192,PR-10215,SUP-010,AccuPlast Molding Corp,Raw Materials,David Kim (Purchasing Analyst),2026-05-11,435.39,1,Net 60,3-Way Match,21,Invoiced - Pending Payment
+PO-20193,PR-10216,SUP-016,Summit CNC Tooling GmbH,MRO & Tooling,David Kim (Purchasing Analyst),2026-02-04,7720.35,1,Net 60,3-Way Match,18,Closed
+PO-20194,PR-10217,SUP-003,Precision Hydraulics Ltd,MRO & Tooling,David Kim (Purchasing Analyst),2026-04-16,10503.91,1,Net 30,3-Way Match,10,Closed
+PO-20195,PR-10218,SUP-017,AeroMetals Alloy Supply,Raw Materials,Elena Rostova (Lead Buyer),2026-03-09,12595.16,2,Net 45,3-Way Match,16,Closed
+PO-20196,PR-10219,SUP-014,Matrix Information Technologies,IT & Telecommunications,Elena Rostova (Lead Buyer),2026-05-26,17212.31,2,Net 30,2-Way Match,10,Closed
+PO-20197,PR-10220,SUP-010,AccuPlast Molding Corp,Raw Materials,Elena Rostova (Lead Buyer),2026-02-19,916.25,1,Net 60,3-Way Match,21,Closed
+PO-20198,PR-10221,SUP-021,Dynamic Pneumatics Ltd,MRO & Tooling,Rachel Adams (Senior Buyer),2026-05-16,12022.79,1,Net 30,3-Way Match,8,Closed
+PO-20199,PR-10223,SUP-024,Starlight Industrial Gas,Raw Materials,Elena Rostova (Lead Buyer),2026-03-16,9070.7,3,Net 30,3-Way Match,6,Invoiced - Pending Payment
+PO-20200,PR-10224,SUP-025,Vanguard Security Services,Facilities & Services,Elena Rostova (Lead Buyer),2026-03-28,6331.61,1,Net 30,2-Way Match,7,Closed
+PO-20201,PR-10225,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,David Kim (Purchasing Analyst),2026-04-17,5568.46,3,Net 30,2-Way Match,5,Closed
+PO-20202,PR-10226,SUP-025,Vanguard Security Services,Facilities & Services,Elena Rostova (Lead Buyer),2026-04-16,5229.62,3,Net 30,2-Way Match,7,Closed
+PO-20203,PR-10227,SUP-006,Global Packaging Solutions,Packaging,Marcus Vance (Procurement Specialist),2026-02-06,21429.48,2,Net 30,3-Way Match,8,Invoiced - Pending Payment
+PO-20204,PR-10228,SUP-015,Pinnacle Corrugated Boxes,Packaging,David Kim (Purchasing Analyst),2026-03-17,10661.7,2,Net 45,3-Way Match,8,Closed
+PO-20205,PR-10230,SUP-025,Vanguard Security Services,Facilities & Services,Rachel Adams (Senior Buyer),2026-04-01,10074.87,3,Net 30,2-Way Match,7,Closed
+PO-20206,PR-10231,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Marcus Vance (Procurement Specialist),2026-06-05,7428.36,1,Net 30,2-Way Match,5,Closed
+PO-20207,PR-10232,SUP-016,Summit CNC Tooling GmbH,MRO & Tooling,Elena Rostova (Lead Buyer),2026-05-09,14231.77,2,Net 60,3-Way Match,18,Closed
+PO-20208,PR-10233,SUP-013,Ironclad Safety Gear Co,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-03-19,9392.74,2,Net 30,3-Way Match,5,Closed
+PO-20209,PR-10234,SUP-019,Quantum Sensor Tech,Raw Materials,David Kim (Purchasing Analyst),2026-03-08,11405.79,2,Net 30,3-Way Match,20,Invoiced - Pending Payment
+PO-20210,PR-10236,SUP-015,Pinnacle Corrugated Boxes,Packaging,David Kim (Purchasing Analyst),2026-02-13,39089.97,2,Net 45,3-Way Match,8,Invoiced - Pending Payment
+PO-20211,PR-10237,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,David Kim (Purchasing Analyst),2026-04-04,4360.07,2,Net 30,2-Way Match,3,Closed
+PO-20212,PR-10238,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,David Kim (Purchasing Analyst),2026-03-26,2209.75,1,Net 30,2-Way Match,5,Closed
+PO-20213,PR-10239,SUP-003,Precision Hydraulics Ltd,MRO & Tooling,Marcus Vance (Procurement Specialist),2026-03-25,2224.39,1,Net 30,3-Way Match,10,Closed
+PO-20214,PR-10240,SUP-023,ByteCloud Software Solutions,IT & Telecommunications,David Kim (Purchasing Analyst),2026-05-11,10368.24,1,Net 30,2-Way Match,3,Closed
+PO-20215,PR-10241,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Rachel Adams (Senior Buyer),2026-04-13,6739.71,1,Net 30,2-Way Match,5,Invoiced - Pending Payment
+PO-20216,PR-10242,SUP-015,Pinnacle Corrugated Boxes,Packaging,Rachel Adams (Senior Buyer),2026-05-14,15316.51,3,Net 45,3-Way Match,8,Invoiced - Pending Payment
+PO-20217,PR-10243,SUP-005,Solenoid Systems Corp,Raw Materials,David Kim (Purchasing Analyst),2026-04-10,40907.2,8,Net 45,3-Way Match,12,Closed
+PO-20218,PR-10244,SUP-008,Kinetics Lubricants Inc,MRO & Tooling,David Kim (Purchasing Analyst),2026-03-30,21558.9,3,2/10 Net 30,3-Way Match,6,Closed
+PO-20219,PR-10245,SUP-024,Starlight Industrial Gas,Raw Materials,Rachel Adams (Senior Buyer),2026-04-04,15369.55,8,Net 30,3-Way Match,6,Closed
+PO-20220,PR-10246,SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Marcus Vance (Procurement Specialist),2026-03-13,1664.74,1,Net 30,2-Way Match,5,Closed
+PO-20221,PR-10247,SUP-012,Crestview Facilities Management,Facilities & Services,Rachel Adams (Senior Buyer),2026-06-06,11282.9,2,Net 30,2-Way Match,7,Invoiced - Pending Payment
+PO-20222,PR-10248,SUP-012,Crestview Facilities Management,Facilities & Services,David Kim (Purchasing Analyst),2026-03-13,10888.14,1,Net 30,2-Way Match,7,Closed
+PO-20223,PR-10250,SUP-021,Dynamic Pneumatics Ltd,MRO & Tooling,David Kim (Purchasing Analyst),2026-03-10,5451.15,2,Net 30,3-Way Match,8,Closed

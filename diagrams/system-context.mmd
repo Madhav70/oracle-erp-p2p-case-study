@@ -1,0 +1,51 @@
+flowchart LR
+    %% System Context Architecture Diagram - Northstar Manufacturing Ltd.
+    classDef boundary fill:#f0fdf4,stroke:#16a34a,stroke-width:2px;
+    classDef actor fill:#eff6ff,stroke:#3b82f6,stroke-width:1.5px;
+    classDef external fill:#fef2f2,stroke:#ef4444,stroke-width:1.5px;
+    classDef core fill:#f8fafc,stroke:#0f172a,stroke-width:2px;
+
+    subgraph InternalUsers [Northstar Internal User Personas]
+        ReqUser[Requisitioner / Operational Staff]:::actor
+        Approvers[Department Managers & Directors]:::actor
+        Buyers[Procurement & Purchasing Team]:::actor
+        DockClerk[Warehouse & Dock Receiving Staff]:::actor
+        APSpecialist[Accounts Payable Specialists]:::actor
+        FinanceExec[Finance Leadership / Controller]:::actor
+    end
+
+    subgraph OracleERPBoundary [Target Conceptual ERP Boundary: Oracle Fusion Cloud]
+        SSP[Self-Service Procurement Cloud]:::core
+        Purchasing[Purchasing & Agreement Management]:::core
+        Receiving[Inventory & Receiving Cloud]:::core
+        APCloud[Financials: Payables & Match Engine]:::core
+        GLCloud[General Ledger & Subledger Accounting]:::core
+        BIP[Oracle Transactional Business Intelligence - OTBI]:::core
+    end
+
+    subgraph ExternalEntities [External Ecosystem & Partners]
+        Suppliers[Commercial Suppliers & Vendors]:::external
+        Banking[Commercial Bank - Payments / ACH]:::external
+    end
+
+    %% Interactions
+    ReqUser -->|Submit PR| SSP
+    Approvers -->|Approve / Reject Workflow| SSP
+    SSP -->|Approved PR Transferred| Purchasing
+    Buyers -->|Manage Catalogs & Issue PO| Purchasing
+    
+    Purchasing -->|PO Transmission / EDI| Suppliers
+    Suppliers -->|Shipment Delivery| Receiving
+    DockClerk -->|Log Goods Receipt| Receiving
+    
+    Suppliers -->|Electronic Invoices / XML| APCloud
+    Receiving -->|Receipt Confirmation| APCloud
+    Purchasing -->|PO Terms & Commitments| APCloud
+    
+    APSpecialist -->|Resolve Holds & Manage Exceptions| APCloud
+    APCloud -->|Payment File / ISO 20022| Banking
+    Banking -->|Settlement Confirmation & BAI2| APCloud
+    
+    APCloud -->|Subledger Journal Entries| GLCloud
+    FinanceExec -->|Real-Time Analytics & KPIs| BIP
+    BIP -->|Reports on Spend & Exceptions| FinanceExec

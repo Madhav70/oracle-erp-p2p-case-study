@@ -1,0 +1,57 @@
+flowchart TD
+    %% As-Is Fragmented Procure-to-Pay Workflow (Northstar Manufacturing Ltd.)
+    classDef startEnd fill:#f8fafc,stroke:#475569,stroke-width:2px;
+    classDef problem fill:#fee2e2,stroke:#ef4444,stroke-width:2px;
+    classDef manual fill:#fef3c7,stroke:#f59e0b,stroke-width:2px;
+    classDef normal fill:#f1f5f9,stroke:#64748b,stroke-width:1px;
+
+    Start([Operational Need Identified]):::startEnd --> ChSelection{Channel Selection}
+    
+    ChSelection -->|Paper Form| PaperPR[Paper Requisition Printed & Signed]:::manual
+    ChSelection -->|Email / Slack| EmailPR[Ad-Hoc Email Sent to Buyer]:::problem
+    ChSelection -->|Verbal / Maverick| Maverick[Verbal Order Placed with Vendor]:::problem
+
+    PaperPR --> DeskDelay[Inter-Department Mail Delay & Lost Forms]:::problem
+    EmailPR --> InboxTrap[Request Buried in Buyer Inbox]:::problem
+    
+    DeskDelay --> ManualAppr{Ad-Hoc Manual Approval}
+    InboxTrap --> ManualAppr
+    
+    ManualAppr -->|Approver on Leave| Bottleneck[Indefinite Approval Delay]:::problem
+    ManualAppr -->|Approved| ManualPO[Manual PO Drafted in Legacy Spreadsheets]:::manual
+    
+    ManualPO --> FaxEmail[PO Sent via Email Attachment to Supplier]:::normal
+    Maverick -.->|No PO Issued| SupDelivery[Supplier Delivers Shipment]:::normal
+    FaxEmail --> SupDelivery
+    
+    SupDelivery --> DockArrival[Shipment Arrives at Warehouse Dock]:::normal
+    DockArrival --> PaperSlip[Packing Slip Stamped on Paper & Filed in Binder]:::manual
+    PaperSlip -.->|Slip Misplaced / Unmatched| LostSlip[Receiving Slip Lost in Staging]:::problem
+    
+    SupDelivery --> InvReceived[Supplier Sends Paper / PDF Invoice to AP]:::normal
+    
+    InvReceived --> APClerk[AP Specialist Receives Invoice]:::normal
+    APClerk --> LookupPO{PO Number on Invoice?}
+    
+    LookupPO -->|No PO / Maverick| NoPORoute[AP Hunts for Approver via Email Chasing]:::problem
+    NoPORoute --> DelayWeeks[Payment Delayed 30-60 Days]:::problem
+    
+    LookupPO -->|PO Quoted| ManualMatch{Manual 3-Way Match Investigation}:::manual
+    
+    ManualMatch -->|Dock Slip Missing| SlipChasing[AP Calls Warehouse for Receiving Slip]:::problem
+    ManualMatch -->|Price Mismatch > $100| PriceDispute[Manual Negotiation Between Buyer & Vendor]:::problem
+    ManualMatch -->|Matches Roughly| ManualCheck[Manual Check Printed or Batch ACH Entry]:::manual
+    
+    SlipChasing --> LostSlip
+    PriceDispute --> SupplierLate[Supplier Places Account on Credit Hold]:::problem
+    
+    ManualCheck --> PaymentDisbursed([Payment Disbursed to Supplier]):::startEnd
+    
+    subgraph PainPoints [Core Operational Deficiencies]
+        PP1[High Invoice Discrepancy Rate: 24.5%]
+        PP2[Approval Delays Averaging 2.5 to 5+ Days]
+        PP3[Zero Centralized Visibility or Audit Trail]
+        PP4[Risk of Duplicate Payments & Maverick Spend]
+    end
+    
+    class PP1,PP2,PP3,PP4 problem;

@@ -1,0 +1,39 @@
+# Gap Analysis Matrix: Northstar Manufacturing Ltd.
+
+**Project**: Procure-to-Pay (P2P) Implementation Simulation  
+**Scope**: As-Is Operational State vs. Proposed Oracle ERP Future State  
+**Baseline Status**: 100% Hypothetical Scenario Assumptions
+
+> **Simulated Project Disclaimer**:  
+> This gap analysis matrix is developed as an academic and professional portfolio artifact. It models common enterprise operational deficiencies in legacy manufacturing environments and articulates structured remediation strategies aligned with modern cloud ERP standards.
+
+---
+
+## 1. Gap Classification Overview
+
+Gaps are categorized across six operational and technical dimensions:
+1. **Process Gaps (PRC)**: Workflows requiring structural standardization.
+2. **Data Gaps (DAT)**: Deficiencies in master data cleanliness, completeness, or integrity.
+3. **Control & Security Gaps (CTL)**: Deficits in auditability, Delegation of Authority, and Segregation of Duties.
+4. **Reporting & Visibility Gaps (RPT)**: Inability to access timely operational analytics.
+5. **Training & Enablement Gaps (TRN)**: User skill gaps and change resistance.
+6. **Integration & Technical Gaps (INT)**: Technical connectivity and format conversions.
+
+---
+
+## 2. Comprehensive Gap Analysis Matrix (12 Entries)
+
+| Gap ID | Category | Current-State Problem | Desired Future State | Identified Gap | Proposed Resolution | Owner | Priority | Dependencies | Verification Method |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **GAP-01** | **Process** | Requisitions submitted through informal email, paper, or phone calls ("maverick spend"). | 100% of purchase requests initiated through structured self-service portal. | Lack of single entry point and standard requisition taxonomy. | Implement Self-Service Requisitioning with predefined catalog items and mandatory cost-center fields. | Procurement Lead | **High** | Approval Matrix Sign-off | User testing and monthly audit of PO vs non-PO invoices. |
+| **GAP-02** | **Control** | Approvals handled via email with no monetary threshold enforcement; managers approve their own requests. | Automated Delegation of Authority (DoA) with strict monetary limits ($<\$5\text{k}, \$5\text{k}-\$25\text{k}, >\$25\text{k}$). | No system-enforced approval hierarchy or Segregation of Duties. | Configure Approvals Management Engine (AME) with supervisory routing and SoD rules. | Internal Controls / PM | **High** | HR Organization Hierarchy Data | Functional test execution of multi-tier approval paths. |
+| **GAP-03** | **Process** | Goods receipts recorded on physical paper slips; dock slips lost or filed after invoices arrive. | Dock receipts logged digitally in real-time upon truck delivery at warehouse dock. | Lack of warehouse receiving workstations and real-time inventory intake. | Deploy Receiving Workbench at Docks A, B, and C with barcode/PO line lookup. | Warehouse / Dock Lead | **High** | Network & Terminal Hardware at Dock | Receipt-to-PO entry audit and dock intake timestamp review. |
+| **GAP-04** | **Control** | Invoices matched manually; clerks frequently approve overbilled unit prices to avoid vendor friction. | Automated 3-Way matching (PO vs. Receipt vs. Invoice) with strict tolerance limits ($1.5\% / \$50$). | Absence of automated validation rules and price tolerance controls. | Configure 3-Way and 2-Way automated matching rules in Payables with tolerance holds. | AP Specialist Lead | **High** | Finalization of Tolerance Policy | Simulation testing with sample price/quantity mismatch vouchers. |
+| **GAP-05** | **Data** | Supplier master contains duplicate vendor records, missing tax identification numbers, and outdated payment terms. | Clean, deduplicated Supplier Master with standardized tax IDs, active flags, and validated terms. | No vendor master data governance or mandatory field validation. | Execute vendor master data cleansing sprint; establish standardized onboarding validation rules. | Procurement Lead / Data SME | **High** | Supplier Master Cleansing Scripts | Data quality script audit verifying 100% completeness on tax IDs and terms. |
+| **GAP-06** | **Process** | Invoices on hold sit unmonitored for weeks until suppliers place accounts on credit hold. | Automated exception notifications and escalation worklists for holds $> 7$ days. | No tracking of hold aging or automated notification to buyers and dock clerks. | Configure automated hold routing worklists with scheduled email reminders and escalation timers. | AP Specialist Lead | **Medium** | Notification Server / SMTP Setup | Test case verification of 7-day hold escalation trigger. |
+| **GAP-07** | **Reporting** | Management relies on labor-intensive, month-end spreadsheet reconciliations for spend and liability analysis. | Real-time interactive executive dashboard displaying spend by supplier, category, holds, and cycle times. | Lack of consolidated business intelligence or transactional reporting layer. | Develop pre-configured Oracle Transactional Business Intelligence (OTBI) dashboards and KPI views. | BI / Reporting Analyst | **Medium** | Data Model Stability | Reconciliation of dashboard totals against underlying database tables. |
+| **GAP-08** | **Integration** | Disconnected banking processes; AP prepares physical checks or manual web-portal bank uploads. | Automated electronic Payment Process Request (PPR) generating standard ACH / EFT payment files. | Manual payment execution causing late-fee risk and lack of cash-outflow forecasting. | Configure automated payment batch workbench with electronic remittance advice generation. | Treasury / Finance Lead | **Medium** | Banking Partner File Format Specs | Verification of test payment file format against bank specification. |
+| **GAP-09** | **Training** | Warehouse dock workers and plant requisitioners have never utilized an enterprise cloud ERP interface. | All operational roles demonstrate proficiency in system navigation, receiving, and request submission. | High risk of user error, dock intake delays, and requisition rejection rates during go-live. | Develop role-tailored training curriculum, interactive sandbox practice, and 1-page dock job aids. | Change Management Lead | **High** | Sandbox Environment Availability | $\ge 90\%$ competency score on role-based user training assessments. |
+| **GAP-10** | **Control** | Incomplete audit trail; impossible to determine who approved specific historical invoice overrides. | Full immutable audit logging of all approvals, status changes, manual overrides, and cancellations. | Audit logging not enabled; lack of traceable compliance records. | Enable database and application audit trail logging for all procurement and payables entities. | IT Security / Compliance | **High** | Audit Storage Configuration | Audit log export verification for sample transaction lifecycle. |
+| **GAP-11** | **Process** | Service and consulting contracts lack defined milestones, causing disputes over incomplete deliverables. | Standardized 2-Way matching against defined PO milestone schedules for service categories. | Service procurement handled informally without line-item service confirmations. | Establish 2-Way service PO templates with mandatory service completion sign-off by hiring manager. | Procurement Buyer Lead | **Medium** | Service SOW Standardization | Review of service PO invoice matching against milestone schedule. |
+| **GAP-12** | **Data** | Item catalogs lack standardized category coding, making commodity spend analysis inaccurate. | Standardized item categorization (Raw Materials, MRO, Packaging, Facilities, IT, Logistics). | Ad-hoc free-text item descriptions entered by requesters. | Implement standard UNSPSC-aligned 6-category taxonomy across all catalog and non-catalog PRs. | Master Data SME | **Medium** | Category Taxonomy Definition | Analysis script verification showing 0% uncategorized transactions. |

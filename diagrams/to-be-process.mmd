@@ -1,0 +1,81 @@
+flowchart TD
+    %% To-Be Standardized Oracle ERP Procure-to-Pay Workflow (Northstar Manufacturing Ltd.)
+    classDef step fill:#eff6ff,stroke:#2563eb,stroke-width:1.5px;
+    classDef decision fill:#fef3c7,stroke:#d97706,stroke-width:1.5px;
+    classDef hold fill:#fee2e2,stroke:#ef4444,stroke-width:1.5px;
+    classDef success fill:#ecfdf5,stroke:#059669,stroke-width:2px;
+    classDef audit fill:#f8fafc,stroke:#475569,stroke-width:1px;
+
+    Start([1. Operational Need Identified]):::success --> PRCreate[1. Raise Purchase Requisition in Self-Service Procurement]:::step
+    
+    PRCreate --> AutoRoute{2. Automated Approval Routing via DoA Rules}:::decision
+    
+    AutoRoute -->|Amount < $5,000| MgrAppr[Department Manager Approval]:::step
+    AutoRoute -->|Amount $5,000 - $25,000| DirAppr[Director of Operations Approval]:::step
+    AutoRoute -->|Amount > $25,000| VPAppr[VP Finance & Operations Approval]:::step
+    AutoRoute -->|Policy Violation / Over Budget| PRReject[Requisition Rejected & Returned to Requester with Notes]:::hold
+    
+    MgrAppr --> POEngine
+    DirAppr --> POEngine
+    VPAppr --> POEngine
+    
+    subgraph PO_Phase [Purchase Order Generation & Dispatch]
+        POEngine[3. Automated / Buyer PO Creation against Master Agreements]:::step
+        POEngine --> POIssue[3b. Electronic PO Dispatched via Supplier Portal / EDI]:::step
+    end
+    
+    POIssue --> SupplierFulfill[4. Supplier Fulfills Order & Ships Goods / Services]:::step
+    
+    subgraph Receiving_Phase [Goods / Service Receipt]
+        SupplierFulfill --> DockReceipt[5. Warehouse Logs Goods Receipt in Receiving Cloud against PO]:::step
+        DockReceipt --> QualityInspection{Inspection Passed?}:::decision
+        QualityInspection -->|Yes - Full Qty| ReceiptRecorded[Receipt Confirmed & Available for Matching]:::step
+        QualityInspection -->|Damaged / Partial| ReturnRMA[Defect Flagged & Short Receipt Quantity Stored]:::hold
+    end
+    
+    subgraph Invoicing_Phase [Invoice Capture & Automated Matching]
+        SupplierFulfill --> InvCapture[6. Supplier Invoice Captured via XML/Portal/OCR]:::step
+        ReceiptRecorded --> MatchEngine{7. Automated Matching Engine Evaluates Line Items}:::decision
+        ReturnRMA --> MatchEngine
+        InvCapture --> MatchEngine
+        
+        MatchEngine -->|2-Way Match - Services| Match2Way[PO vs Invoice Price & Schedule Match]:::step
+        MatchEngine -->|3-Way Match - Goods| Match3Way[PO vs Receipt vs Invoice Price & Quantity]:::step
+        
+        Match3Way --> ToleranceCheck{Within Tolerance? Price <= 1.5% or <= $50}:::decision
+        Match2Way --> ToleranceCheck
+        
+        ToleranceCheck -->|Pass Tolerances| MatchPassed[Validated & Approved for Payment Automatically]:::step
+        
+        ToleranceCheck -->|Price Variance > 2%| HoldPrice[Hold: Price Variance Hold Applied]:::hold
+        ToleranceCheck -->|No Dock Receipt Found| HoldReceipt[Hold: Missing Goods Receipt Hold Applied]:::hold
+        ToleranceCheck -->|Invoice Qty > Receipt Qty| HoldQty[Hold: Quantity Variance Hold Applied]:::hold
+    end
+    
+    subgraph Exception_Resolution [8. Automated Exception Routing & Resolution]
+        HoldPrice --> APReview[Routed to AP Supervisor & Buyer for Approval or Credit Memo Request]:::step
+        HoldReceipt --> DockAlert[Alert Sent to Warehouse Lead to Verify Dock Receipt]:::step
+        HoldQty --> ShortageReview[Supplier Shortage Claim Filed / Adjust Line]:::step
+        
+        APReview --> HoldResolved{Discrepancy Resolved?}:::decision
+        DockAlert --> HoldResolved
+        ShortageReview --> HoldResolved
+        
+        HoldResolved -->|Hold Released| MatchPassed
+        HoldResolved -->|Disputed / Rejected| CreditMemo[Invoice Voided / Replacement Credit Memo Captured]:::hold
+    end
+    
+    subgraph Payment_Phase [9. Payment Execution & Cash Management]
+        MatchPassed --> PmtSchedule[9. Scheduled for Payment via Terms Optimization]:::step
+        PmtSchedule --> ExecPayment[Automated Payment Batch Run via ACH / Electronic Funds Transfer]:::step
+        ExecPayment --> Remittance[Remittance Advice Emailed to Vendor]:::step
+    end
+    
+    subgraph Governance [10. Audit, Controls & Analytics]
+        AuditLog[10. Complete Immutable Audit Trail Logged to General Ledger]:::audit
+        ProcureAnalytics[Real-Time Analytics Dashboard: Spend, Cycle Times, Hold Metrics]:::audit
+    end
+    
+    ExecPayment --> AuditLog
+    ExecPayment --> ProcureAnalytics
+    Remittance --> EndNode([Procure-to-Pay Lifecycle Complete]):::success

@@ -1,0 +1,6 @@
+Stage,Average (Days),Median (Days),Target (Days)
+Requisition to Manager Approval,2.48,3.0,2.0
+Approval to PO Issuance (Buyer Turnaround),1.34,1.0,1.0
+Total Procurement Cycle (PR to PO),3.88,4.0,3.0
+Receipt to Invoice Capture,4.02,N/A,3.0
+Invoice Capture to Payment Disbursement,30.89,30.0,30.0

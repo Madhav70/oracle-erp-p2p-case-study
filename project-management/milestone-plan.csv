@@ -1,0 +1,11 @@
+milestone_id,milestone_name,target_week,target_date,predecessors,responsible_owner,exit_criteria,deliverable_artifact,status
+M1,Project Kickoff & Charter Authorization,Week 1,2026-01-16,None,Executive Sponsor / PMO,Formal sign-off on Project Charter,Signed Project Charter & Scope Baseline,Completed
+M2,Business Requirements & Process Baseline,Week 3,2026-01-30,M1,Business Analyst / PM,18 traceable business requirements signed off,Signed BRD & Gap Analysis Matrix,Completed
+M3,Functional Solution Design & CRP-1 Exit,Week 7,2026-02-27,M2,Lead Functional Consultant,CRP-1 prototype successfully executed; FDD signed,Signed Functional Design Document (FDD),Completed
+M4,System Integration Testing (SIT) Exit,Week 9,2026-03-13,M3,QA Lead / Technical Lead,100% end-to-end integration scenarios passed,SIT Execution Sign-off Memorandum,Completed
+M5,Mock Cutover 1 Data Reconciliation,Week 10,2026-03-20,M4,Data Migration Lead,100% supplier master cleansed & validated,Mock Cutover 1 Data Verification Report,Completed
+M6,User Acceptance Testing (UAT) Sign-off,Week 11,2026-03-27,M5,QA Lead / Business Leads,12 business UAT scenarios passed; 0 Sev 1/2 defects,Formal Business UAT Sign-off Protocol,Completed
+M7,Mock Cutover 2 & End-User Training Certification,Week 13,2026-04-10,M6,Change Lead / Technical Lead,>=90% staff certified; dress rehearsal completed,Training Roster & Mock Cutover 2 Certificate,Completed
+M8,Steering Committee Go / No-Go Cutover Authorization,Week 13,2026-04-10,M7,Steering Committee (CFO),Unanimous executive authorization for weekend blackout,Signed Go/No-Go Governance Decision,Completed
+M9,Production Cutover & System Launch (Go-Live),Week 14,2026-04-13,M8,Technical Lead / PMO,48-hour cutover executed; smoke tests passed,Production Launch Smoke Test Certificate,Completed
+M10,Hypercare Exit & Governance Council Handover,Week 16,2026-05-01,M9,PMO / Governance Chair,14 days stable production; <= 2 open Sev 3 bugs,Final Project Retrospective & Handover Memo,Completed

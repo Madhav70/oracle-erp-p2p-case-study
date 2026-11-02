@@ -1,0 +1,26 @@
+supplier_id,supplier_name,category,payment_terms,risk_rating,lead_time_days,is_active,created_date
+SUP-001,Apex Industrial Fasteners,Raw Materials,Net 30,Low,7,True,2025-11-15
+SUP-002,Vulcan Steelworks Corp,Raw Materials,Net 45,Medium,14,True,2025-11-15
+SUP-003,Precision Hydraulics Ltd,MRO & Tooling,Net 30,Low,10,True,2025-11-15
+SUP-004,Orion Logistics & Freight,Logistics,Net 30,Low,5,True,2025-11-15
+SUP-005,Solenoid Systems Corp,Raw Materials,Net 45,Medium,12,True,2025-11-15
+SUP-006,Global Packaging Solutions,Packaging,Net 30,Low,8,True,2025-11-15
+SUP-007,Titan Bearings & Drives,MRO & Tooling,Net 45,Low,10,True,2025-11-15
+SUP-008,Kinetics Lubricants Inc,MRO & Tooling,2/10 Net 30,Low,6,True,2025-11-15
+SUP-009,Benchmark Electricals Ltd,MRO & Tooling,Net 30,Medium,9,True,2025-11-15
+SUP-010,AccuPlast Molding Corp,Raw Materials,Net 60,High,21,True,2025-11-15
+SUP-011,Nordic Chemical Reagents,Raw Materials,Net 45,Medium,15,True,2025-11-15
+SUP-012,Crestview Facilities Management,Facilities & Services,Net 30,Low,7,True,2025-11-15
+SUP-013,Ironclad Safety Gear Co,MRO & Tooling,Net 30,Low,5,True,2025-11-15
+SUP-014,Matrix Information Technologies,IT & Telecommunications,Net 30,Low,10,True,2025-11-15
+SUP-015,Pinnacle Corrugated Boxes,Packaging,Net 45,Low,8,True,2025-11-15
+SUP-016,Summit CNC Tooling GmbH,MRO & Tooling,Net 60,Medium,18,True,2025-11-15
+SUP-017,AeroMetals Alloy Supply,Raw Materials,Net 45,Medium,16,True,2025-11-15
+SUP-018,Fleetlink Transport Services,Logistics,Net 30,Low,5,True,2025-11-15
+SUP-019,Quantum Sensor Tech,Raw Materials,Net 30,High,20,True,2025-11-15
+SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,Net 30,Low,5,True,2025-11-15
+SUP-021,Dynamic Pneumatics Ltd,MRO & Tooling,Net 30,Low,8,True,2025-11-15
+SUP-022,Polymer Extrusions Inc,Raw Materials,Net 45,Medium,14,True,2025-11-15
+SUP-023,ByteCloud Software Solutions,IT & Telecommunications,Net 30,Low,3,True,2025-11-15
+SUP-024,Starlight Industrial Gas,Raw Materials,Net 30,Low,6,True,2025-11-15
+SUP-025,Vanguard Security Services,Facilities & Services,Net 30,Low,7,True,2025-11-15

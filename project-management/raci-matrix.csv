@@ -1,0 +1,19 @@
+activity_id,implementation_activity,project_manager,procurement_lead,finance_lead,erp_functional_consultant,technical_integration_lead,qa_lead,change_management_lead,business_approver_sponsor
+ACT-01,Project Charter & Scope Definition,R,C,C,C,I,I,I,A
+ACT-02,Business Requirements Gathering (BRD),A,C,C,R,I,C,I,C
+ACT-03,As-Is & To-Be Process Mapping,A,C,C,R,I,I,I,C
+ACT-04,Delegation of Authority (DoA) Thresholds,C,C,R,C,I,I,I,A
+ACT-05,Functional Solution Design (FDD),A,C,C,R,C,C,I,I
+ACT-06,Matching Rules & Tolerance Configuration,I,C,R,R,C,C,I,A
+ACT-07,Security Roles & Segregation of Duties (SoD),A,I,C,C,R,I,I,C
+ACT-08,Supplier Master Data Cleansing,I,C,C,I,R,I,I,A
+ACT-09,Open Purchase Order Conversion Scripts,I,C,C,C,R,I,I,A
+ACT-10,Functional Unit Testing (FUT) Execution,I,I,I,C,C,R,I,A
+ACT-11,System Integration Testing (SIT),C,I,I,C,C,R,I,A
+ACT-12,User Acceptance Testing (UAT) Sign-off,C,R,R,C,I,C,C,A
+ACT-13,End-User Training Delivery,I,C,C,I,I,I,R,A
+ACT-14,Supplier Enablement Notice Transmission,I,R,I,I,I,I,C,A
+ACT-15,Weekend Cutover Runbook Execution,A,C,C,C,R,C,I,I
+ACT-16,Production Go / No-Go Decision Gate,C,C,C,C,C,C,C,A
+ACT-17,Hypercare Support & Triage,A,C,C,R,R,C,C,I
+ACT-18,Transition to Steady-State Governance,R,C,C,I,I,I,I,A

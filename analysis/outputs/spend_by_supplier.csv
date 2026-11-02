@@ -1,0 +1,26 @@
+supplier_id,supplier_name,category,po_count,total_committed_spend,invoice_count,invoiced_amount,exception_count,paid_amount,exception_rate_pct
+SUP-023,ByteCloud Software Solutions,IT & Telecommunications,15,292419.31,14,284265.14,3,225454.96,21.43
+SUP-014,Matrix Information Technologies,IT & Telecommunications,18,292364.21,16,254576.44,1,249396.86,6.25
+SUP-015,Pinnacle Corrugated Boxes,Packaging,10,274280.16,10,274280.16,4,183268.37,40.0
+SUP-006,Global Packaging Solutions,Packaging,10,235474.21,9,231302.92,3,170485.58,33.33
+SUP-005,Solenoid Systems Corp,Raw Materials,10,166889.67,9,129153.39,2,107325.31,22.22
+SUP-020,CleanRoom Janitorial Supplies,Facilities & Services,24,158745.65,20,133656.74,1,126917.03,5.0
+SUP-017,AeroMetals Alloy Supply,Raw Materials,6,156096.15,6,156112.79,0,156112.79,0.0
+SUP-025,Vanguard Security Services,Facilities & Services,20,145803.02,18,140680.32,1,140680.32,5.56
+SUP-007,Titan Bearings & Drives,MRO & Tooling,10,136930.48,10,136930.48,5,73674.87,50.0
+SUP-004,Orion Logistics & Freight,Logistics,9,135338.64,9,135379.36,1,121925.26,11.11
+SUP-012,Crestview Facilities Management,Facilities & Services,18,124518.57,17,121518.22,6,104347.23,35.29
+SUP-021,Dynamic Pneumatics Ltd,MRO & Tooling,9,97054.15,9,97054.15,2,82735.3,22.22
+SUP-018,Fleetlink Transport Services,Logistics,8,91013.42,8,91578.97,1,91578.97,12.5
+SUP-003,Precision Hydraulics Ltd,MRO & Tooling,10,90374.0,9,83186.57,3,56604.91,33.33
+SUP-022,Polymer Extrusions Inc,Raw Materials,2,80786.16,2,87097.31,2,87097.31,100.0
+SUP-008,Kinetics Lubricants Inc,MRO & Tooling,5,71432.19,4,52806.29,2,23075.43,50.0
+SUP-019,Quantum Sensor Tech,Raw Materials,4,70662.2,4,71256.01,1,59256.41,25.0
+SUP-016,Summit CNC Tooling GmbH,MRO & Tooling,9,68800.19,9,69655.78,2,68776.84,22.22
+SUP-001,Apex Industrial Fasteners,Raw Materials,4,66514.29,3,47617.64,2,13126.98,66.67
+SUP-010,AccuPlast Molding Corp,Raw Materials,5,59340.82,5,61383.93,4,33673.74,80.0
+SUP-013,Ironclad Safety Gear Co,MRO & Tooling,8,58683.97,8,58732.34,2,45577.11,25.0
+SUP-002,Vulcan Steelworks Corp,Raw Materials,2,29097.33,2,29662.62,1,29662.62,50.0
+SUP-024,Starlight Industrial Gas,Raw Materials,3,28329.35,3,28347.77,1,19277.07,33.33
+SUP-009,Benchmark Electricals Ltd,MRO & Tooling,3,27400.33,3,27400.33,0,27400.33,0.0
+SUP-011,Nordic Chemical Reagents,Raw Materials,1,6570.91,1,6570.91,1,0.0,100.0

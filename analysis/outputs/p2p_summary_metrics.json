@@ -1,0 +1,67 @@
+{
+    "metadata": {
+        "organization": "Northstar Manufacturing Ltd.",
+        "project_name": "Oracle ERP Procure-to-Pay Implementation Simulation",
+        "analysis_timestamp": "2026-11-02T13:06:32.987006",
+        "status": "Simulated Analytics - Synthetic Baseline",
+        "seed": 42
+    },
+    "financial_overview": {
+        "total_po_value": 2964919.38,
+        "total_invoiced_value": 2810206.58,
+        "total_paid_value": 2297431.6,
+        "total_price_variance_delta": 22512.69
+    },
+    "transaction_counts": {
+        "total_suppliers": 25,
+        "total_requisitions": 250,
+        "approved_requisitions": 223,
+        "rejected_requisitions": 19,
+        "pending_requisitions": 8,
+        "total_purchase_orders": 223,
+        "total_goods_receipts": 105,
+        "total_invoices": 208,
+        "paid_invoices": 169,
+        "invoices_on_hold": 24,
+        "approved_pending_payment": 15
+    },
+    "discrepancy_and_exception_metrics": {
+        "clean_matched_count": 157,
+        "total_exception_count": 51,
+        "exception_rate_count_pct": 24.52,
+        "exception_value": 720146.31,
+        "exception_rate_value_pct": 25.63,
+        "price_variance_count": 19,
+        "price_variance_value": 305535.27,
+        "missing_receipt_count": 21,
+        "missing_receipt_value": 285947.33,
+        "quantity_variance_count": 11,
+        "quantity_variance_value": 128663.71
+    },
+    "cycle_time_metrics_days": {
+        "pr_approval_time": {
+            "mean": 2.48,
+            "median": 3.0,
+            "description": "Days between Requisition submission and Managerial approval"
+        },
+        "po_creation_turnaround": {
+            "mean": 1.34,
+            "median": 1.0,
+            "description": "Days between PR approval and PO issuance by Buyer"
+        },
+        "procurement_cycle_time": {
+            "mean": 3.88,
+            "median": 4.0,
+            "description": "Total elapsed days from initial Requisition creation to PO issuance"
+        },
+        "receipt_to_invoice_turnaround": {
+            "mean": 4.02,
+            "description": "Days between physical dock receipt and invoice recording"
+        },
+        "invoice_to_payment_cycle_time": {
+            "mean": 30.89,
+            "median": 30.0,
+            "description": "Days between invoice recording and final payment disbursement"
+        }
+    }
+}

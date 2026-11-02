@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Independent simulated case study for Oracle ERP Procure-to-Pay (P2P) implementation at Northstar Manufacturing Ltd. Demonstrates business analysis, project management, and analytics.">
+  <title>Oracle ERP Procure-to-Pay Implementation | Northstar Manufacturing Ltd. (Case Study)</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Top Simulation Disclosure Banner -->
+  <div class="disclosure-banner">
+    <div>
+      <span class="badge">ACADEMIC & PORTFOLIO CASE STUDY</span>
+      <strong>Notice:</strong> This is an independent simulated project for fictional enterprise "Northstar Manufacturing Ltd." No actual Oracle ERP implementation took place.
+    </div>
+    <div style="font-size: 0.8rem; opacity: 0.9;">
+      Simulated Planning Horizon: 14 Weeks | Version 1.0
+    </div>
+  </div>
+
+  <!-- Primary Sticky Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">N</div>
+        <span>Northstar P2P Transformation</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#process-flows">Process Flows</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#gap-analysis">Gaps</a></li>
+        <li><a href="#project-plan">Plan & RACI</a></li>
+        <li><a href="#risk-register">Risks</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+        <li><a href="#testing">Testing & UAT</a></li>
+        <li><a href="#cutover">Cutover</a></li>
+        <li><a href="#artifacts">Artifacts Hub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- 1. HERO & PROJECT OVERVIEW SECTION -->
+    <header class="hero" id="overview">
+      <div class="hero-subtitle">Independent ERP Consulting Case Study</div>
+      <h1>Oracle ERP Procure-to-Pay (P2P) Implementation</h1>
+      <p>
+        A comprehensive, portfolio-ready business transformation blueprint demonstrating how a mid-sized manufacturing organization modernizes procurement and supplier payments by transitioning from fragmented manual workflows to an integrated, auditable cloud ERP operating model.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><strong>Fictional Client:</strong> Northstar Manufacturing Ltd.</div>
+        <div class="hero-meta-item"><strong>Process Scope:</strong> Procure-to-Pay (P2P)</div>
+        <div class="hero-meta-item"><strong>Target ERP Alignment:</strong> Oracle Fusion Cloud Procurement & Financials</div>
+        <div class="hero-meta-item"><strong>Execution Window:</strong> 14 Weeks (Illustrative)</div>
+        <div class="hero-meta-item"><strong>Status:</strong> Baselined Simulation Deliverables</div>
+      </div>
+    </header>
+
+    <!-- KEY PERFORMANCE INDICATORS (DERIVED FROM GENERATED DATA) -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-title">Committed PO Spend</div>
+        <div class="kpi-value">$2.96M</div>
+        <p class="kpi-desc">223 Purchase Orders issued across 25 approved vendors ($2,964,919.38).</p>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-title">Invoiced Volume</div>
+        <div class="kpi-value">$2.81M</div>
+        <p class="kpi-desc">208 Vouchers processed ($2,810,206.58); $2.30M disbursed to date.</p>
+      </div>
+      <div class="kpi-card danger">
+        <div class="kpi-title">Simulated Discrepancy Rate</div>
+        <div class="kpi-value">24.52%</div>
+        <p class="kpi-desc">51 Invoices on hold (Price variance, Missing receipts, Quantity mismatch).</p>
+      </div>
+      <div class="kpi-card warning">
+        <div class="kpi-title">Procurement Cycle Time</div>
+        <div class="kpi-value">3.88 Days</div>
+        <p class="kpi-desc">Average elapsed duration from PR creation to PO dispatch (Target: &le; 2.0d).</p>
+      </div>
+      <div class="kpi-card success">
+        <div class="kpi-title">Data Quality Audit</div>
+        <div class="kpi-value">100% Pass</div>
+        <p class="kpi-desc">Zero foreign-key orphans; strict referential integrity across all tables.</p>
+      </div>
+    </div>
+
+    <!-- 2. EXECUTIVE SUMMARY -->
+    <section id="executive-summary">
+      <div class="section-header">
+        <span class="section-tag">Strategic Direction</span>
+        <h2>Executive Summary</h2>
+      </div>
+      <p>
+        Northstar Manufacturing Ltd. is a fictional discrete manufacturing enterprise specializing in precision industrial components. Prior to this modernization program, Northstar operated with decentralized purchasing practices characterized by paper requisition forms, unmonitored email approvals, physical dock slips, and manual Accounts Payable cross-checking. These vulnerabilities created rampant maverick spend, an unsustainable invoice exception rate of <strong>24.52%</strong>, and delayed vendor payments that strained critical supply chains.
+      </p>
+      <p>
+        This case study formulates a structured 14-week implementation roadmap to establish a standardized, control-driven Procure-to-Pay lifecycle aligned conceptually with Oracle Fusion Cloud Procurement and Financials. Core architectural pillars include:
+      </p>
+      <ul>
+        <li><strong>Self-Service Procurement</strong>: Centralized catalog templates and mandatory cost-center funding rules.</li>
+        <li><strong>Automated Delegation of Authority (DoA)</strong>: Three-tier approval routing (&lt;$5k, $5k&ndash;$25k, &gt;$25k).</li>
+        <li><strong>Automated 2-Way & 3-Way Matching</strong>: Pre-configured tolerance group (1.5% / $50) to auto-approve minor freight variances while stopping billing overages.</li>
+        <li><strong>Real-Time Analytics</strong>: Centralized dashboards replacing month-end spreadsheet chasing with live KPIs.</li>
+      </ul>
+    </section>
+
+    <!-- 3. BUSINESS PROBLEM & OBJECTIVES -->
+    <section id="business-problem">
+      <div class="section-header">
+        <span class="section-tag">Problem Statement & KPIs</span>
+        <h2>Business Problem & Strategic Objectives</h2>
+      </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Objective ID</th>
+              <th>Strategic Business Objective</th>
+              <th>Current Simulated Baseline</th>
+              <th>To-Be Target SLA (Assumption)</th>
+              <th>Verification Method</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>OBJ-01</strong></td>
+              <td>Standardize Requisition & Approval Routing</td>
+              <td>2.48 days avg latency; loose email chains</td>
+              <td>&le; 1.0 business day via automated DoA</td>
+              <td>BPM approval audit logs</td>
+            </tr>
+            <tr>
+              <td><strong>OBJ-02</strong></td>
+              <td>Compress Total Procurement Cycle Time</td>
+              <td>3.88 days from initial PR to PO dispatch</td>
+              <td>&le; 2.0 business days for standard catalogue items</td>
+              <td>Purchasing workbench timestamp audit</td>
+            </tr>
+            <tr>
+              <td><strong>OBJ-03</strong></td>
+              <td>Automate Invoice Matching & Reduce Holds</td>
+              <td>24.52% invoice exception holds (51 vouchers)</td>
+              <td>&le; 8.0% exception rate via 3-Way match</td>
+              <td>Accounts Payable hold log review</td>
+            </tr>
+            <tr>
+              <td><strong>OBJ-04</strong></td>
+              <td>Eliminate Maverick & Unmatched Invoices</td>
+              <td>Frequent unreferenced invoices received</td>
+              <td>100% invoices linked to approved PO or SOW</td>
+              <td>Payables subledger reconciliation</td>
+            </tr>
+            <tr>
+              <td><strong>OBJ-05</strong></td>
+              <td>Consolidated Real-Time Spend Visibility</td>
+              <td>Manual monthly Excel reconciliations</td>
+              <td>Real-time interactive executive dashboard</td>
+              <td>Production dashboard sign-off</td>
+            </tr>
+            <tr>
+              <td><strong>OBJ-06</strong></td>
+              <td>Organizational Change Adoption</td>
+              <td>Minimal structured training documentation</td>
+              <td>&ge; 90% certified role competency score</td>
+              <td>LMS completion & UAT sign-off</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 4. SCOPE & EXCLUSIONS -->
+    <section id="scope">
+      <div class="section-header">
+        <span class="section-tag">Boundary Definition</span>
+        <h2>Scope & Boundary Conditions</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+        <div style="background-color: var(--neutral-50); border: 1px solid var(--neutral-200); border-radius: var(--radius-md); padding: 1.25rem;">
+          <h4 style="color: var(--success); margin-bottom: 0.75rem;">&check; In-Scope Processes (Phase 1)</h4>
+          <ul style="padding-left: 1.25rem; font-size: 0.88rem; color: var(--neutral-700);">
+            <li>Supplier Master standardization (25 vendors, Net 30/45/60/2-10).</li>
+            <li>Self-Service Requisitioning with catalog & non-catalog templates.</li>
+            <li>Delegation of Authority approval workflows (&lt;$5k, $5k-$25k, &gt;$25k).</li>
+            <li>Automated Purchase Order creation and electronic transmission.</li>
+            <li>Dock goods intake, partial delivery, and damage inspection logging.</li>
+            <li>Automated 2-Way (services) & 3-Way (goods) matching.</li>
+            <li>Invoice tolerance group configuration (1.5% / $50 threshold).</li>
+            <li>Automated Payment Process Request (PPR) batch runs (ACH/EFT).</li>
+            <li>Role-Based Access Control (RBAC) & Segregation of Duties.</li>
+          </ul>
+        </div>
+        <div style="background-color: var(--neutral-50); border: 1px solid var(--neutral-200); border-radius: var(--radius-md); padding: 1.25rem;">
+          <h4 style="color: var(--danger); margin-bottom: 0.75rem;">&cross; Out-of-Scope Exclusions (Phase 2 Roadmap)</h4>
+          <ul style="padding-left: 1.25rem; font-size: 0.88rem; color: var(--neutral-700);">
+            <li>Complex multi-vendor RFx strategic sourcing bidding events.</li>
+            <li>Contract lifecycle authoring with automated clause libraries.</li>
+            <li>Optical Character Recognition (OCR) scanner hardware installation.</li>
+            <li>Direct host-to-host bank SFTP socket integration (mock ACH simulated).</li>
+            <li>Global intercompany transfer pricing across foreign tax entities.</li>
+            <li>Direct supplier catalog punch-out e-commerce interfaces.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. AS-IS AND TO-BE PROCESS FLOWS -->
+    <section id="process-flows">
+      <div class="section-header">
+        <span class="section-tag">Process Re-Engineering</span>
+        <h2>As-Is vs. To-Be Process Architecture</h2>
+      </div>
+
+      <div class="tabs-header">
+        <button class="tab-btn active" data-target="flow-tobe">To-Be Standardized 10-Step Flow (Target ERP)</button>
+        <button class="tab-btn" data-target="flow-asis">As-Is Fragmented Current State (Baseline)</button>
+      </div>
+
+      <!-- Tab: To-Be Process -->
+      <div class="tab-pane active" id="flow-tobe">
+        <p>The To-Be operating model establishes a standardized, automated 10-step lifecycle aligned with Oracle Fusion Cloud:</p>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Step #</th>
+                <th>Lifecycle Stage</th>
+                <th>Operating Role</th>
+                <th>System Activity & Controls</th>
+                <th>Exception Handling Logic</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td>Requisition Creation</td>
+                <td>Requisitioner</td>
+                <td>Raise request in Self-Service Procurement; mandatory cost center & commodity assignment.</td>
+                <td>Item validation blocks invalid accounting flexfields.</td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td>Approval Routing</td>
+                <td>Dept Mgr / Director / VP</td>
+                <td>Automated routing based on monetary thresholds (&lt;$5k, $5k-$25k, &gt;$25k).</td>
+                <td>Rejections require mandatory feedback; 48hr inactivity escalation.</td>
+              </tr>
+              <tr>
+                <td><strong>3</strong></td>
+                <td>PO Execution</td>
+                <td>Purchasing Buyer / Auto</td>
+                <td>Auto-creation against Blanket Purchase Agreements; electronic dispatch to supplier.</td>
+                <td>Non-catalog items route to buyer workbench for quote review.</td>
+              </tr>
+              <tr>
+                <td><strong>4</strong></td>
+                <td>Fulfillment</td>
+                <td>Supplier</td>
+                <td>Supplier ships goods / delivers services per contracted lead times.</td>
+                <td>Advanced Shipping Notice (ASN) logging.</td>
+              </tr>
+              <tr>
+                <td><strong>5</strong></td>
+                <td>Dock Receiving</td>
+                <td>Receiving Clerk</td>
+                <td>Log dock receipt against PO lines; record quantity and packaging condition.</td>
+                <td>Partial deliveries update open balance; damages initiate RMA return.</td>
+              </tr>
+              <tr>
+                <td><strong>6</strong></td>
+                <td>Invoice Ingestion</td>
+                <td>Accounts Payable</td>
+                <td>Electronic capture; mandatory validation against PO number; duplicate check.</td>
+                <td>Duplicate supplier invoice references blocked immediately.</td>
+              </tr>
+              <tr>
+                <td><strong>7</strong></td>
+                <td>Automated Match</td>
+                <td>Payables Match Engine</td>
+                <td>3-Way (Goods) and 2-Way (Services) match against configured tolerances (1.5% / $50).</td>
+                <td>Passed invoices move directly to payment scheduling.</td>
+              </tr>
+              <tr>
+                <td><strong>8</strong></td>
+                <td>Exception Routing</td>
+                <td>AP Supervisor / Buyer</td>
+                <td>Automated hold tagging (Price Variance, Missing Receipt, Quantity Variance).</td>
+                <td>Price holds alert Buyer; missing receipts alert Warehouse Lead.</td>
+              </tr>
+              <tr>
+                <td><strong>9</strong></td>
+                <td>Disbursement</td>
+                <td>Treasury / AP Manager</td>
+                <td>Automated Payment Process Request (PPR) run; ACH/EFT payment batch authorization.</td>
+                <td>Segregation of duties enforces secondary managerial sign-off.</td>
+              </tr>
+              <tr>
+                <td><strong>10</strong></td>
+                <td>Governance & Audit</td>
+                <td>PMO / Compliance</td>
+                <td>Immutable audit trail logging; real-time OTBI spend and hold analytics.</td>
+                <td>Hold aging &gt; 7 days triggers priority executive escalation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--neutral-600);">
+          <em>Visual Flowchart available in <code>diagrams/to-be-process.mmd</code>.</em>
+        </p>
+      </div>
+
+      <!-- Tab: As-Is Process -->
+      <div class="tab-pane" id="flow-asis">
+        <p>The As-Is baseline suffered from severe manual bottlenecks and lack of central visibility:</p>
+        <ul>
+          <li><strong>Informal Intake:</strong> Paper forms, email threads, and verbal agreements resulting in widespread maverick buying.</li>
+          <li><strong>Approval Latency:</strong> Manual physical paper signing averaging 2.48 days latency, with frequent lost documents.</li>
+          <li><strong>Receiving Deficits:</strong> Warehouse stamped physical packing slips; slips mislaid or filed days after invoices arrived.</li>
+          <li><strong>Matching Friction:</strong> Over 24.5% invoice discrepancies requiring manual email disputes between AP, Buyers, and Suppliers.</li>
+        </ul>
+        <p style="font-size: 0.85rem; color: var(--neutral-600);">
+          <em>Visual Flowchart available in <code>diagrams/as-is-process.mmd</code>.</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. FUNCTIONAL REQUIREMENTS TABLE -->
+    <section id="requirements">
+      <div class="section-header">
+        <span class="section-tag">Traceability Matrix</span>
+        <h2>Functional Business Requirements (BRD)</h2>
+      </div>
+
+      <div class="filter-toolbar">
+        <input type="text" id="reqSearchInput" class="search-input" placeholder="Search requirements by ID, title, keyword, or owner...">
+        <select id="reqPriorityFilter" class="select-filter">
+          <option value="ALL">All Priorities</option>
+          <option value="Must Have">Must Have</option>
+          <option value="Should Have">Should Have</option>
+          <option value="Could Have">Could Have</option>
+        </select>
+        <span id="reqMatchCount" style="font-size: 0.85rem; font-weight: 600; color: var(--neutral-600);">18 requirements shown</span>
+      </div>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Req ID</th>
+              <th>Requirement Title & Scope</th>
+              <th>Priority</th>
+              <th>Process Owner</th>
+              <th>Proposed Solution (ERP Alignment)</th>
+              <th>Related Test ID</th>
+            </tr>
+          </thead>
+          <tbody id="requirementsTableBody">
+            <tr data-priority="Must Have">
+              <td><strong>BR-01</strong></td>
+              <td>Standardized Supplier Master Onboarding</td>
+              <td><span class="badge badge-danger">Must Have</span></td>
+              <td>Procurement Lead</td>
+              <td>Centralized vendor master with mandatory Tax ID, bank account, and payment terms validation.</td>
+              <td><code>TC-FUNC-01</code></td>
+            </tr>
+            <tr data-priority="Must Have">
+              <td><strong>BR-02</strong></td>
+              <td>Self-Service Purchase Requisitioning</td>
+              <td><span class="badge badge-danger">Must Have</span></td>
+              <td>Operations</td>
+              <td>Catalog search & expense templates with mandatory cost-center validation.</td>
+              <td><code>TC-FUNC-02</code></td>
+            </tr>
+            <tr data-priority="Must Have">
+              <td><strong>BR-03</strong></td>
+              <td>Automated Multi-Tier Approval Routing</td>
+              <td><span class="badge badge-danger">Must Have</span></td>
+              <td>Finance / Controls</td>
+              <td>Approvals Management Engine routing (&lt;$5k Mgr, $5k-$25k Dir, &gt;$25k VP).</td>
+              <td><code>TC-FUNC-03</code></td>
+            </tr>
+            <tr data-priority="Should Have">
+              <td><strong>BR-04</strong></td>
+              <td>Requisition Rejection Justification</td>
+              <td><span class="badge badge-warning">Should Have</span></td>
+              <td>Purchasing</td>
+              <td>Mandatory rejection comment field with instant requester email notification.</td>
+              <td><code>TC-FUNC-05</code></td>
+            </tr>
+            <tr data-priority="Must Have">
+              <td><strong>BR-05</strong></td>
+              <td>Automated Purchase Order Creation</td>
+              <td><span class="badge badge-danger">Must Have</span></td>
+              <td>Purchasing Lead</td>
+              <td>Auto-conversion of approved PRs into POs against active Blanket Agreements.</td>
+              <td><code>TC-FUNC-06</code></td>
+            </tr>
+            <tr data-priority="Must Have">
+              <td><strong>BR-06</strong></td>
+              <td>Dock Goods Receipt Intake</td>
+              <td><span class="badge badge-danger">Must Have</span></td>
+              <td>Warehouse Lead</td>
+              <td>Digital receiving workbench recording quantity, condition, and dock location.</td>
+              <td><code>TC-FUNC-07</code></td>
+            </tr>
+            <tr data-priority="Should Have">
+              <td><strong>BR-07</strong></td>
+              <td>Inspection & Partial Delivery Logging</td>
+              <td><span class="badge badge-warning">Should Have</span></td>
+              <td>Quality Assurance</td>
+              <td>Support for partial deliveries and RMA return quarantine for damaged items.</td>
+              <td><code>TC-FUNC-08</code></td>
+            </tr>
+            <tr data-priority="Must Have">
+              <td><strong>BR-08</strong></td>
+              <td>Electronic Invoice Capture & Duplicate Check</td>
+              <td><span class="badge badge-danger">Must Have</span></td>
+              <td>Accounts Payable</td>
+              <td>Payables workbench with mandatory PO reference and duplicate voucher check.</td>
+              <td><code>TC-FUNC-09</code></td>
+            </tr>
+            <tr data-priority="Must Have">
+              <td><strong>BR-09</strong></td>
+              <td>Automated 3-Way Invoice Matching</td>
+              <td><span class="badge badge-danger">Must Have</span></td>
+              <td>Accounts Payable</td>
+              <td>Automated PO &harr; Receipt &harr; Invoice line-item match for physical goods.</td>
+              <td><code>TC-FUNC-10</code></td>
+            </tr>
+            <tr data-priority="Must Have">
+              <td><strong>BR-10</strong></td>
+              <td>Automated 2-Way Service Matching</td>
+              <td><span class="badge badge-danger">Must Have</span></td>
+              <td>Accounts Payable</td>
+              <td>Invoice &harr; PO commitment match bypassing dock receipt for services/IT.</td>
+              <td><code>TC-FUNC-11</code></td>
+            </tr>
+            <tr data-priority="Should Have">
+              <td><strong>BR-11</strong></td>
+              <td>Invoice Matching Tolerance Group</td>
+              <td><span class="badge badge-warning">Should Have</span></td>
+              <td>Controller</td>
+              <td>Auto-approve price variances &le; 1.5% or &le; $50; hold higher variances.</td>
+              <td><code>TC-FUNC-12</code></td>
+            </tr>
+            <tr data-priority="Must Have">
+              <td><strong>BR-12</strong></td>
+              <td>Automated Hold Routing & Escalation</td>
+              <td><span class="badge badge-danger">Must Have</span></td>
+              <td>Accounts Payable</td>
+              <td>Dedicated worklists for Price, Missing Receipt, and Quantity variance holds.</td>
+              <td><code>TC-FUNC-13</code></td>
+            </tr>
+            <tr data-priority="Must Have">
+              <td><strong>BR-13</strong></td>
+              <td>Payment Process Request (PPR) Scheduling</td>
+              <td><span class="badge badge-danger">Must Have</span></td>
+              <td>Treasury Lead</td>
+              <td>Automated payment batch generation with dual-authorization release.</td>
+              <td><code>TC-FUNC-15</code></td>
+            </tr>
+            <tr data-priority="Should Have">
+              <td><strong>BR-14</strong></td>
+              <td>Procurement Analytics Dashboard</td>
+              <td><span class="badge badge-warning">Should Have</span></td>
+              <td>PMO / Finance</td>
+              <td>Interactive OTBI reporting workbenches for spend, cycle times, and hold rates.</td>
+              <td><code>TC-FUNC-16</code></td>
+            </tr>
+            <tr data-priority="Must Have">
+              <td><strong>BR-15</strong></td>
+              <td>Segregation of Duties (SoD) & RBAC</td>
+              <td><span class="badge badge-danger">Must Have</span></td>
+              <td>Internal Audit</td>
+              <td>Role-based security profiles preventing self-approvals and unauthorized changes.</td>
+              <td><code>TC-FUNC-17</code></td>
+            </tr>
+            <tr data-priority="Must Have">
+              <td><strong>BR-16</strong></td>
+              <td>Immutable Audit Trail & Logging</td>
+              <td><span class="badge badge-danger">Must Have</span></td>
+              <td>Compliance Officer</td>
+              <td>Comprehensive database audit history with user IDs and ISO timestamps.</td>
+              <td><code>TC-FUNC-18</code></td>
+            </tr>
+            <tr data-priority="Could Have">
+              <td><strong>BR-17</strong></td>
+              <td>Hold Escalation Timers (7-Day SLA)</td>
+              <td><span class="badge badge-neutral">Could Have</span></td>
+              <td>AP Manager</td>
+              <td>Automated workflow escalation to AP Manager for holds stagnant &gt; 7 days.</td>
+              <td><code>TC-FUNC-19</code></td>
+            </tr>
+            <tr data-priority="Should Have">
+              <td><strong>BR-18</strong></td>
+              <td>Role-Based Training Curriculum</td>
+              <td><span class="badge badge-warning">Should Have</span></td>
+              <td>Change Lead</td>
+              <td>5 role-tailored training modules with &ge; 90% competency certification gate.</td>
+              <td><code>TC-FUNC-20</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 7. GAP ANALYSIS -->
+    <section id="gap-analysis">
+      <div class="section-header">
+        <span class="section-tag">Remediation Matrix</span>
+        <h2>Gap Analysis (Current vs. Desired State)</h2>
+      </div>
+      <p>Structured evaluation of operational deficiencies across process, data, control, and training dimensions:</p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Gap ID</th>
+              <th>Category</th>
+              <th>Current-State Deficiency</th>
+              <th>Desired Future State</th>
+              <th>Proposed ERP Resolution</th>
+              <th>Priority</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>GAP-01</strong></td>
+              <td>Process</td>
+              <td>Paper and email requisitions cause rampant maverick spend.</td>
+              <td>100% digital self-service procurement intake.</td>
+              <td>Deploy Self-Service Requisitioning with catalog templates.</td>
+              <td><span class="badge badge-danger">High</span></td>
+            </tr>
+            <tr>
+              <td><strong>GAP-02</strong></td>
+              <td>Control</td>
+              <td>Unmonitored email approvals; managers approving own requests.</td>
+              <td>Automated Delegation of Authority with strict thresholds.</td>
+              <td>Configure AME supervisory hierarchy & SoD rules.</td>
+              <td><span class="badge badge-danger">High</span></td>
+            </tr>
+            <tr>
+              <td><strong>GAP-03</strong></td>
+              <td>Process</td>
+              <td>Paper dock slips mislaid or filed days after invoices arrive.</td>
+              <td>Real-time dock goods intake logged upon truck arrival.</td>
+              <td>Install ruggedized dock terminals with PO lookup.</td>
+              <td><span class="badge badge-danger">High</span></td>
+            </tr>
+            <tr>
+              <td><strong>GAP-04</strong></td>
+              <td>Control</td>
+              <td>Manual paper invoice matching; clerks approve price hikes.</td>
+              <td>Automated 3-Way match with configured tolerance limits.</td>
+              <td>Enable 3-Way match engine with 1.5% / $50 tolerance.</td>
+              <td><span class="badge badge-danger">High</span></td>
+            </tr>
+            <tr>
+              <td><strong>GAP-05</strong></td>
+              <td>Data</td>
+              <td>Vendor master contains duplicate entries and missing tax IDs.</td>
+              <td>Clean, deduplicated Supplier Master with active flags.</td>
+              <td>Execute automated data cleansing sprint prior to cutover.</td>
+              <td><span class="badge badge-danger">High</span></td>
+            </tr>
+            <tr>
+              <td><strong>GAP-06</strong></td>
+              <td>Process</td>
+              <td>Invoices on hold sit unmonitored for weeks until credit holds.</td>
+              <td>Automated exception routing and 7-day escalation.</td>
+              <td>Configure automated hold worklists and escalation alerts.</td>
+              <td><span class="badge badge-warning">Medium</span></td>
+            </tr>
+            <tr>
+              <td><strong>GAP-07</strong></td>
+              <td>Reporting</td>
+              <td>Month-end spreadsheet chasing for spend and liability totals.</td>
+              <td>Real-time interactive executive spend dashboard.</td>
+              <td>Deploy pre-packaged OTBI executive analytics dashboards.</td>
+              <td><span class="badge badge-warning">Medium</span></td>
+            </tr>
+            <tr>
+              <td><strong>GAP-08</strong></td>
+              <td>Training</td>
+              <td>Warehouse dock workers unfamiliar with cloud ERP software.</td>
+              <td>100% operational staff certified on dock receiving tools.</td>
+              <td>Deliver hands-on dock labs and laminated visual job aids.</td>
+              <td><span class="badge badge-danger">High</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 8. PROJECT TIMELINE, ROADMAP & RACI -->
+    <section id="project-plan">
+      <div class="section-header">
+        <span class="section-tag">PMO Governance</span>
+        <h2>Implementation Plan & RACI Accountability</h2>
+      </div>
+
+      <div class="tabs-header">
+        <button class="tab-btn active" data-target="plan-milestones">14-Week Milestone Roadmap</button>
+        <button class="tab-btn" data-target="plan-raci">RACI Governance Matrix</button>
+      </div>
+
+      <div class="tab-pane active" id="plan-milestones">
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Milestone</th>
+                <th>Phase Scope</th>
+                <th>Target Week</th>
+                <th>Workstream Owner</th>
+                <th>Exit Criteria Deliverable</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>M1</strong></td>
+                <td>Project Kickoff & Charter Sign-Off</td>
+                <td>Week 1</td>
+                <td>Executive Sponsor / PMO</td>
+                <td>Signed Project Charter & Scope Baseline</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td><strong>M2</strong></td>
+                <td>Business Requirements & Process Baseline</td>
+                <td>Week 3</td>
+                <td>Business Analyst / PM</td>
+                <td>18 Traceable Requirements & Gap Matrix Signed</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td><strong>M3</strong></td>
+                <td>Functional Design & CRP-1 Exit</td>
+                <td>Week 7</td>
+                <td>Lead Functional Consultant</td>
+                <td>Signed FDD & Prototype Demonstration Pass</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td><strong>M4</strong></td>
+                <td>System Integration Testing (SIT) Exit</td>
+                <td>Week 9</td>
+                <td>QA Lead / Technical Lead</td>
+                <td>100% Cross-Module Integration Scenarios Passed</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td><strong>M5</strong></td>
+                <td>User Acceptance Testing (UAT) Sign-Off</td>
+                <td>Week 11</td>
+                <td>QA Lead / Business Leads</td>
+                <td>12 Business UAT Scenarios Passed (0 Sev 1/2)</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td><strong>M6</strong></td>
+                <td>Mock Cutover 2 & End-User Training Certification</td>
+                <td>Week 13</td>
+                <td>Change Lead / Tech Lead</td>
+                <td>&ge; 90% Staff Certified; Dress Rehearsal Reconciled</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td><strong>M7</strong></td>
+                <td>Production Go-Live Launch</td>
+                <td>Week 14</td>
+                <td>Technical Lead / PMO</td>
+                <td>48-Hour Cutover Weekend Passed; Smoke Test Verified</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td><strong>M8</strong></td>
+                <td>Hypercare Exit & Governance Handover</td>
+                <td>Week 16</td>
+                <td>PMO / Governance Chair</td>
+                <td>14 Days Stable Operations; P2P Council Charter Active</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="plan-raci">
+        <p>RACI Matrix defining Responsible (R), Accountable (A), Consulted (C), and Informed (I) roles:</p>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Activity ID</th>
+                <th>Implementation Activity</th>
+                <th>PM</th>
+                <th>Procurement</th>
+                <th>Finance/AP</th>
+                <th>Consultant</th>
+                <th>Tech Lead</th>
+                <th>QA</th>
+                <th>Change</th>
+                <th>Sponsor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>ACT-01</td><td>Project Charter & Scope Definition</td><td>R</td><td>C</td><td>C</td><td>C</td><td>I</td><td>I</td><td>I</td><td><strong>A</strong></td></tr>
+              <tr><td>ACT-02</td><td>Requirements Gathering (BRD)</td><td><strong>A</strong></td><td>C</td><td>C</td><td>R</td><td>I</td><td>C</td><td>I</td><td>C</td></tr>
+              <tr><td>ACT-03</td><td>As-Is & To-Be Process Mapping</td><td><strong>A</strong></td><td>C</td><td>C</td><td>R</td><td>I</td><td>I</td><td>I</td><td>C</td></tr>
+              <tr><td>ACT-04</td><td>DoA Approval Hierarchy Matrix</td><td>C</td><td>C</td><td>R</td><td>C</td><td>I</td><td>I</td><td>I</td><td><strong>A</strong></td></tr>
+              <tr><td>ACT-05</td><td>Tolerance & Matching Configuration</td><td>I</td><td>C</td><td>R</td><td>R</td><td>C</td><td>C</td><td>I</td><td><strong>A</strong></td></tr>
+              <tr><td>ACT-06</td><td>Supplier Master Cleansing</td><td>I</td><td>C</td><td>C</td><td>I</td><td>R</td><td>I</td><td>I</td><td><strong>A</strong></td></tr>
+              <tr><td>ACT-07</td><td>User Acceptance Testing (UAT)</td><td>C</td><td>R</td><td>R</td><td>C</td><td>I</td><td>C</td><td>C</td><td><strong>A</strong></td></tr>
+              <tr><td>ACT-08</td><td>End-User Training Delivery</td><td>I</td><td>C</td><td>C</td><td>I</td><td>I</td><td>I</td><td>R</td><td><strong>A</strong></td></tr>
+              <tr><td>ACT-09</td><td>Weekend Cutover Execution</td><td><strong>A</strong></td><td>C</td><td>C</td><td>C</td><td>R</td><td>C</td><td>I</td><td>I</td></tr>
+              <tr><td>ACT-10</td><td>Go / No-Go Decision Gate</td><td>C</td><td>C</td><td>C</td><td>C</td><td>C</td><td>C</td><td>C</td><td><strong>A</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. RISK REGISTER -->
+    <section id="risk-register">
+      <div class="section-header">
+        <span class="section-tag">Risk Management</span>
+        <h2>Quantitative Project Risk Register</h2>
+      </div>
+
+      <div class="filter-toolbar">
+        <input type="text" id="riskSearchInput" class="search-input" placeholder="Search risks by ID, description, owner, or keyword...">
+        <select id="riskCategoryFilter" class="select-filter">
+          <option value="ALL">All Categories</option>
+          <option value="Data Quality">Data Quality</option>
+          <option value="Cutover Downtime">Cutover Downtime</option>
+          <option value="User Adoption">User Adoption</option>
+          <option value="Stakeholder Availability">Stakeholder Availability</option>
+          <option value="Supplier Resistance">Supplier Resistance</option>
+          <option value="Regulatory Compliance">Regulatory Compliance</option>
+        </select>
+        <span id="riskMatchCount" style="font-size: 0.85rem; font-weight: 600; color: var(--neutral-600);">Showing all risks</span>
+      </div>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Risk ID</th>
+              <th>Category</th>
+              <th>Risk Description</th>
+              <th>Likelihood (1-5)</th>
+              <th>Impact (1-5)</th>
+              <th>Score (1-25)</th>
+              <th>Preventative Mitigation</th>
+              <th>Owner</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="riskTableBody">
+            <tr data-category="Data Quality" data-severity="Critical">
+              <td><strong>RSK-01</strong></td>
+              <td>Data Quality</td>
+              <td>Legacy vendor master contains duplicates and missing tax IDs, corrupting database.</td>
+              <td>5</td>
+              <td>4</td>
+              <td><span class="badge badge-danger">20 (Critical)</span></td>
+              <td>Pre-migration automated cleansing scripts; strict tax ID validation gates.</td>
+              <td>Data SME / AP Lead</td>
+              <td><span class="badge badge-warning">In Progress</span></td>
+            </tr>
+            <tr data-category="Cutover Downtime" data-severity="Critical">
+              <td><strong>RSK-09</strong></td>
+              <td>Cutover Downtime</td>
+              <td>Data migration and open PO conversion exceeds 48-hour weekend blackout window.</td>
+              <td>4</td>
+              <td>5</td>
+              <td><span class="badge badge-danger">20 (Critical)</span></td>
+              <td>Two full mock cutover dry runs (Weeks 10 & 12); strict rollback cutoff at Sunday 18:00.</td>
+              <td>Technical Lead</td>
+              <td><span class="badge badge-warning">In Progress</span></td>
+            </tr>
+            <tr data-category="User Adoption" data-severity="High">
+              <td><strong>RSK-08</strong></td>
+              <td>User Adoption</td>
+              <td>Warehouse dock clerks resist digital receiving, causing missing receipt holds.</td>
+              <td>4</td>
+              <td>4</td>
+              <td><span class="badge badge-warning">16 (High)</span></td>
+              <td>Hands-on dock floor labs; ruggedized touchscreens; 1-page visual desk job aids.</td>
+              <td>Change Lead</td>
+              <td><span class="badge badge-warning">In Progress</span></td>
+            </tr>
+            <tr data-category="Stakeholder Availability" data-severity="High">
+              <td><strong>RSK-03</strong></td>
+              <td>Stakeholder Availability</td>
+              <td>Operational AP and buyer SMEs unavailable for UAT due to daily plant duties.</td>
+              <td>4</td>
+              <td>4</td>
+              <td><span class="badge badge-warning">16 (High)</span></td>
+              <td>Executive mandate allocating 30% dedicated SME time; funded AP backfill contractor.</td>
+              <td>Sponsor (CFO)</td>
+              <td><span class="badge badge-success">Managed</span></td>
+            </tr>
+            <tr data-category="Supplier Resistance" data-severity="High">
+              <td><strong>RSK-11</strong></td>
+              <td>Supplier Resistance</td>
+              <td>Vendors fail to quote PO numbers on invoices, stalling automated matching.</td>
+              <td>3</td>
+              <td>5</td>
+              <td><span class="badge badge-warning">15 (High)</span></td>
+              <td>Vendor enablement letters at T-4 & T-1 weeks; temporary AP exception triage desk.</td>
+              <td>Procurement Lead</td>
+              <td><span class="badge badge-warning">In Progress</span></td>
+            </tr>
+            <tr data-category="Scope Creep" data-severity="Medium">
+              <td><strong>RSK-02</strong></td>
+              <td>Scope Creep</td>
+              <td>Stakeholders request advanced sourcing RFx and contract modules during Phase 1.</td>
+              <td>3</td>
+              <td>4</td>
+              <td><span class="badge badge-info">12 (Medium)</span></td>
+              <td>Enforce Project Charter scope baseline; formal PMO Change Control Board.</td>
+              <td>Project Manager</td>
+              <td><span class="badge badge-success">Mitigated</span></td>
+            </tr>
+            <tr data-category="Regulatory Compliance" data-severity="Medium">
+              <td><strong>RSK-12</strong></td>
+              <td>Regulatory Compliance</td>
+              <td>Failure to retain immutable audit logs of price tolerance overrides violates SOX rules.</td>
+              <td>2</td>
+              <td>5</td>
+              <td><span class="badge badge-info">10 (Medium)</span></td>
+              <td>Database transaction logging; secondary manager sign-off for overrides &gt; $250.</td>
+              <td>Compliance Officer</td>
+              <td><span class="badge badge-success">Mitigated</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 10. SAMPLE PROCUREMENT ANALYTICS & DASHBOARD CHARTS -->
+    <section id="analytics">
+      <div class="section-header">
+        <span class="section-tag">Analytical Evidence</span>
+        <h2>Procurement & Financial Analytics Dashboard</h2>
+      </div>
+      <p>
+        All metrics and charts below are derived deterministically from the synthetic baseline datasets generated by <code>generate_sample_data.py</code> and analyzed via <code>p2p_analysis.py</code>.
+      </p>
+
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h4>Spend Distribution by Commodity Category</h4>
+          <img src="assets/images/chart_spend_by_category.png" alt="Spend by Category Chart">
+          <p style="font-size: 0.8rem; color: var(--neutral-600); margin-top: 0.5rem;">
+            Raw Materials represent the largest spend concentration ($1.53M across 98 POs), followed by MRO & Tooling ($612k).
+          </p>
+        </div>
+        <div class="chart-card">
+          <h4>Monthly Purchase Order Volume Trend (Jan - Jun 2026)</h4>
+          <img src="assets/images/chart_monthly_spend.png" alt="Monthly Spend Trend Chart">
+          <p style="font-size: 0.8rem; color: var(--neutral-600); margin-top: 0.5rem;">
+            Commitment volumes stabilized between $450k and $550k per month across 6 manufacturing operational periods.
+          </p>
+        </div>
+        <div class="chart-card">
+          <h4>Invoice Matching & Exception Hold Distribution</h4>
+          <img src="assets/images/chart_exception_breakdown.png" alt="Invoice Exception Breakdown Chart">
+          <p style="font-size: 0.8rem; color: var(--neutral-600); margin-top: 0.5rem;">
+            157 invoices matched cleanly (75.48%); 51 vouchers encountered holds (Price variance: 19, Missing receipt: 21, Quantity: 11).
+          </p>
+        </div>
+        <div class="chart-card">
+          <h4>Cycle Times: Simulated Current vs. Target ERP SLA</h4>
+          <img src="assets/images/chart_cycle_times.png" alt="Cycle Times Comparison Chart">
+          <p style="font-size: 0.8rem; color: var(--neutral-600); margin-top: 0.5rem;">
+            Requisition approval takes 2.48 days (target: 2.0d); overall procurement cycle takes 3.88 days (target: 3.0d).
+          </p>
+        </div>
+      </div>
+
+      <!-- Interactive Transaction Workbench -->
+      <h3 style="margin-top: 2rem;">Interactive Voucher Verification Workbench</h3>
+      <p style="font-size: 0.9rem; color: var(--neutral-600);">
+        Search and filter actual simulated invoice vouchers across matching states, payment statuses, and suppliers:
+      </p>
+
+      <div class="filter-toolbar">
+        <input type="text" id="txSearchInput" class="search-input" placeholder="Search by Voucher ID, PO, Supplier Name, or Reference...">
+        <select id="txStatusFilter" class="select-filter">
+          <option value="ALL">All Match Statuses</option>
+          <option value="MATCHED">Clean Match</option>
+          <option value="HOLD_PRICE">Price Variance Hold</option>
+          <option value="HOLD_RECEIPT">Missing Receipt Hold</option>
+          <option value="PAID">Disbursed (Paid)</option>
+        </select>
+        <span id="txMatchCount" style="font-size: 0.85rem; font-weight: 600; color: var(--neutral-600);">24 records displayed</span>
+      </div>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Voucher ID</th>
+              <th>PO Number</th>
+              <th>Supplier Name</th>
+              <th>Match Type</th>
+              <th>Billed Amount</th>
+              <th>Match Status</th>
+              <th>Hold / Tolerance Reason</th>
+              <th>Payment Status</th>
+            </tr>
+          </thead>
+          <tbody id="txTableBody">
+            <!-- Dynamically populated by assets/js/app.js -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 11. TESTING & UAT APPROACH -->
+    <section id="testing">
+      <div class="section-header">
+        <span class="section-tag">Quality Assurance</span>
+        <h2>Functional Testing & User Acceptance Testing (UAT)</h2>
+      </div>
+      <p>
+        The quality assurance strategy enforces 100% requirements traceability across Functional Unit Testing (22 test cases) and User Acceptance Testing (12 business scenarios).
+      </p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Test Stream</th>
+              <th>Scope & Target</th>
+              <th>Total Scenarios</th>
+              <th>Simulated Status</th>
+              <th>Open Sev 1/2 Defects</th>
+              <th>Exit Gate Recommendation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Functional Testing (FUT)</strong></td>
+              <td>Discrete field validation, approval thresholds, tolerance boundaries</td>
+              <td>22 Test Cases</td>
+              <td><span class="badge badge-success">100% Passed</span></td>
+              <td>0 Open</td>
+              <td>Gate Passed</td>
+            </tr>
+            <tr>
+              <td><strong>Integration Testing (SIT)</strong></td>
+              <td>End-to-end data passing from PR &rarr; PO &rarr; Dock &rarr; AP &rarr; Bank</td>
+              <td>Core E2E Suite</td>
+              <td><span class="badge badge-success">100% Passed</span></td>
+              <td>0 Open</td>
+              <td>Gate Passed</td>
+            </tr>
+            <tr>
+              <td><strong>User Acceptance (UAT)</strong></td>
+              <td>Business SME verification of realistic daily manufacturing scenarios</td>
+              <td>12 Scenarios</td>
+              <td><span class="badge badge-success">100% Signed Off</span></td>
+              <td>0 Open</td>
+              <td>Formally Signed Off</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--neutral-600); margin-top: 0.5rem;">
+        <em>Note: Because this project is an independent academic study without an active Oracle Cloud tenant, test cases are maintained as simulated catalogue verifications. Complete test suites and defect logs are located in <code>testing/functional-test-cases.csv</code>, <code>testing/uat-test-cases.csv</code>, and <code>testing/defect-log.csv</code>.</em>
+      </p>
+    </section>
+
+    <!-- 12. CUTOVER AND HYPERCARE -->
+    <section id="cutover">
+      <div class="section-header">
+        <span class="section-tag">Go-Live Execution</span>
+        <h2>48-Hour Weekend Cutover & Hypercare Governance</h2>
+      </div>
+      <p>
+        To prevent disrupting Monday morning plant manufacturing, cutover executes over a strict 48-hour weekend blackout window (Friday 18:00 to Sunday 18:00):
+      </p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Sequence</th>
+              <th>Window</th>
+              <th>Cutover Activity</th>
+              <th>Owner</th>
+              <th>Verification Gate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CK-01</td><td>Fri 18:00</td><td>Convene Cutover Command Center & lock legacy purchasing database to Read-Only.</td><td>PMO / IT</td><td>Write access confirmed disabled.</td></tr>
+            <tr><td>CK-03</td><td>Fri 19:30</td><td>Extract legacy vendor master and open PO delta balances.</td><td>Data Lead</td><td>Record count checksum verified.</td></tr>
+            <tr><td>CK-05</td><td>Sat 02:00</td><td>Load cleansed Supplier Master (25 active vendors) into production environment.</td><td>Tech Lead</td><td>25 records verified in production.</td></tr>
+            <tr><td>CK-06</td><td>Sat 06:00</td><td>Load open PO balances and verify subledger accruals.</td><td>Finance Lead</td><td>Zero variance against legacy trial balance.</td></tr>
+            <tr><td>CK-08</td><td>Sat 12:00</td><td>Configure Approval Hierarchy and Invoice Tolerance group (1.5% / $50).</td><td>Consultant</td><td>Configuration audit export verified.</td></tr>
+            <tr><td>CK-10</td><td>Sat 17:00</td><td>Execute End-to-End Smoke Test (synthetic PR &rarr; PO &rarr; Approval).</td><td>QA Lead</td><td>Smoke transaction executed and voided.</td></tr>
+            <tr><td>CK-13</td><td>Sun 14:00</td><td>Steering Committee Final Go-Live Assessment.</td><td>Sponsor (CFO)</td><td>Unanimous executive authorization.</td></tr>
+            <tr><td>CK-14</td><td>Sun 15:00</td><td>Release production system access to all certified business users.</td><td>Security Lead</td><td>System online; broadcast notice sent.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 13. GLOSSARY / EXPANDABLE ACCORDIONS -->
+    <section id="glossary">
+      <div class="section-header">
+        <span class="section-tag">Technical Reference</span>
+        <h2>ERP Procure-to-Pay Terminology & Concepts</h2>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">What is Three-Way Invoice Matching and why is it critical?</button>
+        <div class="accordion-body">
+          <p>
+            <strong>Three-Way Matching</strong> is an automated financial internal control that compares three independent documents before approving an invoice for payment:
+          </p>
+          <ol style="padding-left: 1.25rem; font-size: 0.9rem;">
+            <li><strong>Purchase Order</strong>: What was committed (quantity, unit price, terms).</li>
+            <li><strong>Goods Receipt</strong>: What was physically delivered and accepted at the dock.</li>
+            <li><strong>Supplier Invoice</strong>: What the vendor is billing.</li>
+          </ol>
+          <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+            In Northstar's implementation, 3-Way matching prevents paying for unreceived goods, detects billing overages, and automatically applies holds when price variances exceed 1.5% or $50.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">How does Two-Way Matching differ for Services & Software?</button>
+        <div class="accordion-body">
+          <p>
+            For non-physical commodities (e.g. consulting services, cloud subscriptions, facilities maintenance), there is no physical warehouse dock receipt. <strong>Two-Way Matching</strong> matches the supplier invoice directly against the approved Purchase Order commitment schedule, eliminating unnecessary receiving clerical steps while maintaining contractual control.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">What is a Delegation of Authority (DoA) Approval Hierarchy?</button>
+        <div class="accordion-body">
+          <p>
+            A Delegation of Authority policy defines the financial spending limits assigned to organizational management roles. In Northstar's design:
+          </p>
+          <ul style="padding-left: 1.25rem; font-size: 0.9rem;">
+            <li><strong>&lt; $5,000</strong>: Department Line Manager approval.</li>
+            <li><strong>$5,000 &ndash; $25,000</strong>: Director of Operations approval.</li>
+            <li><strong>&gt; $25,000</strong>: VP of Finance & Operations / CFO approval.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">What is Hypercare and how long does it last?</button>
+        <div class="accordion-body">
+          <p>
+            <strong>Hypercare</strong> is an intensive, high-support operational transition phase immediately following production cutover (typically 14 to 30 days). A centralized Command Center and on-site floor champions provide rapid defect triage, monitor automated matching holds, and support end-users until steady-state operations are achieved.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. DOWNLOAD PROJECT DOCUMENTATION & ARTIFACT HUB -->
+    <section id="artifacts">
+      <div class="section-header">
+        <span class="section-tag">Deliverables Repository</span>
+        <h2>Download Project Documentation & Data Artifacts</h2>
+      </div>
+      <p>
+        Every deliverable referenced in this case study is fully authored and available directly in this repository:
+      </p>
+
+      <div class="downloads-grid">
+        <div class="download-card">
+          <div>
+            <div class="download-title">Project Charter</div>
+            <div class="download-meta">Executive summary, objectives, scope, governance, illustrative budget.</div>
+          </div>
+          <a href="docs/project-charter.md" class="download-link" target="_blank">&darr; View project-charter.md</a>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-title">Business Requirements (BRD)</div>
+            <div class="download-meta">18 traceable requirements with MoSCoW priorities and test mappings.</div>
+          </div>
+          <a href="docs/business-requirements.md" class="download-link" target="_blank">&darr; View business-requirements.md</a>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-title">Functional Solution Design</div>
+            <div class="download-meta">Future-state architecture, matching tolerances, security roles, SLA rules.</div>
+          </div>
+          <a href="docs/functional-design.md" class="download-link" target="_blank">&darr; View functional-design.md</a>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-title">As-Is & To-Be Process Mapping</div>
+            <div class="download-meta">10-step standardized workflow and exception handling matrix.</div>
+          </div>
+          <a href="docs/as-is-to-be-process.md" class="download-link" target="_blank">&darr; View as-is-to-be-process.md</a>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-title">Gap Analysis Matrix</div>
+            <div class="download-meta">12 detailed gaps across process, data, control, and training.</div>
+          </div>
+          <a href="docs/gap-analysis.md" class="download-link" target="_blank">&darr; View gap-analysis.md</a>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-title">Project Implementation Plan</div>
+            <div class="download-meta">14-week phase breakdown, workstream tasks, milestone schedule.</div>
+          </div>
+          <a href="docs/project-plan.md" class="download-link" target="_blank">&darr; View project-plan.md</a>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-title">Quantitative Risk Register</div>
+            <div class="download-meta">13 assessed risks with 1-25 scoring, mitigations, and owners.</div>
+          </div>
+          <a href="docs/risk-register.md" class="download-link" target="_blank">&darr; View risk-register.md</a>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-title">Change Management & Training</div>
+            <div class="download-meta">ADKAR framework, role impact analysis, 5-course training curriculum.</div>
+          </div>
+          <a href="docs/change-management.md" class="download-link" target="_blank">&darr; View change-management.md</a>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-title">Functional & UAT Test Suites</div>
+            <div class="download-meta">22 functional test cases, 12 business UAT scenarios, defect log.</div>
+          </div>
+          <a href="testing/functional-test-cases.csv" class="download-link" target="_blank">&darr; Download functional-test-cases.csv</a>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-title">Synthetic Datasets & Data Dict</div>
+            <div class="download-meta">Suppliers, Requisitions, POs, Receipts, Invoices, and Data Dictionary.</div>
+          </div>
+          <a href="data/data_dictionary.md" class="download-link" target="_blank">&darr; View data_dictionary.md</a>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-title">Cutover Runbook & Hypercare</div>
+            <div class="download-meta">48-hour weekend cutover checklist, rollback protocol, hypercare SLAs.</div>
+          </div>
+          <a href="docs/implementation-and-cutover.md" class="download-link" target="_blank">&darr; View implementation-and-cutover.md</a>
+        </div>
+
+        <div class="download-card">
+          <div>
+            <div class="download-title">Project Retrospective & Lessons</div>
+            <div class="download-meta">Implementation post-mortem, successes, challenges, Phase 2 roadmap.</div>
+          </div>
+          <a href="docs/project-retrospective.md" class="download-link" target="_blank">&darr; View project-retrospective.md</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. ABOUT & CONTACT PLACEHOLDER -->
+    <section id="about">
+      <div class="section-header">
+        <span class="section-tag">Portfolio Profile</span>
+        <h2>About This Project & Contact Placeholder</h2>
+      </div>
+      <p>
+        This case study was conceived and engineered as an independent professional portfolio project for entry-level and junior roles across technology consulting, ERP functional advisory, business analysis, and IT project management (PMO).
+      </p>
+      <div style="background-color: var(--neutral-100); border-radius: var(--radius-md); padding: 1.25rem; font-size: 0.9rem;">
+        <p><strong>Candidate Name:</strong> [Portfolio Author / Madhav Kumar]</p>
+        <p><strong>Focus Areas:</strong> ERP Business Analysis, Procure-to-Pay (P2P), Requirements Engineering, PMO Governance, Data Analytics</p>
+        <p><strong>Repository Link:</strong> <a href="https://github.com/Madhav70/oracle-erp-p2p-case-study" target="_blank">github.com/Madhav70/oracle-erp-p2p-case-study</a> (or local workspace)</p>
+        <p style="margin-bottom: 0;"><strong>Professional Disclaimer:</strong> This case study demonstrates project-management and analytical methods, not hands-on experience in a live Oracle ERP production environment.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h5>Northstar Manufacturing Ltd.</h5>
+        <p style="font-size: 0.85rem; color: var(--neutral-400);">
+          Independent Procure-to-Pay (P2P) ERP Implementation Simulation. Built for academic and technology consulting portfolio demonstration.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h5>Core Artifacts</h5>
+        <ul>
+          <li><a href="docs/project-charter.md">Project Charter</a></li>
+          <li><a href="docs/business-requirements.md">Business Requirements</a></li>
+          <li><a href="docs/functional-design.md">Functional Design</a></li>
+          <li><a href="docs/risk-register.md">Risk Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5>Data & Testing</h5>
+        <ul>
+          <li><a href="data/data_dictionary.md">Data Dictionary</a></li>
+          <li><a href="testing/functional-test-cases.csv">Functional Test Cases</a></li>
+          <li><a href="testing/uat-test-cases.csv">UAT Scenarios</a></li>
+          <li><a href="analysis/outputs/README.md">Analysis Outputs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Northstar Manufacturing Ltd. Simulated Case Study. MIT Licensed.
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

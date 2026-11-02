@@ -19,7 +19,7 @@ Operational audits and simulated baseline data at Northstar Manufacturing Ltd. h
 - **Inconsistent Requisition Channels**: Requisitions are submitted via paper forms, informal emails, or unrecorded verbal commitments, creating rampant "maverick spend" and unbudgeted obligations.
 - **Unclear & Decentralized Approvals**: Absence of automated Delegation of Authority rules leads to managerial bottlenecks, orphaned approval requests, and occasional unauthorized commitments exceeding sign-off thresholds.
 - **Tracking & Receiving Deficiencies**: Physical goods receipts recorded in dock paper logs are frequently mislaid or entered after vendor invoices arrive, generating artificial "Missing Goods Receipt" holds.
-- **Invoice Discrepancies & Stalled Cash Flow**: Over 24% of received invoices encounter matching exceptions—primarily due to uncoordinated pricing amendments or dock shortages—requiring labor-intensive manual investigations by Accounts Payable clerks.
+- **Invoice Discrepancies & Stalled Cash Flow**: Over 20% of received invoices encounter matching exceptions—primarily due to uncoordinated pricing amendments or dock shortages—requiring labor-intensive manual investigations by Accounts Payable clerks.
 - **Deficient Reporting & Spend Analytics**: Executive management lacks consolidated visibility into supplier performance, category spend concentrations, pending commitments, and cash-outflow liabilities.
 
 ---
@@ -30,9 +30,9 @@ The project establishes the following illustrative, measurable targets for the f
 
 | Objective ID | Strategic Objective | Baseline Metric (Simulated) | Target State (Illustrative Assumption) | Verification Method |
 | :--- | :--- | :--- | :--- | :--- |
-| **OBJ-01** | Standardize Requisition & Approval Routing | 2.5 days avg approval; ad-hoc emails | $\le 1.0$ business day via automated DoA workflows | Workflow audit logs in ERP |
-| **OBJ-02** | Compress Total Procurement Cycle Time | 3.88 days from PR creation to PO dispatch | $\le 2.0$ business days for standard catalogue items | Purchase Order timestamp metrics |
-| **OBJ-03** | Automate Invoice Matching & Reduce Exception Rate | 24.52% invoice exception holds | $\le 8.0\%$ exceptions through tolerance rules & 3-Way match | Accounts Payable hold report |
+| **OBJ-01** | Standardize Requisition & Approval Routing | 2.5 days avg approval; ad-hoc emails | $\le 2.0$ business days via automated DoA workflows | Workflow audit logs in ERP |
+| **OBJ-02** | Compress Total Procurement Cycle Time | 4.0 days from PR creation to PO dispatch | $\le 3.0$ business days for standard catalogue items | Purchase Order timestamp metrics |
+| **OBJ-03** | Automate Invoice Matching & Reduce Exception Rate | 20.77% invoice exception holds | $\le 8.0\%$ exceptions through tolerance rules & 3-Way match | Accounts Payable hold report |
 | **OBJ-04** | Eliminate Maverick & Unmatched Invoices | Frequent unreferenced invoices | $100\%$ invoices matched to approved PO or contract | AP subledger reconciliation |
 | **OBJ-05** | Real-Time Spend Visibility & Analytics | Monthly manual Excel consolidations | Real-time interactive OTBI / Executive dashboard | Dashboard operational sign-off |
 | **OBJ-06** | Change Readiness & Role Adoption | Minimal structured training | $\ge 90\%$ verified end-user competency score | LMS completion & UAT sign-off |

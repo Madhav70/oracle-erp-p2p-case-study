@@ -22,7 +22,7 @@ The Procure-to-Pay modernization case study for Northstar Manufacturing Ltd. est
 ## 2. Key Successes & What Went Well
 
 1. **Rigorous End-to-End Traceability**: Established an unbroken traceability chain connecting business problems $\rightarrow$ strategic objectives $\rightarrow$ 18 detailed requirements $\rightarrow$ functional designs $\rightarrow$ 20 functional test cases and 12 UAT scenarios.
-2. **Deterministic Data Integrity**: Designed and executed an automated data generation and analytics suite (Python/pandas) with 100% referential integrity across 25 suppliers, 250 requisitions, 223 purchase orders, 105 dock receipts, and 208 invoice vouchers.
+2. **Deterministic Data Integrity**: Designed and verified an automated data generation and analytics suite (Python/pandas) with 100% referential integrity across 25 suppliers, 250 requisitions, 224 purchase orders, 110 dock receipts, and 207 invoice vouchers.
 3. **Internal Control Architecture**: Enforced clear Delegation of Authority (DoA) approval tiers ($<\$5\text{k}, \$5\text{k}-\$25\text{k}, >\$25\text{k}$) and realistic tolerance controls ($1.5\% / \$50$) that prevent unauthorized cash disbursements while maintaining operational agility.
 4. **Holistic Change Management & Governance**: Built comprehensive human-centered deliverables (ADKAR change plan, role impact assessment, 5-course training curriculum, and P2P Governance Council charter) that reflect the organizational reality of technology adoption.
 

@@ -44,7 +44,7 @@ To ensure end-to-end quality and compliance, the testing lifecycle was partition
 
 ### Defect Triage Summary (From `testing/defect-log.csv`):
 - **Total Defects Identified During Simulation**: 8 defects
-  - **Severity 1 (Critical / Blocker)**: 2 defects (`DEF-001` AME routing boundary error, `DEF-007` role privilege leak) $\rightarrow$ **100% Resolved & Closed**.
+  - **Severity 1 (Critical / Blocker)**: 2 defects (`DEF-001` BPM Worklist routing boundary error, `DEF-007` role privilege leak) $\rightarrow$ **100% Resolved & Closed**.
   - **Severity 2 (Major)**: 3 defects (`DEF-002` tolerance evaluation logic, `DEF-003` case-sensitivity check, `DEF-005` remittance email default) $\rightarrow$ **100% Resolved & Closed**.
   - **Severity 3 (Moderate)**: 2 defects (`DEF-004` dock query indexing, `DEF-006` audit character width) $\rightarrow$ **100% Resolved & Closed**.
   - **Severity 4 (Minor / Cosmetic)**: 1 defect (`DEF-008` dashboard tooltip typo) $\rightarrow$ **100% Resolved & Closed**.

@@ -48,7 +48,7 @@
 - **Key Tasks**:
   - `TSK-2.1`: Author Functional Design Document (FDD) covering 10-step To-Be lifecycle.
   - `TSK-2.2`: Configure Self-Service Requisition item templates and accounting flexfields.
-  - `TSK-2.3`: Configure Approvals Management Engine (AME) routing rules ($<\$5\text{k}, \$5\text{k}-\$25\text{k}, >\$25\text{k}$).
+  - `TSK-2.3`: Configure Oracle BPM Worklist / Human Workflow (AMX) routing rules ($<\$5\text{k}, \$5\text{k}-\$25\text{k}, >\$25\text{k}$).
   - `TSK-2.4`: Configure 3-Way and 2-Way Invoice Matching rules with $1.5\% / \$50$ tolerance group.
   - `TSK-2.5`: Establish Supplier Master Data cleansing rules and mock extract scripts.
   - `TSK-2.6`: Conduct Conference Room Pilot 1 (CRP-1) prototype walkthrough with business leads.

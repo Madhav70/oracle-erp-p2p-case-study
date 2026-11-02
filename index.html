@@ -96,7 +96,7 @@
         <h2>Executive Summary</h2>
       </div>
       <p>
-        Northstar Manufacturing Ltd. is a fictional discrete manufacturing enterprise specializing in precision industrial components. Prior to this modernization program, Northstar operated with decentralized purchasing practices characterized by paper requisition forms, unmonitored email approvals, physical dock slips, and manual Accounts Payable cross-checking. These vulnerabilities created rampant maverick spend, an unsustainable invoice exception rate of <strong>24.52%</strong>, and delayed vendor payments that strained critical supply chains.
+        Northstar Manufacturing Ltd. is a fictional discrete manufacturing enterprise specializing in precision industrial components. Prior to this modernization program, Northstar operated with decentralized purchasing practices characterized by paper requisition forms, unmonitored email approvals, physical dock slips, and manual Accounts Payable cross-checking. These vulnerabilities created rampant maverick spend, an unsustainable invoice exception rate of <strong>20.77%</strong> (with active holds tying up $299k in working capital), and delayed vendor payments that strained critical supply chains.
       </p>
       <p>
         This case study formulates a structured 14-week implementation roadmap to establish a standardized, control-driven Procure-to-Pay lifecycle aligned conceptually with Oracle Fusion Cloud Procurement and Financials. Core architectural pillars include:
@@ -130,21 +130,21 @@
             <tr>
               <td><strong>OBJ-01</strong></td>
               <td>Standardize Requisition & Approval Routing</td>
-              <td>2.48 days avg latency; loose email chains</td>
-              <td>&le; 1.0 business day via automated DoA</td>
+              <td>2.50 days avg latency; loose email chains</td>
+              <td>&le; 2.0 business days via automated DoA</td>
               <td>BPM approval audit logs</td>
             </tr>
             <tr>
               <td><strong>OBJ-02</strong></td>
               <td>Compress Total Procurement Cycle Time</td>
-              <td>3.88 days from initial PR to PO dispatch</td>
-              <td>&le; 2.0 business days for standard catalogue items</td>
+              <td>4.00 days from initial PR to PO dispatch</td>
+              <td>&le; 3.0 business days for standard catalogue items</td>
               <td>Purchasing workbench timestamp audit</td>
             </tr>
             <tr>
               <td><strong>OBJ-03</strong></td>
               <td>Automate Invoice Matching & Reduce Holds</td>
-              <td>24.52% invoice exception holds (51 vouchers)</td>
+              <td>20.77% invoice exception holds (43 exceptions, 20 active holds)</td>
               <td>&le; 8.0% exception rate via 3-Way match</td>
               <td>Accounts Payable hold log review</td>
             </tr>
@@ -542,7 +542,7 @@
               <td>Control</td>
               <td>Unmonitored email approvals; managers approving own requests.</td>
               <td>Automated Delegation of Authority with strict thresholds.</td>
-              <td>Configure AME supervisory hierarchy & SoD rules.</td>
+              <td>Configure Oracle BPM Worklist supervisory hierarchy & SoD rules.</td>
               <td><span class="badge badge-danger">High</span></td>
             </tr>
             <tr>
